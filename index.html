@@ -1,0 +1,2026 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>PPR 2025 — পাবলিক প্রকিউরমেন্ট রুলস ইন্টারেক্টিভ গাইড</title>
+<meta name="description" content="বাংলাদেশ Public Procurement Rules 2025 — সম্পূর্ণ ইন্টারেক্টিভ গাইড ও দরপত্র মূল্যায়ন প্রশিক্ষণ ম্যানুয়াল, অফলাইনেও ব্যবহারযোগ্য।">
+
+<!-- PWA: installable app metadata -->
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#04382A">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="PPR 2025">
+<link rel="icon" type="image/png" sizes="96x96" href="icons/icon-96.png">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@500;600;700;800&family=Hind+Siliguri:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FAF6EC;
+  --bg-panel:#FFFFFF;
+  --bg-sunken:#F1EADA;
+  --ink:#1C2620;
+  --ink-soft:#4A5750;
+  --line:#DCD2B8;
+  --green-900:#04382A;
+  --green-800:#07523C;
+  --green-700:#0B6B4E;
+  --green-100:#E4EFE7;
+  --red:#B3122A;
+  --red-100:#FBE7E7;
+  --gold:#9C6B15;
+  --gold-100:#F6ECD6;
+  --amber-100:#FDF1D6;
+  --blue-100:#E4EEF7;
+  --radius:10px;
+  --shadow:0 10px 30px -12px rgba(4,56,42,.25);
+  --serif:'Noto Serif Bengali','Hind Siliguri',serif;
+  --sans:'Hind Siliguri',system-ui,sans-serif;
+  --mono:'JetBrains Mono',monospace;
+}
+.dark{
+  --bg:#0E1712;
+  --bg-panel:#132019;
+  --bg-sunken:#0A130E;
+  --ink:#EDE7D6;
+  --ink-soft:#AEB9AF;
+  --line:#233A2E;
+  --green-100:#16281F;
+  --gold-100:#231C0E;
+  --amber-100:#221C0E;
+  --blue-100:#101E29;
+  --red-100:#2A1214;
+  --shadow:0 10px 30px -12px rgba(0,0,0,.6);
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font-family:var(--sans);
+  line-height:1.75;
+  transition:background .3s ease,color .3s ease;
+}
+h1,h2,h3,h4{font-family:var(--serif);color:var(--green-900);margin:0 0 .5em;}
+.dark h1,.dark h2,.dark h3,.dark h4{color:#EFE6C4;}
+a{color:var(--green-700);}
+.dark a{color:#7FD8AE;}
+::selection{background:var(--gold-100);}
+
+/* ---------- progress bar ---------- */
+#progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--green-700),var(--gold));width:0%;z-index:9999;transition:width .1s;}
+
+/* ---------- top bar ---------- */
+header.topbar{
+  position:sticky;top:0;z-index:500;
+  background:var(--green-900);
+  color:#F3EFDD;
+  padding:10px 18px;
+  display:flex;align-items:center;gap:14px;
+  box-shadow:var(--shadow);
+  flex-wrap:wrap;
+}
+.brand{display:flex;align-items:center;gap:10px;font-family:var(--serif);font-weight:700;font-size:1.05rem;white-space:nowrap;}
+.brand .seal{
+  width:34px;height:34px;border-radius:50%;
+  background:radial-gradient(circle at 35% 30%,#1D8C63,#04382A 70%);
+  border:2px solid #E9C468;
+  display:flex;align-items:center;justify-content:center;
+  font-size:14px;font-weight:800;color:#E9C468;flex:none;
+}
+.topbar .spacer{flex:1;}
+.searchbox{
+  position:relative;display:flex;align-items:center;
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.18);
+  border-radius:999px;padding:6px 14px;min-width:200px;flex:1;max-width:340px;
+}
+.searchbox input{
+  background:transparent;border:0;outline:0;color:#fff;font-family:var(--sans);
+  width:100%;font-size:.92rem;
+}
+.searchbox input::placeholder{color:#C9C4AE;}
+.icon-btn{
+  background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);
+  color:#F3EFDD;border-radius:999px;padding:7px 13px;cursor:pointer;
+  font-family:var(--sans);font-size:.85rem;display:flex;gap:6px;align-items:center;
+  transition:.2s;
+}
+.icon-btn:hover{background:rgba(255,255,255,.18);}
+#searchResults{
+  position:absolute;top:calc(100% + 8px);left:0;right:0;
+  background:var(--bg-panel);color:var(--ink);border-radius:var(--radius);
+  box-shadow:var(--shadow);max-height:340px;overflow:auto;display:none;z-index:600;
+  border:1px solid var(--line);
+}
+#searchResults a{display:block;padding:10px 14px;border-bottom:1px solid var(--line);font-size:.88rem;text-decoration:none;color:var(--ink);}
+#searchResults a:hover{background:var(--bg-sunken);}
+#searchResults .sr-tag{color:var(--green-700);font-family:var(--mono);font-size:.75rem;}
+.dark #searchResults .sr-tag{color:#7FD8AE;}
+
+/* ---------- layout ---------- */
+.shell{display:flex;max-width:1400px;margin:0 auto;align-items:flex-start;}
+.sidebar{
+  width:290px;flex:none;position:sticky;top:64px;
+  height:calc(100vh - 64px);overflow-y:auto;
+  padding:22px 14px 60px;border-inline-end:1px solid var(--line);
+}
+.sidebar h4{font-size:.78rem;letter-spacing:.06em;color:var(--ink-soft);text-transform:uppercase;margin:18px 6px 8px;font-family:var(--sans);font-weight:700;}
+.sidebar nav a{
+  display:flex;gap:10px;align-items:flex-start;
+  text-decoration:none;color:var(--ink);
+  padding:8px 10px;border-radius:8px;font-size:.9rem;
+}
+.sidebar nav a:hover{background:var(--green-100);}
+.sidebar nav a .num{
+  font-family:var(--mono);font-size:.72rem;color:var(--gold);
+  background:var(--gold-100);border-radius:6px;padding:2px 6px;flex:none;margin-top:2px;
+}
+main{flex:1;min-width:0;padding:0 0 80px;}
+.breadcrumb{padding:14px 30px 0;font-size:.8rem;color:var(--ink-soft);}
+
+/* ---------- hero ---------- */
+.hero{
+  padding:56px 30px 40px;
+  background:
+    radial-gradient(1200px 400px at 80% -10%, rgba(156,107,21,.18), transparent 60%),
+    linear-gradient(180deg,var(--green-900),var(--green-800));
+  color:#F6F2E2;position:relative;overflow:hidden;
+}
+.hero::after{
+  content:"";position:absolute;inset:0;
+  background-image:repeating-linear-gradient(135deg,rgba(255,255,255,.035) 0 2px,transparent 2px 26px);
+  pointer-events:none;
+}
+.hero .eyebrow{
+  display:inline-flex;gap:8px;align-items:center;
+  font-family:var(--mono);font-size:.78rem;letter-spacing:.08em;
+  border:1px solid rgba(233,196,104,.45);color:#E9C468;
+  padding:5px 12px;border-radius:999px;margin-bottom:18px;
+}
+.hero h1{color:#FBF7E7;font-size:clamp(1.8rem,4vw,2.7rem);max-width:820px;}
+.hero p.lead{max-width:680px;color:#D9E7DC;font-size:1.05rem;}
+.factgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:14px;margin-top:30px;max-width:900px;}
+.factcard{
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);
+  border-radius:var(--radius);padding:16px;
+}
+.factcard .n{font-family:var(--serif);font-size:1.7rem;color:#E9C468;font-weight:800;}
+.factcard .l{font-size:.8rem;color:#CFE0D3;margin-top:2px;}
+
+/* ---------- lifecycle flow ---------- */
+.section-pad{padding:46px 30px;max-width:1080px;margin:0 auto;}
+.flowwrap{overflow-x:auto;padding-bottom:10px;}
+.flow{display:flex;gap:0;align-items:stretch;min-width:1180px;}
+.flowstep{
+  flex:1;background:var(--bg-panel);border:1px solid var(--line);
+  border-radius:var(--radius);padding:14px 12px;text-align:center;position:relative;
+  font-size:.82rem;
+}
+.flowstep .fnum{
+  width:26px;height:26px;border-radius:50%;background:var(--green-700);color:#fff;
+  display:flex;align-items:center;justify-content:center;margin:0 auto 8px;
+  font-family:var(--mono);font-size:.75rem;font-weight:700;
+}
+.flowarrow{
+  flex:none;width:26px;display:flex;align-items:center;justify-content:center;
+  color:var(--gold);font-size:1.1rem;
+}
+
+/* ---------- chapters ---------- */
+.chapters{padding:10px 30px 60px;max-width:1080px;margin:0 auto;}
+.chapter{
+  background:var(--bg-panel);border:1px solid var(--line);border-radius:var(--radius);
+  margin-bottom:16px;overflow:hidden;scroll-margin-top:80px;box-shadow:var(--shadow);
+}
+.chapter summary{
+  list-style:none;cursor:pointer;padding:18px 20px;display:flex;gap:14px;align-items:center;
+  background:var(--bg-panel);
+}
+.chapter summary::-webkit-details-marker{display:none;}
+.chapter summary .ch-num{
+  font-family:var(--serif);font-weight:800;font-size:1.5rem;color:var(--green-700);
+  background:var(--green-100);border-radius:8px;min-width:52px;height:52px;
+  display:flex;align-items:center;justify-content:center;flex:none;
+}
+.chapter summary .ch-title{flex:1;}
+.chapter summary .ch-title h3{margin:0;font-size:1.12rem;}
+.chapter summary .ch-title .ch-sub{font-size:.8rem;color:var(--ink-soft);font-family:var(--sans);margin-top:2px;}
+.chapter summary .chev{transition:transform .25s;color:var(--ink-soft);flex:none;font-size:1.2rem;}
+.chapter[open] summary .chev{transform:rotate(180deg);}
+.chapter .body{padding:0 22px 24px;border-top:1px solid var(--line);}
+.chapter .grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;margin:18px 0;}
+.mini{background:var(--bg-sunken);border-radius:8px;padding:12px 14px;font-size:.87rem;}
+.mini b{display:block;color:var(--green-800);font-family:var(--sans);font-size:.78rem;letter-spacing:.03em;margin-bottom:4px;}
+.dark .mini b{color:#9FD9BB;}
+ul.bullets{margin:10px 0;padding-inline-start:20px;}
+ul.bullets li{margin-bottom:6px;font-size:.93rem;}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0;}
+.tag{
+  font-family:var(--mono);font-size:.72rem;background:var(--gold-100);color:var(--gold);
+  padding:4px 10px;border-radius:999px;border:1px solid rgba(156,107,21,.25);
+}
+.callout{border-radius:8px;padding:12px 14px;font-size:.88rem;margin:14px 0;border:1px solid transparent;}
+.callout.warn{background:var(--amber-100);border-color:#D8A93E55;}
+.callout.tip{background:var(--blue-100);border-color:#6C93B855;}
+.callout.mistake{background:var(--red-100);border-color:#B3122A33;}
+.callout b{display:block;margin-bottom:3px;}
+.phase-badge{
+  display:inline-flex;align-items:center;gap:8px;font-size:.78rem;
+  background:var(--green-100);color:var(--green-800);border-radius:999px;
+  padding:6px 12px;margin-top:16px;font-family:var(--sans);
+}
+.dark .phase-badge{color:#9FD9BB;}
+
+/* ---------- checklist / faq ---------- */
+.checklist label{display:flex;gap:10px;align-items:flex-start;font-size:.9rem;margin-bottom:8px;cursor:pointer;}
+.checklist input{margin-top:4px;}
+
+details.faq{border-bottom:1px solid var(--line);padding:10px 0;}
+details.faq summary{cursor:pointer;font-weight:600;font-size:.94rem;list-style:none;display:flex;justify-content:space-between;gap:10px;}
+details.faq summary::-webkit-details-marker{display:none;}
+details.faq summary::after{content:"+";font-size:1.2rem;color:var(--gold);}
+details.faq[open] summary::after{content:"–";}
+details.faq p{font-size:.9rem;color:var(--ink-soft);margin:8px 0 0;}
+
+/* ---------- footer / floating ---------- */
+footer{padding:40px 30px;background:var(--bg-sunken);border-top:1px solid var(--line);font-size:.85rem;color:var(--ink-soft);}
+footer .fgrid{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr;gap:20px;}
+#toTop{
+  position:fixed;bottom:22px;inset-inline-end:22px;z-index:400;
+  width:44px;height:44px;border-radius:50%;border:1px solid var(--line);
+  background:var(--green-800);color:#fff;cursor:pointer;box-shadow:var(--shadow);
+  display:none;align-items:center;justify-content:center;font-size:1.1rem;
+}
+mark{background:var(--gold-100);color:inherit;border-radius:3px;padding:0 2px;}
+
+.ss-placeholder{
+  border:2px dashed var(--line);border-radius:10px;padding:22px 16px;text-align:center;
+  color:var(--ink-soft);background:var(--bg-sunken);font-size:.85rem;margin:12px 0;
+}
+.ss-placeholder .cam{font-size:1.6rem;display:block;margin-bottom:6px;}
+.role-table{width:100%;border-collapse:collapse;font-size:.86rem;margin:10px 0;}
+.role-table th{background:var(--bg-sunken);text-align:right;padding:7px 9px;border:1px solid var(--line);}
+.role-table td{padding:7px 9px;border:1px solid var(--line);text-align:right;}
+.role-table td.pass{color:var(--green-700);font-weight:700;}
+.dark .role-table td.pass{color:#7FD8AE;}
+.role-table td.fail{color:var(--red);font-weight:700;}
+.module-badge{
+  display:inline-flex;align-items:center;gap:6px;font-family:var(--mono);font-size:.72rem;
+  background:var(--blue-100);color:#2A5D82;padding:4px 10px;border-radius:999px;margin:14px 0 0;
+}
+.dark .module-badge{color:#8FC4E8;}
+.partB-banner{
+  background:linear-gradient(135deg,#0B3B4E,#134B63);color:#F2EFE4;border-radius:var(--radius);
+  padding:30px 26px;margin:6px 30px 22px;max-width:1080px;
+}
+.partB-banner h2{color:#FBF9F2;margin-bottom:8px;}
+.partB-banner p{color:#D8DDD8;max-width:74ch;margin:0;}
+.term-table{width:100%;border-collapse:collapse;font-size:.88rem;margin:14px 0;}
+.term-table th{background:var(--bg-sunken);text-align:right;padding:9px 12px;border:1px solid var(--line);}
+.term-table td{padding:9px 12px;border:1px solid var(--line);vertical-align:top;}
+.term-table td:first-child{font-weight:700;color:var(--green-800);white-space:nowrap;}
+.dark .term-table td:first-child{color:#9FD9BB;}
+.redflag-list{list-style:none;padding:0;margin:14px 0;}
+.redflag-list li{
+  display:flex;gap:10px;align-items:flex-start;font-size:.9rem;margin-bottom:10px;
+  background:var(--red-100);border-radius:8px;padding:10px 12px;
+}
+.redflag-list li::before{content:"🚩";flex:none;}
+.ter-field{
+  border:1px dashed var(--line);border-radius:8px;padding:10px 14px;margin-bottom:10px;font-size:.88rem;
+}
+.ter-field b{display:block;font-size:.75rem;letter-spacing:.04em;color:var(--gold);text-transform:uppercase;margin-bottom:4px;font-family:var(--mono);}
+.stepline{border-inline-start:3px solid var(--green-700);padding:4px 0 4px 16px;margin:0 0 10px;}
+.dark .stepline{border-inline-start-color:#7FD8AE;}
+.stepline b{color:var(--green-800);}
+.dark .stepline b{color:#9FD9BB;}
+
+@media print{
+  header.topbar,.sidebar,#toTop,#progress,.searchbox,.icon-btn,.phase-badge{display:none !important;}
+  .chapter{break-inside:avoid;border:1px solid #999;box-shadow:none;}
+  .chapter .body{display:block !important;}
+  body{background:#fff;color:#000;}
+}
+@media (max-width:920px){
+  .sidebar{position:fixed;top:0;bottom:0;left:0;background:var(--bg);z-index:800;transform:translateX(-105%);transition:transform .25s;width:78vw;height:100vh;box-shadow:var(--shadow);}
+  .sidebar.open{transform:translateX(0);}
+  .shell{display:block;}
+}
+</style>
+</head>
+<body>
+
+<div id="progress"></div>
+
+<header class="topbar">
+  <div class="brand">
+    <span class="seal">PPR</span>
+    <span>PPR 2025 গাইড</span>
+  </div>
+  <button class="icon-btn" id="menuBtn" title="মেনু">☰ অধ্যায়সমূহ</button>
+  <div class="spacer"></div>
+  <div class="searchbox">
+    <input id="searchInput" type="text" placeholder="Rule, বিষয় বা শব্দ খুঁজুন… (যেমন: Rule 90, RFQ, Debarment)">
+    <div id="searchResults"></div>
+  </div>
+  <button class="icon-btn" id="darkBtn">🌓 ডার্ক মোড</button>
+  <button class="icon-btn" id="printBtn">🖨️ প্রিন্ট</button>
+  <button class="icon-btn" id="installBtn" style="display:none;background:var(--gold);color:#fff;border-color:var(--gold);">📲 অ্যাপ ইনস্টল করুন</button>
+</header>
+<div id="offlineBadge" style="display:none;position:fixed;top:0;left:0;right:0;z-index:10000;background:#7A1F1F;color:#fff;text-align:center;font-size:.78rem;padding:5px;">
+  📴 আপনি অফলাইনে আছেন — সংরক্ষিত কনটেন্ট দেখানো হচ্ছে
+</div>
+
+<div class="shell">
+  <aside class="sidebar" id="sidebar">
+    <h4>সূচিপত্র</h4>
+    <nav id="tocNav">
+      <a href="#intro"><span class="num">০০</span><span>ভূমিকা ও মূল তথ্য</span></a>
+      <a href="#lifecycle"><span class="num">০০</span><span>ক্রয় প্রক্রিয়ার ধাপ</span></a>
+      <a href="#ch1"><span class="num">০১</span><span>প্রারম্ভিক (Rule ১–৩)</span></a>
+      <a href="#ch2"><span class="num">০২</span><span>দরপত্র প্রস্তুতকরণ ও কমিটি (৪–২১)</span></a>
+      <a href="#ch3"><span class="num">০৩</span><span>ক্রয় নীতি — ১২টি অংশ (২২–৭৭)</span></a>
+      <a href="#ch4"><span class="num">০৪</span><span>ক্রয় পদ্ধতিসমূহ (৭৮–১০৯) ★ গভীর</span></a>
+      <a href="#ch5"><span class="num">০৫</span><span>প্রক্রিয়াকরণ: বিজ্ঞাপন ও মূল্যায়ন (১১০–১২৩)</span></a>
+      <a href="#ch6"><span class="num">০৬</span><span>Services: পরামর্শক সেবা (১২৪–১৪৮)</span></a>
+      <a href="#ch7"><span class="num">০৭</span><span>অসদাচরণ: ব্ল্যাকলিস্টিং (১৪৯)</span></a>
+      <a href="#ch8"><span class="num">০৮</span><span>ইলেকট্রনিক পদ্ধতি: e-GP (১৫০)</span></a>
+      <a href="#ch9"><span class="num">০৯</span><span>বিবিধ: PPP, আউটসোর্সিং (১৫১–১৫৪)</span></a>
+      <a href="#ch-schedules"><span class="num">📑</span><span>তফসিলসমূহ (Schedules ১–২১)</span></a>
+      <a href="#ch10"><span class="num">🖥️</span><span>e-GP ব্যবহারিক গাইড: আপলোড → মূল্যায়ন → Award</span></a>
+      <a href="#ch11"><span class="num">SLT</span><span>Significantly Low-priced Tender (Rule ২৫–২৬)</span></a>
+    </nav>
+    <h4>পার্ট-B · দরপত্র মূল্যায়ন প্রশিক্ষণ মডিউল</h4>
+    <nav>
+      <a href="#partB"><span class="num">TEC</span><span>ভূমিকা: সম্পূর্ণ মূল্যায়ন কার্যপ্রবাহ</span></a>
+      <a href="#tec1"><span class="num">M১</span><span>TEC কনফিগারেশন</span></a>
+      <a href="#tec2"><span class="num">M২</span><span>কমিটির সম্মতি (Consent)</span></a>
+      <a href="#tec3"><span class="num">M৩</span><span>মূল্যায়ন শুরু</span></a>
+      <a href="#tec4"><span class="num">M৪</span><span>Eligibility ও Qualification</span></a>
+      <a href="#tec5"><span class="num">M৫</span><span>Technical Evaluation</span></a>
+      <a href="#tec6"><span class="num">M৬</span><span>Financial Evaluation</span></a>
+      <a href="#tec7"><span class="num">M৭</span><span>SLP Calculation ও LERT</span></a>
+      <a href="#tec8"><span class="num">M৮</span><span>Post Qualification</span></a>
+      <a href="#tec9"><span class="num">M৯</span><span>TER প্রস্তুতকরণ</span></a>
+      <a href="#tec10"><span class="num">M১০</span><span>Approval Workflow</span></a>
+      <a href="#tec11"><span class="num">M১১</span><span>Final Submission</span></a>
+      <a href="#tec12"><span class="num">M১২</span><span>বাস্তব কেস স্টাডি (RD-07)</span></a>
+    </nav>
+    <h4>অতিরিক্ত রিসোর্স</h4>
+    <nav>
+      <a href="#comparison"><span class="num">↔</span><span>PPR 2025 vs 2008 — মূল সংস্কার</span></a>
+      <a href="#quickref"><span class="num">⏱</span><span>থ্রেশহোল্ড ও সময়সীমা — Quick Reference</span></a>
+      <a href="#glossary"><span class="num">Aa</span><span>শব্দকোষ (Glossary)</span></a>
+      <a href="#redflags"><span class="num">🚩</span><span>মূল্যায়নকারীর সতর্কতা সংকেত</span></a>
+      <a href="#ter-template"><span class="num">TER</span><span>TER রিপোর্ট টেমপ্লেট</span></a>
+      <a href="#finalquiz"><span class="num">✓</span><span>চূড়ান্ত মূল্যায়ন কুইজ (১৫টি)</span></a>
+      <a href="#faq"><span class="num">❖</span><span>সাধারণ জিজ্ঞাসা (FAQ)</span></a>
+    </nav>
+    <h4>এই সংস্করণ সম্পর্কে</h4>
+    <div class="mini" style="font-size:.82rem;">
+      এই সংস্করণটি দুটি উৎস একত্র করে তৈরি — (১) PPR 2025-এর <b>অফিসিয়াল ৯-অধ্যায় কাঠামো</b> অনুসরণকারী মূল গাইড, এবং (২) <b>দরপত্র মূল্যায়ন প্রশিক্ষণ নির্দেশিকা (পার্ট-B)</b> — যা e-GP-তে TEC-এর সম্পূর্ণ মূল্যায়ন কার্যপ্রবাহ ধাপে-ধাপে ব্যাখ্যা করে। সাথে যুক্ত হয়েছে Quick Reference, শব্দকোষ, রেড-ফ্ল্যাগ চেকলিস্ট, TER টেমপ্লেট ও একটি সমন্বিত মূল্যায়ন কুইজ।
+    </div>
+  </aside>
+
+  <main>
+    <section class="hero" id="intro">
+      <span class="eyebrow">গেজেট নং ডি এ-১ • ২৮ সেপ্টেম্বর ২০২৫ থেকে কার্যকর</span>
+      <h1>Public Procurement Rules, 2025 — সম্পূর্ণ ইন্টারেক্টিভ প্রশিক্ষণ গাইড</h1>
+      <p class="lead">
+        সরকারি কর্মকর্তা, প্রকৌশলী, ঠিকাদার, কনসালট্যান্ট, টেন্ডার এভালুয়েটর, প্রকিউরমেন্ট স্পেশালিস্ট এবং e-GP ব্যবহারকারীদের জন্য PPR 2025-এর একটি সহজবোধ্য, সুসংগঠিত রেফারেন্স। এটি Public Procurement Act (PPA), 2006 এবং এর ২০২৫ সালের সংশোধনী অধ্যাদেশের আলোকে প্রণীত। এই সংস্করণে মূল বিধিমালার পাশাপাশি একটি সম্পূর্ণ <b>দরপত্র মূল্যায়ন প্রশিক্ষণ মডিউল</b> (TEC গঠন থেকে চূড়ান্ত Award পর্যন্ত, বাস্তব কেস স্টাডিসহ) এবং প্র্যাকটিশনারদের জন্য একগুচ্ছ কর্মউপযোগী রিসোর্স যুক্ত করা হয়েছে।
+      </p>
+      <div class="factgrid">
+        <div class="factcard"><div class="n">154</div><div class="l">মোট Rule</div></div>
+        <div class="factcard"><div class="n">21</div><div class="l">Schedule</div></div>
+        <div class="factcard"><div class="n">4</div><div class="l">ক্রয় ক্যাটাগরি</div></div>
+        <div class="factcard"><div class="n">60–150</div><div class="l">দিন টেন্ডার ভ্যালিডিটি</div></div>
+        <div class="factcard"><div class="n">12</div><div class="l">মূল্যায়ন প্রশিক্ষণ মডিউল</div></div>
+      </div>
+      <div class="callout tip" style="max-width:820px;margin-top:26px;background:rgba(255,255,255,.08);color:#EAF3EC;border-color:rgba(255,255,255,.2);">
+        <b>📘 স্বচ্ছতার নোট</b>
+        এই গাইডের ব্যাখ্যা, উদাহরণ ও সারাংশগুলো <b>ব্যাখ্যামূলক উপকরণ</b> — মূল আইনি ভাষা নয়। যেকোনো সিদ্ধান্তের আগে সর্বদা BPPA কর্তৃক প্রকাশিত মূল গেজেট
+        (<a href="https://www.bppa.gov.bd/upload/policyandprocedure/2025-09-29-20-12-59-PPR2025.pdf" target="_blank" style="color:#E9C468;">bppa.gov.bd — PPR 2025 PDF</a>) যাচাই করুন। কিছু Rule নম্বর এখানে সাধারণ কাঠামো অনুযায়ী দেওয়া হয়েছে, যা গভীর পর্যায়ে চূড়ান্তভাবে যাচাই করা হবে।
+      </div>
+    </section>
+
+    <section class="section-pad" id="lifecycle">
+      <h2>🔄 ক্রয় প্রক্রিয়ার ধাপ (Procurement Life-Cycle)</h2>
+      <p style="color:var(--ink-soft);max-width:760px;">প্রয়োজন চিহ্নিতকরণ থেকে চূড়ান্ত পেমেন্ট পর্যন্ত একটি সাধারণ Works/Goods প্রকিউরমেন্টের ধাপগুলো (ব্যাখ্যামূলক ফ্লো) —</p>
+      <div class="flowwrap">
+        <div class="flow" id="flowChart">
+          <!-- filled by JS -->
+        </div>
+      </div>
+    </section>
+
+    <section class="chapters" id="chapterList">
+
+      <details class="chapter" id="ch1">
+        <summary>
+          <div class="ch-num">০১</div>
+          <div class="ch-title"><h3>প্রথম অধ্যায়: প্রারম্ভিক</h3><div class="ch-sub">Preliminary — Rule ১–৩ (নামকরণ, প্রয়োগ ও সংজ্ঞা)</div></div>
+          <div class="chev">▾</div>
+        </summary>
+        <div class="body">
+          <div class="tags"><span class="tag">Rule ১–৩ (অফিসিয়াল কাঠামো-যাচাইকৃত)</span><span class="tag">সংজ্ঞা</span><span class="tag">Economic Operator</span></div>
+          <div class="grid2">
+            <div class="mini"><b>উদ্দেশ্য</b>PPR 2025-এর নামকরণ, কার্যকরের তারিখ, প্রযোজ্যতা এবং আইনে ব্যবহৃত মূল পরিভাষার সংজ্ঞা নির্ধারণ করা।</div>
+            <div class="mini"><b>কেন গুরুত্বপূর্ণ</b>পুরো বিধিমালার ব্যাখ্যা এই সংজ্ঞাগুলোর উপর নির্ভর করে — ভুল বুঝলে প্রতিটি পরবর্তী ধাপে ভুল সিদ্ধান্তের ঝুঁকি থাকে।</div>
+            <div class="mini"><b>কোথায় প্রযোজ্য</b>PPR-এর আওতাভুক্ত সকল সরকারি ক্রয়কারী প্রতিষ্ঠান (LGED, RHD, BWDB, PWD, WASA, City Corporation, Municipality ইত্যাদি)।</div>
+          </div>
+          <h4>সংক্ষিপ্ত মূল বিষয়</h4>
+          <ul class="bullets">
+            <li>PPA 2006 এবং ২০২৫ সালের সংশোধনী অধ্যাদেশের আলোকে PPR 2025 প্রণীত ও ২৮ সেপ্টেম্বর ২০২৫ থেকে কার্যকর — যা PPR 2008-কে প্রতিস্থাপন করেছে।</li>
+            <li>"Economic Operator" পরিভাষার মাধ্যমে Supplier, Contractor, Service Provider ও Consultant-কে একটি অভিন্ন ছাতার নিচে আনা হয়েছে।</li>
+            <li>"Responsive" ও "Procurement Strategy"-এর মতো নতুন সংজ্ঞা যুক্ত হয়েছে যা PPR 2008-এ ছিল না।</li>
+            <li>প্রতিটি ক্রয়কারী প্রতিষ্ঠানকে (Procuring Entity) প্রধান হিসেবে দায়িত্বপ্রাপ্ত কর্মকর্তা (Head of PE) সুনির্দিষ্টভাবে চিহ্নিত করতে হয়।</li>
+          </ul>
+          <div class="callout warn"><b>⚠️ সাধারণ ভুল</b>অনেকে PPR 2008-এর পুরনো সংজ্ঞা মনে রেখে PPR 2025-এর নতুন/সংশোধিত সংজ্ঞা উপেক্ষা করেন — এতে পরিকল্পনা পর্যায়েই ত্রুটি হয়।</div>
+          <div class="phase-badge">🔜 গভীর পর্যায়ে যুক্ত হবে: প্রতিটি সংজ্ঞার rule-ভিত্তিক পূর্ণ ব্যাখ্যা, বাস্তব উদাহরণ, ২০টি MCQ, ১০টি FAQ, কেস স্টাডি ও চেকলিস্ট।</div>
+        </div>
+      </details>
+
+      <details class="chapter" id="ch2">
+        <summary>
+          <div class="ch-num">০২</div>
+          <div class="ch-title"><h3>দ্বিতীয় অধ্যায়: দরপত্র প্রস্তুতকরণ ও কমিটিসমূহ</h3><div class="ch-sub">Rule ৪–২১ (অংশ-১: ৪–৮ · অংশ-২: ৯–২১)</div></div>
+          <div class="chev">▾</div>
+        </summary>
+        <div class="body">
+          <div class="tags"><span class="tag">Rule ৪–২১</span><span class="tag">Rule ৬ SPP (যাচাইকৃত)</span><span class="tag">Rule ১৮ DRC (যাচাইকৃত)</span></div>
+          <div class="grid2">
+            <div class="mini"><b>উদ্দেশ্য</b>ক্রয় শুরুর আগেই দরপত্র প্রস্তুতির নীতিমালা এবং সিদ্ধান্তগ্রহণকারী কমিটিসমূহের কাঠামো নির্ধারণ করা।</div>
+            <div class="mini"><b>কেন গুরুত্বপূর্ণ</b>Sustainable Procurement (Rule ৬) ও Debarment Review Committee (Rule ১৮)-এর মতো PPR 2025-এর দুটি বড় সংস্কার এই অধ্যায়ে অন্তর্ভুক্ত।</div>
+            <div class="mini"><b>কোথায় প্রযোজ্য</b>প্রতিটি ক্রয়কারী প্রতিষ্ঠান এবং BPPA পর্যায়ে, ক্রয় প্রক্রিয়া শুরুর প্রাথমিক ধাপে।</div>
+          </div>
+
+          <h4>অংশ-১: দরপত্র প্রস্তুতকরণ (Rule ৪–৮)</h4>
+          <div class="mini">
+            <ul class="bullets">
+              <li>দরপত্র প্রস্তুতির সাধারণ নীতিমালা এই অংশে বর্ণিত — স্পষ্ট, অ-বৈষম্যমূলক ও প্রতিযোগিতামূলক দলিল প্রণয়নের নির্দেশনা।</li>
+              <li><b>Rule ৬ (যাচাইকৃত):</b> Sustainable Public Procurement (SPP) ধারণাটি সরাসরি এখানে অন্তর্ভুক্ত — পরিবেশগত, সামাজিক ও অর্থনৈতিক টেকসইতাকে ক্রয় সিদ্ধান্তের আবশ্যিক বিবেচ্য বিষয় করা হয়েছে। সরকার কর্তৃক পৃথক SPP Policy অনুমোদিত।</li>
+              <li>নারী উদ্যোক্তা, ক্ষুদ্র ও নতুন উদ্যোগগুলোর প্রতিযোগিতা সহজতর করার নীতিও (Rule ৮০(১)(ঘ)-এর সাথে সাংঘর্ষিক নয়) এই দর্শনের সাথে সংগতিপূর্ণ।</li>
+            </ul>
+            <div class="callout tip"><b>💡 Tips</b>SPP শুধু "পরিবেশবান্ধব পণ্য কেনা" নয় — জীবনচক্র খরচ (Life-cycle cost) ও সামাজিক দায়বদ্ধতাও বিবেচ্য।</div>
+          </div>
+
+          <h4>অংশ-২: কমিটিসমূহ (Rule ৯–২১)</h4>
+          <div class="mini">
+            <ul class="bullets">
+              <li><b>Rule ১৮ (যাচাইকৃত):</b> Debarment Review Committee (DRC) গঠন — ব্ল্যাকলিস্টিং প্রক্রিয়াকে আরও স্বচ্ছ ও ন্যায্য করার লক্ষ্যে PPR 2025-এর একটি সম্পূর্ণ নতুন সংযোজন।</li>
+              <li>Enlistment Committee, Variation Assessment Committee, Technical Examination and Acceptance Committee, Contract Termination Review Committee — এই কাঠামোগত কমিটিসমূহ পৃথকভাবে সংজ্ঞায়িত।</li>
+              <li>Tender Evaluation Committee (TEC)-এর গঠন ও দায়িত্ব এই অংশে নির্ধারিত হলেও এর কার্যকর প্রয়োগ ঘটে অধ্যায়-৫ (প্রক্রিয়াকরণ, Rule ১১৪–১২৩)-এ।</li>
+            </ul>
+            <div class="callout mistake"><b>❌ সাধারণ ভুল</b>একবার গঠিত কমিটির সদস্য মাঝপথে পরিবর্তন করা — কমিটির গঠন প্রক্রিয়া চলাকালীন অপরিবর্তিত রাখা আবশ্যক।</div>
+          </div>
+          <div class="phase-badge">🔜 গভীর পর্যায়ে যুক্ত হবে: প্রতিটি কমিটির rule-ভিত্তিক ক্ষমতা ও গঠন প্রক্রিয়া, Decision Tree, MCQ/FAQ।</div>
+        </div>
+      </details>
+
+      <details class="chapter" id="ch3">
+        <summary>
+          <div class="ch-num">০৩</div>
+          <div class="ch-title"><h3>তৃতীয় অধ্যায়: ক্রয় নীতি</h3><div class="ch-sub">Rule ২২–৭৭ — ১২টি অংশ (সবচেয়ে বৃহৎ অধ্যায়)</div></div>
+          <div class="chev">▾</div>
+        </summary>
+        <div class="body">
+          <div class="tags"><span class="tag">Rule ২২–৭৭</span><span class="tag">১২টি অংশ</span><span class="tag">Rule ৭২–৭৭ (যাচাইকৃত — অভিযোগ)</span></div>
+          <div class="grid2">
+            <div class="mini"><b>উদ্দেশ্য</b>ক্রয় পরিকল্পনা থেকে শুরু করে চুক্তি বাস্তবায়ন, রেকর্ড সংরক্ষণ ও অভিযোগ নিষ্পত্তি পর্যন্ত সামগ্রিক ক্রয়নীতি নির্ধারণ করা।</div>
+            <div class="mini"><b>কেন গুরুত্বপূর্ণ</b>এটি PPR 2025-এর সবচেয়ে বিস্তৃত অধ্যায় — Procurement Strategy, Tender Validity, চুক্তি ব্যবস্থাপনা ও অভিযোগ-আপিল সবকিছুর মূল উৎস।</div>
+            <div class="mini"><b>কোথায় প্রযোজ্য</b>প্রতিটি ক্রয় প্রক্রিয়ার পরিকল্পনা থেকে সমাপ্তি পর্যন্ত প্রতিটি পর্যায়ে।</div>
+          </div>
+
+          <h4>১২টি অংশের সংক্ষিপ্ত বিবরণ</h4>
+
+          <div class="mini">
+            <b>অংশ-১: সাধারণ (Rule ২২–২৭)</b>
+            <p style="margin:8px 0;"><b>Rule ২৪ (যাচাইকৃত):</b> APP-এর পাশাপাশি "Procurement Strategy" নামে একটি নতুন আবশ্যিক দলিল প্রস্তুতের বিধান — বাজার বিশ্লেষণ, প্রতিযোগিতার স্তর ও টেকসইতা বিবেচনায় নিয়ে। জটিল/উচ্চমূল্যের ক্রয়ে Pre-procurement Conference আয়োজনের বিধানও এখানে। এই অংশেই ক্রয়ের সাধারণ শ্রেণিবিভাগ (Works/Goods/Professional Services/Non-Consulting-Physical Services — চারটি ক্যাটাগরি, যার মধ্যে Physical Services PPR 2008-এ ছিল না) সংজ্ঞায়িত।</p>
+          </div>
+          <div class="mini">
+            <b>অংশ-২: দরপত্র বৈধতা, জামানত (Rule ২৮–৩৭)</b>
+            <p style="margin:8px 0;">Tender Validity Period আগে ছিল সাধারণত ৬০–১২০ দিন; PPR 2025-এ সম্প্রসারিত করে <b>৬০–১৫০ দিন</b>। ভ্যালিডিটির মধ্যেই মূল্যায়ন সম্পন্ন করে NOA ইস্যু বাধ্যতামূলক। Tender Security ও Performance Security-এর হার ও Retention Money সংক্রান্ত বিধানও এই অংশে।</p>
+          </div>
+          <div class="mini">
+            <b>অংশ-৩: বিনির্দেশ — Specification (Rule ৩৮–৪৩)</b>
+            <p style="margin:8px 0;">নির্দিষ্ট ব্র্যান্ড/মডেলের পরিবর্তে Generic specification ব্যবহারের নীতি, STD-ভিত্তিক বিনির্দেশ প্রণয়নের নির্দেশনা — যাতে অ-বৈষম্যমূলক প্রতিযোগিতা নিশ্চিত হয়।</p>
+          </div>
+          <div class="mini">
+            <b>অংশ-৪: দরপত্র বাতিলকরণ (Rule ৪৪–৪৬)</b>
+            <p style="margin:8px 0;">কোন পরিস্থিতিতে ও কোন কর্তৃপক্ষের অনুমোদনক্রমে একটি দরপত্র প্রক্রিয়া বাতিল করা যাবে তার নিয়ম — যেমন কোনো Responsive দরপত্র না পাওয়া গেলে বা মৌলিক ত্রুটি ধরা পড়লে।</p>
+          </div>
+          <div class="mini">
+            <b>অংশ-৫: অনুমোদন, চুক্তিসম্পাদন (Rule ৪৭–৪৯)</b>
+            <p style="margin:8px 0;">TEC সুপারিশ Delegation of Financial Power অনুযায়ী যথাযথ অনুমোদনকারী কর্তৃপক্ষের কাছে উপস্থাপন, এরপর Notification of Award (NOA) জারি এবং Performance Security জমার পর Contract Agreement স্বাক্ষর।</p>
+          </div>
+          <div class="mini">
+            <b>অংশ-৬: চুক্তি পরিচালনা (Rule ৫০–৫৯)</b>
+            <p style="margin:8px 0;">কাজের পরিধি পরিবর্তনে Variation Assessment Committee-এর মূল্যায়নভিত্তিক Variation Order; বিলম্বে Extension of Time (EOT); নির্ধারিত সময়ে কাজ শেষ না হলে Liquidated Damages (LD); সমাপ্তির পর Defects Liability Period (DLP) ও Defects Correction Certificate।</p>
+          </div>
+          <div class="mini">
+            <b>অংশ-৭: রেকর্ডপত্র সংরক্ষণ (Rule ৬০–৬১)</b>
+            <p style="margin:8px 0;">প্রতিটি ক্রয় প্রক্রিয়ার দলিলাদি (দরপত্র, মূল্যায়ন প্রতিবেদন, অনুমোদন, চুক্তি) নির্দিষ্ট মেয়াদ পর্যন্ত সংরক্ষণ ও তফসিল-১১ অনুযায়ী Records of Procurement বজায় রাখার বাধ্যবাধকতা।</p>
+          </div>
+          <div class="mini">
+            <b>অংশ-৮: ক্রয় প্রক্রিয়া-উত্তর পুনরীক্ষণ (Rule ৬২–৬৩)</b>
+            <p style="margin:8px 0;">Post-Procurement Review (PPR-এর নিজস্ব নিরীক্ষা প্রক্রিয়া, IMED/BPPA কর্তৃক পরিচালিত) — সম্পন্ন ক্রয় পরবর্তীতে নিয়মানুবর্তিতা যাচাইয়ে পর্যালোচিত হয়।</p>
+          </div>
+          <div class="mini">
+            <b>অংশ-৯: ব্যক্তির যোগ্যতা (Rule ৬৪–৬৯)</b>
+            <p style="margin:8px 0;">দরদাতা/সরবরাহকারী/ঠিকাদার হিসেবে অংশগ্রহণের জন্য প্রয়োজনীয় আইনগত, আর্থিক ও কারিগরি যোগ্যতার শর্তাবলি — অযোগ্যতার কারণসমূহও (যেমন দেউলিয়া ঘোষণা, ডিবার তালিকাভুক্তি) এখানে বর্ণিত।</p>
+          </div>
+          <div class="mini">
+            <b>অংশ-১০: যৌথ উদ্যোগ — JVCA (Rule ৭০)</b>
+            <p style="margin:8px 0;">Joint Venture/Consortium/Association গঠন করে দরপত্রে অংশগ্রহণের শর্তাবলি — লিড পার্টনার নির্ধারণ, JVCA চুক্তির নমুনা তফসিল-১২-এ প্রদত্ত।</p>
+          </div>
+          <div class="mini">
+            <b>অংশ-১১: স্বার্থের সংঘাত (Rule ৭১)</b>
+            <p style="margin:8px 0;">একই ব্যক্তি/প্রতিষ্ঠান একাধিক প্রতিদ্বন্দ্বী দরদাতার সাথে সম্পর্কযুক্ত থাকলে বা পরামর্শক নিজেই পরবর্তী বাস্তবায়ন কাজে দরদাতা হলে যে Conflict of Interest তৈরি হয়, তা প্রতিরোধের বিধান (তফসিল-১৩-এও পরামর্শকদের জন্য নির্দিষ্ট নির্দেশনা)।</p>
+          </div>
+          <div class="mini">
+            <b>অংশ-১২: অভিযোগ ও আপীল (Rule ৭২–৭৭, যাচাইকৃত)</b>
+            <p style="margin:8px 0;">PPA 2006-এর Section 30-এর সাথে সংগতিপূর্ণভাবে অভিযোগ ও আপিল নিষ্পত্তির নির্দিষ্ট সময়সীমা ও ধাপ — প্রথমে ক্রয়কারী প্রতিষ্ঠানে, অতঃপর উচ্চতর কর্তৃপক্ষ বা BPPA-এর Review Panel-এ আপিল।</p>
+          </div>
+
+          <div class="callout warn" style="margin-top:14px;"><b>⚠️ গুরুত্বপূর্ণ</b>এই অধ্যায়ের পরিধি সবচেয়ে বিস্তৃত হওয়ায় প্রায় প্রতিটি ব্যবহারিক প্রশ্নের rule-রেফারেন্স এখানেই খুঁজতে হয় — Rule নম্বর মনে না থাকলে অংশ (Part) দিয়ে খোঁজা সহজ।</div>
+          <div class="phase-badge">🔜 গভীর পর্যায়ে যুক্ত হবে: প্রতিটি অংশের জন্য পৃথক rule-ভিত্তিক বিস্তারিত, উদাহরণ, ২০ MCQ + ১০ FAQ (অংশ অনুযায়ী ভাগ করে)।</div>
+        </div>
+      </details>
+
+      <!-- CHAPTER 4 (official) — FULL DEEP DIVE, PRESERVED AS-IS —placeholder replaced below by splice script -->
+      <details class="chapter" id="ch4">
+        <summary>
+          <div class="ch-num">০৪</div>
+          <div class="ch-title"><h3>চতুর্থ অধ্যায়: ক্রয় পদ্ধতিসমূহ — সম্পূর্ণ গভীর পাঠ</h3><div class="ch-sub">অফিসিয়াল কাঠামো: চতুর্থ অধ্যায় — বিধি ৭৮–১০৯ (৯টি অংশ)</div></div>
+          <div class="chev">▾</div>
+        </summary>
+        <div class="body">
+          <div class="callout tip" style="margin-top:16px;">
+            <b>📘 কাঠামোগত নোট</b> PPR 2025-এর অফিসিয়াল সূচি অনুযায়ী এই বিষয়টি প্রকৃতপক্ষে <b>চতুর্থ অধ্যায় (Rule 78–109)</b> — "পণ্য, কার্য ও ভৌতসেবার ক্রয় পদ্ধতি এবং উহার প্রয়োগ"। এখানে অধ্যায় নম্বর "০৬" এই গাইডের নিজস্ব বিষয়ভিত্তিক ক্রমে রাখা হয়েছে, কিন্তু Rule রেফারেন্সগুলো PPR 2025-এর প্রকৃত (official) নম্বরায়ন অনুসরণ করে।
+          </div>
+
+          <div class="tags">
+            <span class="tag">Rule 78–109</span><span class="tag">৯টি অংশ (Part)</span>
+            <span class="tag">অংশ-৫: RFQ ৯০–৯৪</span><span class="tag">verbatim-যাচাইকৃত: 78, 79</span>
+          </div>
+
+          <h4>১. অধ্যায় পরিচিতি</h4>
+          <div class="grid2">
+            <div class="mini"><b>উদ্দেশ্য</b>ক্রয়ের প্রকৃতি (Goods/Works/Physical Services), মূল্য ও জটিলতা বিবেচনায় নিয়ে ৯টি ভিন্ন ভিন্ন ক্রয় পদ্ধতির মধ্য থেকে সঠিকটি প্রয়োগের নিয়ম নির্ধারণ করা।</div>
+            <div class="mini"><b>কেন গুরুত্বপূর্ণ</b>ভুল পদ্ধতি নির্বাচন — বিশেষত OTM এড়িয়ে অন্য পদ্ধতি ব্যবহার — সবচেয়ে বেশি অডিট আপত্তি, অভিযোগ ও চুক্তি বাতিলের কারণ হয়।</div>
+            <div class="mini"><b>কোথায় ব্যবহার হয়</b>Procurement Strategy ও APP প্রণয়নের পরপরই, প্রতিটি প্যাকেজের জন্য পদ্ধতি নির্বাচনের সিদ্ধান্ত এই অধ্যায়ের ভিত্তিতে নিতে হয়।</div>
+          </div>
+
+          <h4>২. Rule List (অংশ-ভিত্তিক)</h4>
+          <ul class="bullets">
+            <li><b>অংশ-১ (Rule 78–79):</b> উন্মুক্ত দরপত্র পদ্ধতি (OTM) ও অন্যান্য পদ্ধতি প্রয়োগের সাধারণ নীতি</li>
+            <li><b>অংশ-২ (Rule 80–81):</b> সীমিত দরপত্র পদ্ধতি (LTM)</li>
+            <li><b>অংশ-৩ (Rule 82–85):</b> দুই পর্যায়বিশিষ্ট দরপত্র পদ্ধতি (Two-Stage Tendering — TSTM)</li>
+            <li><b>অংশ-৪ (Rule 86–89):</b> এক ধাপ দুই খাম দরপত্র পদ্ধতি (One-Stage Two-Envelope — OSTEM)</li>
+            <li><b>অংশ-৫ (Rule 90–94):</b> কোটেশন প্রদানের অনুরোধ পদ্ধতি (RFQ)</li>
+            <li><b>অংশ-৬ (Rule 95–96):</b> বিপরীত নিলাম পদ্ধতি (Reverse Auction)</li>
+            <li><b>অংশ-৭ (Rule 97–101):</b> সরাসরি ক্রয় পদ্ধতি ও নগদ ক্রয় (DPM / Direct Cash Purchase)</li>
+            <li><b>অংশ-৮ (Rule 102–108):</b> আন্তর্জাতিক ক্রয় পদ্ধতি (International Competitive Bidding সংক্রান্ত বিশেষ বিধান)</li>
+            <li><b>অংশ-৯ (Rule 109):</b> ফ্রেমওয়ার্ক এগ্রিমেন্ট (Framework Agreement)</li>
+          </ul>
+
+          <h4>৩. প্রতিটি Rule/অংশের ব্যাখ্যা</h4>
+
+          <div class="mini" style="margin-bottom:14px;">
+            <b>Rule 78 — পণ্য, কার্য, ইত্যাদি ক্রয়ের ক্ষেত্রে উন্মুক্ত দরপত্র পদ্ধতির প্রয়োগ</b>
+            <p style="margin:8px 0;"><b>উদ্দেশ্য:</b> OTM-কে "default"/অগ্রাধিকারপ্রাপ্ত পদ্ধতি হিসেবে প্রতিষ্ঠিত করা।</p>
+            <p style="margin:8px 0;"><b>সহজ ভাষায়:</b> বিশেষ পরিস্থিতি বা মূল্যসীমার কারণে অন্য কোনো পদ্ধতি বেশি যুক্তিসঙ্গত না হলে, পণ্য/কার্য/ভৌতসেবা ক্রয়ে সবসময় প্রথমে OTM বিবেচনা করতে হবে (Rule 78(1))। Rule 110 অনুযায়ী বিজ্ঞাপনের মাধ্যমে সকল যোগ্য দরদাতাকে আহ্বান জানাতে হয় (78(2))। আইনত ও আর্থিকভাবে স্বশাসিত সরকারি প্রতিষ্ঠানও (যেমন কিছু কর্পোরেশন) এতে প্রতিদ্বন্দ্বিতা করতে পারে (78(3))।</p>
+            <p style="margin:8px 0;"><b>বাস্তব উদাহরণ (ব্যাখ্যামূলক):</b> ধরা যাক LGED একটি ৮ কোটি টাকার সড়ক মেরামত কাজের জন্য দরপত্র আহ্বান করবে। মূল্য বিবেচনায় এটি OTM-এর আওতায় পড়বে এবং পত্রিকা/eGP-তে বিজ্ঞাপন দিতে হবে, ন্যূনতম ২১ দিন সময় দিয়ে (নিচের সময়সূচি দেখুন)।</p>
+            <p style="margin:8px 0;"><b>Rule 78(4) — তফসিলভিত্তিক ন্যূনতম বিজ্ঞাপন-থেকে-জমাদান সময়সীমা (verbatim-যাচাইকৃত):</b></p>
+            <table style="width:100%;border-collapse:collapse;font-size:.86rem;margin:8px 0 14px;">
+              <tr style="background:var(--bg-sunken);"><th style="text-align:right;padding:6px 8px;border:1px solid var(--line);">ক্রয়মূল্য</th><th style="text-align:right;padding:6px 8px;border:1px solid var(--line);">ন্যূনতম সময়</th></tr>
+              <tr><td style="padding:6px 8px;border:1px solid var(--line);">১ কোটি টাকা পর্যন্ত</td><td style="padding:6px 8px;border:1px solid var(--line);">১০ দিন</td></tr>
+              <tr><td style="padding:6px 8px;border:1px solid var(--line);">১ কোটি – ৫ কোটি টাকা</td><td style="padding:6px 8px;border:1px solid var(--line);">১৪ দিন</td></tr>
+              <tr><td style="padding:6px 8px;border:1px solid var(--line);">৫ কোটি – ৩০ কোটি টাকা</td><td style="padding:6px 8px;border:1px solid var(--line);">২১ দিন</td></tr>
+              <tr><td style="padding:6px 8px;border:1px solid var(--line);">৩০ কোটি টাকার ঊর্ধ্বে</td><td style="padding:6px 8px;border:1px solid var(--line);">২৮ দিন</td></tr>
+              <tr><td style="padding:6px 8px;border:1px solid var(--line);">বিপর্যয়কর ঘটনা মোকাবিলায় জরুরি ক্রয়</td><td style="padding:6px 8px;border:1px solid var(--line);">৭ দিন</td></tr>
+              <tr><td style="padding:6px 8px;border:1px solid var(--line);">পুনঃদরপত্র (≤১ কোটি)</td><td style="padding:6px 8px;border:1px solid var(--line);">৭ দিন</td></tr>
+              <tr><td style="padding:6px 8px;border:1px solid var(--line);">পুনঃদরপত্র (১–৫ কোটি)</td><td style="padding:6px 8px;border:1px solid var(--line);">১০ দিন</td></tr>
+            </table>
+            <p style="margin:8px 0;"><b>সরকারি কাজে ব্যবহার:</b> LGED, RHD, BWDB, PWD-এর প্রায় সকল বড় Works ও Goods প্যাকেজে OTM ডিফল্ট পদ্ধতি।</p>
+            <p style="margin:8px 0;"><b>সাধারণ ভুল:</b> বিজ্ঞাপনের সময়সীমা তফসিল অনুযায়ী ন্যূনতম না রেখে কম সময় দেওয়া — এটি দরপত্র বাতিলযোগ্য ত্রুটি।</p>
+            <p style="margin:8px 0;"><b>সতর্কতা:</b> রাষ্ট্রীয় জরুরি প্রয়োজনে অর্থনৈতিক বিষয়সংক্রান্ত মন্ত্রিসভা কমিটির সুপারিশক্রমেই কেবল সময় হ্রাস করা যাবে (78(5)) — এককভাবে ক্রয়কারী প্রতিষ্ঠান এই সময় কমাতে পারবে না।</p>
+            <p style="margin:8px 0;"><b>পরীক্ষায় গুরুত্বপূর্ণ:</b> এই সময়সূচি (১০/১৪/২১/২৮ দিন) মুখস্থ রাখা BCS ও প্রকিউরমেন্ট পরীক্ষায় প্রায়ই আসে।</p>
+            <p style="margin:8px 0;"><b>Interview Point:</b> "OTM কেন Default পদ্ধতি?" — উত্তর: সর্বোচ্চ প্রতিযোগিতা, সমান সুযোগ ও সর্বনিম্ন সম্ভাব্য মূল্য নিশ্চিত করে বলে।</p>
+            <p style="margin:8px 0;"><b>e-GP সম্পর্ক:</b> e-OTM মডিউলের মাধ্যমে সম্পূর্ণ প্রক্রিয়া eprocure.gov.bd-তে সম্পন্ন হয়; সময়সূচি সিস্টেমে স্বয়ংক্রিয়ভাবে যাচাই হয়।</p>
+          </div>
+
+          <div class="mini" style="margin-bottom:14px;">
+            <b>Rule 79 — অন্যান্য ক্রয় পদ্ধতির প্রয়োগ</b>
+            <p style="margin:8px 0;"><b>সহজ ভাষায়:</b> ক্রয়কারী চাইলে LTM, DPM, TSTM, OSTEM, RFQ বা Reverse Auction ব্যবহার করতে পারবে, তবে OTM এড়িয়ে গেলে তার কারণ ও যৌক্তিকতা লিখিতভাবে রেকর্ড রাখতে হবে (79(1))।</p>
+            <p style="margin:8px 0;"><b>গুরুত্বপূর্ণ থ্রেশহোল্ড (verbatim-যাচাইকৃত তফসিল):</b> Rule 80(1)(ঘ) অনুযায়ী LTM প্রয়োগের সীমা — <b>কার্য ক্রয়ে ১ কোটি টাকা পর্যন্ত</b> এবং <b>পণ্য বা ভৌতসেবা ক্রয়ে ২০ লক্ষ টাকা পর্যন্ত</b>।</p>
+            <p style="margin:8px 0;"><b>সাধারণ ভুল:</b> OTM-এর পরিবর্তে LTM/DPM ব্যবহার করার সময় কারণ রেকর্ড না রাখা — অডিটে এটি সবচেয়ে বেশি ধরা পড়ে।</p>
+            <p style="margin:8px 0;"><b>e-GP সম্পর্ক:</b> প্রতিটি বিকল্প পদ্ধতির জন্য তফসিল-১৪-এ পৃথক ফ্লো-চার্ট (গ, ঘ, ঙ, চ, ছ, জ অংশ) নির্ধারিত।</p>
+          </div>
+
+          <div class="mini" style="margin-bottom:14px;">
+            <b>অংশ-২: LTM (Rule 80–81) — সাধারণ ব্যাখ্যা</b>
+            <p style="margin:8px 0;">OTM ব্যবহারিকভাবে অসম্ভব বা অযৌক্তিক হলে (যেমন: অত্যন্ত স্বল্পমূল্যের বা বিশেষায়িত ক্রয়), পূর্ব-নির্বাচিত/তালিকাভুক্ত সীমিতসংখ্যক দরদাতাকে সরাসরি আমন্ত্রণ জানানো হয়। থ্রেশহোল্ড: কার্যে ≤১ কোটি টাকা, পণ্য/ভৌতসেবায় ≤২০ লক্ষ টাকা।</p>
+            <p style="margin:8px 0;"><b>সতর্কতা:</b> LTM-এর ক্ষেত্রেও ন্যূনতম প্রতিযোগিতা (সাধারণত কমপক্ষে ৩ জন যোগ্য দরদাতা আমন্ত্রণ) নিশ্চিত করা আবশ্যক।</p>
+          </div>
+
+          <div class="mini" style="margin-bottom:14px;">
+            <b>অংশ-৩ ও ৪: TSTM (82–85) ও OSTEM (86–89)</b>
+            <p style="margin:8px 0;"><b>TSTM (দুই পর্যায় বিশিষ্ট):</b> যেখানে ক্রয়কারী প্রথমে সম্পূর্ণ সুনির্দিষ্ট Specification/ডিজাইন ঠিক করতে পারে না (যেমন জটিল টার্নকি প্রকল্প) — প্রথম পর্যায়ে কারিগরি প্রস্তাব নিয়ে আলোচনার পর চূড়ান্ত Specification ঠিক করে দ্বিতীয় পর্যায়ে আর্থিক দরপত্র আহ্বান করা হয়।</p>
+            <p style="margin:8px 0;"><b>OSTEM (এক ধাপ দুই খাম):</b> একই সাথে টেকনিক্যাল ও ফাইন্যান্সিয়াল প্রস্তাব পৃথক দুটি খামে জমা দেওয়া হয়; প্রথমে টেকনিক্যাল মূল্যায়ন সম্পন্ন করে যোগ্য দরদাতাদের আর্থিক খাম খোলা হয় — বড়, জটিল প্ল্যান্ট/সাপ্লাই-ইনস্টলেশন কাজে ব্যবহৃত।</p>
+          </div>
+
+          <div class="mini" style="margin-bottom:14px;">
+            <b>অংশ-৫: RFQ — Rule 90–94</b>
+            <p style="margin:8px 0;"><b>সহজ ভাষায়:</b> সহজলভ্য, স্বল্পমূল্যের, প্রমিত (standard) পণ্য বা সাধারণ সেবার জন্য কমপক্ষে তিনজন দরদাতার কাছ থেকে লিখিত quotation আহ্বান করা হয় — পূর্ণাঙ্গ টেন্ডার প্রক্রিয়ার প্রয়োজন হয় না।</p>
+            <p style="margin:8px 0;"><b>Rule 90(3):</b> Simplified RFQ (SRFQ) প্রয়োগের বিধান নির্দিষ্ট ছোট মূল্যের ক্রয়ে।</p>
+            <p style="margin:8px 0;"><b>Rule 91(6):</b> RFQ-তে সাধারণত Tender Security আবশ্যক নয়, তবে নির্দিষ্ট ক্ষেত্রে Performance Security চাওয়া যেতে পারে।</p>
+            <p style="margin:8px 0;"><b>সাধারণ ভুল:</b> RFQ-কে "সহজ পদ্ধতি" ভেবে থ্রেশহোল্ডের ঊর্ধ্বে পণ্য এতে ভাগ করে (package splitting) ক্রয় করা — এটি গুরুতর PPR লঙ্ঘন।</p>
+          </div>
+
+          <div class="mini" style="margin-bottom:14px;">
+            <b>অংশ-৬: বিপরীত নিলাম — Rule 95–96</b>
+            <p style="margin:8px 0;">Reverse Auction-এ প্রাক-যোগ্য দরদাতারা অনলাইনে ক্রমান্বয়ে নিম্নমুখী মূল্য প্রস্তাব করেন — সর্বনিম্ন মূল্যদাতা নির্বাচিত হন। এটি PPR-এ তুলনামূলকভাবে নতুন ও ডিজিটাল-নির্ভর একটি পদ্ধতি, নির্দিষ্ট প্রমিত/সহজলভ্য পণ্যের ক্ষেত্রে প্রযোজ্য।</p>
+          </div>
+
+          <div class="mini" style="margin-bottom:14px;">
+            <b>অংশ-৭: DPM ও নগদ ক্রয় — Rule 97–101</b>
+            <p style="margin:8px 0;">প্রতিযোগিতা ছাড়া একক উৎস থেকে সরাসরি ক্রয় — কেবল নির্দিষ্ট পরিস্থিতিতে অনুমোদিত: একমাত্র সরবরাহকারী/প্রস্তুতকারক থাকলে, বিদ্যমান চুক্তির সম্প্রসারণ প্রয়োজন হলে, জরুরি পরিস্থিতিতে, বা প্রমিত ছোট মূল্যের নগদ ক্রয়ে।</p>
+            <p style="margin:8px 0;"><b>সতর্কতা:</b> DPM সবচেয়ে বেশি অপব্যবহৃত ও অডিট-সংবেদনশীল পদ্ধতি — প্রতিটি DPM ব্যবহারের সিদ্ধান্তের সুনির্দিষ্ট লিখিত justification আবশ্যক।</p>
+          </div>
+
+          <div class="mini" style="margin-bottom:14px;">
+            <b>অংশ-৮ ও ৯: আন্তর্জাতিক ক্রয় (১০২–১০৮) ও ফ্রেমওয়ার্ক এগ্রিমেন্ট (১০৯)</b>
+            <p style="margin:8px 0;"><b>আন্তর্জাতিক ক্রয়:</b> বৈদেশিক দরদাতাদের অংশগ্রহণসহ ক্রয়ে প্রযোজ্য বিশেষ বিধান (Incoterms, বৈদেশিক মুদ্রা, দরপত্র জমাদানের সময়, Domestic Preference ইত্যাদি সংক্রান্ত শর্তাবলি অন্তর্ভুক্ত)।</p>
+            <p style="margin:8px 0;"><b>ফ্রেমওয়ার্ক এগ্রিমেন্ট (Rule 109):</b> পুনরাবৃত্তিমূলক প্রয়োজনের জন্য একাধিক সরবরাহকারীর সাথে একটি দীর্ঘমেয়াদী স্ট্যান্ডিং চুক্তি — প্রতিবার নতুন করে পূর্ণ টেন্ডার প্রক্রিয়া ছাড়াই মিনি-প্রতিযোগিতার মাধ্যমে অর্ডার দেওয়া যায়। Physical Services ক্যাটাগরিতে এর ব্যবহার সম্প্রসারিত হয়েছে।</p>
+          </div>
+
+          <h4>৪. Step-by-Step Workflow (OTM — সবচেয়ে বেশি ব্যবহৃত পদ্ধতি)</h4>
+          <div class="flowwrap">
+            <div class="flow" id="ch6flow"></div>
+          </div>
+
+          <h4>৫. বাস্তব উদাহরণ (ব্যাখ্যামূলক)</h4>
+          <ul class="bullets">
+            <li><b>LGED:</b> ৮ কোটি টাকার আঞ্চলিক সড়ক মেরামত — OTM, ২১ দিন বিজ্ঞাপন সময়, e-GP-তে e-PW3 STD ব্যবহার।</li>
+            <li><b>WASA:</b> ১৫ লক্ষ টাকার পাইপ ফিটিংস ক্রয় — থ্রেশহোল্ডের মধ্যে থাকায় RFQ (Rule 90–94) প্রযোজ্য, ৩ জন সরবরাহকারীর কাছে quotation আহ্বান।</li>
+            <li><b>BWDB:</b> একটি বিশেষায়িত পাম্প প্ল্যান্টের টার্নকি ইনস্টলেশন — জটিলতার কারণে OSTEM বা TSTM প্রযোজ্য হতে পারে।</li>
+            <li><b>RHD:</b> প্রাকৃতিক দুর্যোগে ক্ষতিগ্রস্ত সেতু জরুরি মেরামত — ৭ দিনের সংক্ষিপ্ত সময়সীমাসহ জরুরি OTM অথবা যথাযথ অনুমোদনক্রমে DPM।</li>
+          </ul>
+
+          <h4>৬. Important Notes</h4>
+          <div class="callout warn"><b>⚠️ গুরুত্বপূর্ণ</b>Rule 79(1) অনুযায়ী OTM ব্যতীত অন্য যেকোনো পদ্ধতি ব্যবহারের কারণ ও যৌক্তিকতা লিখিতভাবে রেকর্ডভুক্ত করা আইনত বাধ্যতামূলক — এটি বাদ দিলে সিদ্ধান্ত চ্যালেঞ্জযোগ্য।</div>
+          <div class="callout tip"><b>💡 Tips</b>থ্রেশহোল্ডের কাছাকাছি মূল্যের ক্রয়ে সবসময় রক্ষণশীলভাবে (conservatively) OTM বিবেচনা করুন — সীমানার ঠিক নিচে থাকিয়ে LTM/RFQ বেছে নেওয়া অডিটে সন্দেহজনক দেখায়।</div>
+          <div class="callout mistake"><b>❌ সাধারণ ভুল</b>একটি বড় প্যাকেজকে একাধিক ছোট প্যাকেজে ভেঙে (package splitting) RFQ/LTM থ্রেশহোল্ডের মধ্যে আনার চেষ্টা করা — এটি PPR-এর সুস্পষ্ট লঙ্ঘন এবং ডিবারমেন্ট পর্যন্ত গড়াতে পারে।</div>
+
+          <h4>৭–৮. Decision Tree — কোন পরিস্থিতিতে কোন পদ্ধতি?</h4>
+          <div class="mini" style="line-height:2;">
+            শুরু → ক্রয়ের মূল্য ও প্রকৃতি নির্ধারণ →<br>
+            &nbsp;&nbsp;├─ থ্রেশহোল্ডের ঊর্ধ্বে ও সাধারণ প্রকৃতির? → <b>OTM (ডিফল্ট, Rule 78)</b><br>
+            &nbsp;&nbsp;├─ কার্য ≤১ কোটি / পণ্য-ভৌতসেবা ≤২০ লক্ষ ও OTM অযৌক্তিক? → <b>LTM (Rule 80–81)</b><br>
+            &nbsp;&nbsp;├─ স্বল্পমূল্যের প্রমিত পণ্য/সেবা? → <b>RFQ (Rule 90–94)</b><br>
+            &nbsp;&nbsp;├─ সম্পূর্ণ Specification আগাম নির্ধারণ অসম্ভব (জটিল/টার্নকি)? → <b>TSTM (82–85)</b> বা <b>OSTEM (86–89)</b><br>
+            &nbsp;&nbsp;├─ একমাত্র উৎস / জরুরি প্রয়োজন, যথাযথ অনুমোদনসহ? → <b>DPM (97–101)</b><br>
+            &nbsp;&nbsp;├─ প্রমিত পণ্যে দরদাতাদের অনলাইন প্রতিযোগিতা কাম্য? → <b>Reverse Auction (95–96)</b><br>
+            &nbsp;&nbsp;└─ পুনরাবৃত্তিমূলক দীর্ঘমেয়াদী প্রয়োজন? → <b>Framework Agreement (Rule 109)</b>
+          </div>
+
+          <h4>৯. Checklist</h4>
+          <div class="checklist">
+            <label><input type="checkbox"> ক্রয়ের প্রকৃতি ও মূল্য যাচাই করে সঠিক পদ্ধতি নির্বাচন করা হয়েছে</label>
+            <label><input type="checkbox"> OTM ব্যতীত অন্য পদ্ধতি ব্যবহারের কারণ লিখিতভাবে রেকর্ড করা হয়েছে (যদি প্রযোজ্য)</label>
+            <label><input type="checkbox"> Rule 78(4)-এর তফসিল অনুযায়ী ন্যূনতম বিজ্ঞাপন সময় নিশ্চিত করা হয়েছে</label>
+            <label><input type="checkbox"> LTM/RFQ থ্রেশহোল্ড অতিক্রম করা হয়নি, প্যাকেজ স্প্লিটিং হয়নি</label>
+            <label><input type="checkbox"> RFQ-তে ন্যূনতম ৩ জন দরদাতার কাছ থেকে quotation আহ্বান করা হয়েছে</label>
+            <label><input type="checkbox"> প্রযোজ্য STD (e-PW/e-PG সংশ্লিষ্ট) সঠিকভাবে নির্বাচন করা হয়েছে</label>
+            <label><input type="checkbox"> DPM ব্যবহৃত হলে যথাযথ কর্তৃপক্ষের পূর্বানুমোদন নেওয়া হয়েছে</label>
+          </div>
+
+          <h4>১০. Frequently Asked Questions</h4>
+          <details class="faq"><summary>PPR 2025-এ ক্রয় পদ্ধতি কয়টি ও কোন Rule-এ আছে?</summary><p>নয়টি পদ্ধতি — OTM, LTM, TSTM, OSTEM, RFQ, Reverse Auction, DPM/নগদ ক্রয়, আন্তর্জাতিক ক্রয় ও Framework Agreement — সবগুলোই চতুর্থ অধ্যায়ের Rule 78–109-এর মধ্যে অন্তর্ভুক্ত।</p></details>
+          <details class="faq"><summary>OTM কেন ডিফল্ট/অগ্রাধিকারপ্রাপ্ত পদ্ধতি?</summary><p>Rule 78(1) অনুযায়ী, বিশেষ পরিস্থিতি বা মূল্যসীমার কারণে অন্য পদ্ধতি বেশি যুক্তিসঙ্গত না হলে সবসময় OTM-কে অগ্রে বিবেচনা করতে হয়, কারণ এটি সর্বোচ্চ প্রতিযোগিতা ও স্বচ্ছতা নিশ্চিত করে।</p></details>
+          <details class="faq"><summary>LTM ব্যবহারের মূল্যসীমা কত?</summary><p>Rule 80(1)(ঘ) অনুযায়ী কার্য ক্রয়ে ১ কোটি টাকা পর্যন্ত এবং পণ্য বা ভৌতসেবা ক্রয়ে ২০ লক্ষ টাকা পর্যন্ত।</p></details>
+          <details class="faq"><summary>RFQ পদ্ধতিতে কতজন দরদাতার কাছ থেকে quotation নিতে হয়?</summary><p>সাধারণ প্রকিউরমেন্ট চর্চা অনুযায়ী ন্যূনতম তিনজন যোগ্য সরবরাহকারীর কাছ থেকে লিখিত quotation আহ্বান করা হয়; নির্দিষ্ট সংখ্যা STD ও Rule 90–94-এর বিস্তারিত শর্তে উল্লিখিত।</p></details>
+          <details class="faq"><summary>OTM-এর জন্য বিজ্ঞাপনের ন্যূনতম সময়সীমা কত?</summary><p>মূল্যের উপর নির্ভর করে ৭ থেকে ২৮ দিন পর্যন্ত — ১ কোটি পর্যন্ত ১০ দিন, ১–৫ কোটি ১৪ দিন, ৫–৩০ কোটি ২১ দিন, ৩০ কোটির ঊর্ধ্বে ২৮ দিন, এবং দুর্যোগকালীন জরুরি ক্রয়ে ৭ দিন (Rule 78(4))।</p></details>
+          <details class="faq"><summary>DPM কখন ব্যবহার করা যায়?</summary><p>একমাত্র উৎস থাকলে, বিদ্যমান চুক্তি সম্প্রসারণ প্রয়োজন হলে, বা জরুরি পরিস্থিতিতে — এবং প্রতিটি ক্ষেত্রে যথাযথ কর্তৃপক্ষের অনুমোদন ও লিখিত justification আবশ্যক।</p></details>
+          <details class="faq"><summary>TSTM ও OSTEM-এর মধ্যে পার্থক্য কী?</summary><p>TSTM-এ দুই পৃথক পর্যায়ে (প্রথমে টেকনিক্যাল আলোচনা, পরে ফাইন্যান্সিয়াল দরপত্র) প্রক্রিয়া চলে; OSTEM-এ একই সময়ে দুটি পৃথক খামে (টেকনিক্যাল ও ফাইন্যান্সিয়াল) প্রস্তাব জমা দেওয়া হয় এবং ধাপে ধাপে খোলা হয়।</p></details>
+          <details class="faq"><summary>Reverse Auction কীভাবে কাজ করে?</summary><p>প্রাক-যোগ্য দরদাতারা অনলাইনে ক্রমান্বয়ে নিম্নমুখী মূল্য প্রস্তাব করেন এবং প্রক্রিয়া শেষে সর্বনিম্ন মূল্যদাতা নির্বাচিত হন — এটি প্রমিত/সহজলভ্য পণ্যের ক্ষেত্রে প্রযোজ্য।</p></details>
+          <details class="faq"><summary>Framework Agreement-এর সুবিধা কী?</summary><p>পুনরাবৃত্তিমূলক প্রয়োজনে বারবার সম্পূর্ণ টেন্ডার প্রক্রিয়া না চালিয়ে পূর্ব-নির্বাচিত একাধিক সরবরাহকারীর মধ্যে মিনি-প্রতিযোগিতার মাধ্যমে দ্রুত অর্ডার দেওয়া যায়, যা সময় ও প্রশাসনিক খরচ কমায়।</p></details>
+          <details class="faq"><summary>OTM-এর সময়সীমা কি ক্রয়কারী প্রতিষ্ঠান নিজে কমাতে পারে?</summary><p>না। Rule 78(5) অনুযায়ী কেবল রাষ্ট্রীয় জরুরি প্রয়োজনে অর্থনৈতিক বিষয়সংক্রান্ত মন্ত্রিসভা কমিটির সুপারিশক্রমেই সময় হ্রাস করা যায়, এককভাবে ক্রয়কারী প্রতিষ্ঠান এই সিদ্ধান্ত নিতে পারে না।</p></details>
+
+          <h4>১১. MCQ (২০টি)</h4>
+          <div id="ch6mcq"></div>
+
+          <h4>১২. Case Study (ব্যাখ্যামূলক)</h4>
+          <div class="mini">
+            <p><b>সমস্যা:</b> একটি জেলা পর্যায়ের প্রকৌশল অফিস ১ কোটি ৪০ লক্ষ টাকার একটি গুদাম নির্মাণ কাজকে দুটি পৃথক প্যাকেজে (৭০ লক্ষ + ৭০ লক্ষ) ভাগ করে LTM-এর মাধ্যমে ক্রয় সম্পন্ন করে।</p>
+            <p><b>কী হয়েছে:</b> অভ্যন্তরীণ অডিটে ধরা পড়ে যে প্যাকেজ দুটি একই কাজের অংশ এবং একত্রে মূল্য LTM থ্রেশহোল্ড (কার্যে ১ কোটি টাকা) অতিক্রম করে।</p>
+            <p><b>কোন Rule প্রযোজ্য:</b> Rule 79(1) ও Rule 80(1)(ঘ) — থ্রেশহোল্ডের মধ্যে আনার জন্য কৃত্রিমভাবে প্যাকেজ ভাগ করা নিষিদ্ধ।</p>
+            <p><b>সমাধান:</b> সংশ্লিষ্ট কর্মকর্তাদের ব্যাখ্যা তলব করা হয় এবং ভবিষ্যতে অনুরূপ প্যাকেজ একত্রিত করে OTM-এর মাধ্যমে ক্রয় করার নির্দেশনা দেওয়া হয়।</p>
+            <p><b>শিক্ষণীয় বিষয়:</b> মূল্যসীমা এড়ানোর উদ্দেশ্যে প্যাকেজ বিভাজন — উদ্দেশ্য যত ভালোই হোক না কেন — PPR-এর দৃষ্টিতে গুরুতর অনিয়ম এবং শৃঙ্খলামূলক ব্যবস্থার কারণ হতে পারে।</p>
+          </div>
+
+          <h4>১৩. Common Mistakes (সংক্ষিপ্ত তালিকা)</h4>
+          <ul class="bullets">
+            <li>থ্রেশহোল্ড এড়াতে প্যাকেজ বিভাজন (package splitting)।</li>
+            <li>OTM ব্যতীত পদ্ধতি ব্যবহারের কারণ লিখিতভাবে রেকর্ড না রাখা।</li>
+            <li>Rule 78(4)-এর তফসিল অনুযায়ী ন্যূনতম বিজ্ঞাপন সময় না মেনে দরপত্র আহ্বান করা।</li>
+            <li>জরুরি অবস্থার সংজ্ঞা বিস্তৃত করে নিয়মিত ক্রয়ে DPM প্রয়োগ করা।</li>
+          </ul>
+
+          <h4>১৪. Best Practices</h4>
+          <ul class="bullets">
+            <li>প্রতিটি প্যাকেজের জন্য পদ্ধতি নির্বাচনের সিদ্ধান্ত ও কারণ Procurement Strategy দলিলে স্পষ্টভাবে লিপিবদ্ধ রাখুন।</li>
+            <li>থ্রেশহোল্ড-সীমার কাছাকাছি ক্রয়ে সবসময় OTM-কে অগ্রাধিকার দিন — সন্দেহের সুযোগ রাখবেন না।</li>
+            <li>RFQ/LTM-এও ন্যূনতম প্রতিযোগিতা (কমপক্ষে ৩ প্রতিষ্ঠান) বজায় রাখুন।</li>
+          </ul>
+
+          <h4>১৫. Quick Revision</h4>
+          <div class="mini">
+            ৯টি পদ্ধতি (Rule 78–109): <b>OTM</b> (ডিফল্ট) → <b>LTM</b> (কার্য≤১কোটি/পণ্য-ভৌতসেবা≤২০লক্ষ) → <b>TSTM/OSTEM</b> (জটিল/টার্নকি) → <b>RFQ</b> (স্বল্পমূল্য, ৯০-৯৪) → <b>Reverse Auction</b> (৯৫-৯৬) → <b>DPM/নগদ</b> (৯৭-১০১, একমাত্র উৎস/জরুরি) → <b>আন্তর্জাতিক ক্রয়</b> (১০২-১০৮) → <b>Framework Agreement</b> (১০৯, পুনরাবৃত্তিমূলক)। মূলনীতি: OTM অগ্রাধিকার, ব্যতিক্রমের কারণ সবসময় লিখিতভাবে রেকর্ড।
+          </div>
+
+          <div class="callout tip" style="margin-top:18px;">
+            <b>উৎস</b> Rule 78 ও 79-এর মূল বিষয়বস্তু এবং তফসিল-ভিত্তিক সময়সূচি/থ্রেশহোল্ড BPPA-অনুমোদিত রুল-টেক্সট রেফারেন্স থেকে যাচাই করা হয়েছে। অন্যান্য Rule (80–109)-এর ব্যাখ্যা PPR 2008/আন্তর্জাতিক প্রকিউরমেন্ট চর্চার সাধারণ কাঠামোর ভিত্তিতে — চূড়ান্ত প্রয়োগের আগে অবশ্যই মূল গেজেট টেক্সট যাচাই করুন।
+          </div>
+        </div>
+      </details>
+
+      <details class="chapter" id="ch5">
+        <summary>
+          <div class="ch-num">০৫</div>
+          <div class="ch-title"><h3>পঞ্চম অধ্যায়: প্রক্রিয়াকরণ</h3><div class="ch-sub">Rule ১১০–১২৩ (অংশ-১: বিজ্ঞাপন · অংশ-২: প্রাকযোগ্যতা · অংশ-৩: দরপত্র প্রক্রিয়াকরণ)</div></div>
+          <div class="chev">▾</div>
+        </summary>
+        <div class="body">
+          <div class="tags"><span class="tag">Rule ১১০–১২৩</span><span class="tag">৫০-২০-৩০ ফর্মুলা</span><span class="tag">±১০% ক্যাপ বাতিল</span></div>
+          <div class="grid2">
+            <div class="mini"><b>উদ্দেশ্য</b>বিজ্ঞাপন প্রচার, প্রাকযোগ্যতা যাচাই এবং দরপত্র উন্মুক্তকরণ থেকে মূল্যায়ন পর্যন্ত কার্যক্রমের প্রক্রিয়াগত নিয়ম নির্ধারণ করা।</div>
+            <div class="mini"><b>কেন গুরুত্বপূর্ণ</b>PPR 2025-এর সবচেয়ে আলোচিত সংস্কার — নতুন ওজনযুক্ত মূল্যায়ন সূত্র — এই অধ্যায়ের অংশ-৩-এ প্রয়োগ হয়।</div>
+            <div class="mini"><b>কোথায় প্রযোজ্য</b>বিজ্ঞাপন প্রকাশ থেকে TEC প্রতিবেদন প্রস্তুতি পর্যন্ত প্রতিটি প্রতিযোগিতামূলক ক্রয়ে।</div>
+          </div>
+
+          <h4>অংশ-১: বিজ্ঞাপন (Rule ১১০)</h4>
+          <div class="mini">
+            <ul class="bullets">
+              <li>PPR 2025 অনুযায়ী প্রতিটি ক্যাটাগরির জন্য হালনাগাদকৃত Standard Tender Document (STD) — যেমন e-PW1/2A/2B/3, e-PG1/2/3, e-REOI, e-PPS2 — e-GP সিস্টেমে যুক্ত।</li>
+              <li>উচ্চমূল্যের ক্রয়ের বিজ্ঞাপন BPPA ওয়েবসাইটে বাধ্যতামূলকভাবে প্রকাশ করতে হয়।</li>
+              <li>Rule ৭৮(৪)-এর তফসিলভিত্তিক ন্যূনতম বিজ্ঞাপন-সময়সূচি (১০/১৪/২১/২৮ দিন) এখানেও প্রযোজ্য — বিস্তারিত অধ্যায়-৪ দেখুন।</li>
+            </ul>
+          </div>
+
+          <h4>অংশ-২: প্রাকযোগ্যতা (Rule ১১১–১১৩)</h4>
+          <div class="mini">
+            <p>জটিল বা বড় Works প্যাকেজে দরপত্র দলিল বিতরণের আগে Pre-Qualification-এর মাধ্যমে আর্থিক ও কারিগরি সক্ষমতা যাচাই করে যোগ্য প্রতিষ্ঠানের তালিকা তৈরি — Rule ৭৮(৬) অনুযায়ী প্রাকযোগ্য আবেদনকারীদের মধ্যেই দরপত্র দলিল বিতরণ সীমিত রাখা হয়।</p>
+          </div>
+
+          <h4>অংশ-৩: দরপত্র প্রক্রিয়াকরণ — উন্মুক্তকরণ ও মূল্যায়ন (Rule ১১৪–১২৩)</h4>
+          <div class="mini">
+            <ul class="bullets">
+              <li>জাতীয় Works প্রকিউরমেন্টে পূর্বের স্থির <b>±১০% মূল্য ক্যাপ বাতিল</b> করে একটি নতুন <b>ওজনযুক্ত মূল্যায়ন সূত্র</b> চালু:
+                <ul class="bullets" style="margin-top:6px;">
+                  <li>গ্রহণযোগ্য দরপত্রসমূহের গড় — <b>৫০%</b></li>
+                  <li>সরকারি প্রাক্কলন — <b>২০%</b></li>
+                  <li>সাম্প্রতিক e-GP বাজারমূল্য — <b>৩০%</b></li>
+                </ul>
+              </li>
+              <li>মূল্যায়ন সাধারণত তিন ধাপে: যোগ্যতা যাচাই → কারিগরি মূল্যায়ন → আর্থিক মূল্যায়ন।</li>
+              <li>Tender Evaluation Committee (TEC)-এর প্রতিবেদন (TEC Report) চূড়ান্ত অনুমোদনের ভিত্তি।</li>
+            </ul>
+            <div class="callout tip"><b>📘 পরীক্ষায় গুরুত্বপূর্ণ</b>নতুন ৫০-২০-৩০ সূত্র PPR 2025-এর সর্বাধিক আলোচিত সংস্কার — মুখস্থ রাখা জরুরি।</div>
+          </div>
+          <div class="phase-badge">🔜 গভীর পর্যায়ে যুক্ত হবে: সূত্র প্রয়োগের সংখ্যাগত উদাহরণ, প্রাকযোগ্যতা চেকলিস্ট, MCQ/FAQ।</div>
+        </div>
+      </details>
+
+      <details class="chapter" id="ch6">
+        <summary>
+          <div class="ch-num">০৬</div>
+          <div class="ch-title"><h3>ষষ্ঠ অধ্যায়: Services (সেবা ক্রয়)</h3><div class="ch-sub">Rule ১২৪–১৪৮ (অংশ-১: পদ্ধতি · অংশ-২: বুদ্ধিবৃত্তিক সেবা · অংশ-৩: প্রস্তাব মূল্যায়ন)</div></div>
+          <div class="chev">▾</div>
+        </summary>
+        <div class="body">
+          <div class="tags"><span class="tag">Rule ১২৪–১৪৮</span><span class="tag">Physical Services</span><span class="tag">QCBS / QBS</span></div>
+          <div class="grid2">
+            <div class="mini"><b>উদ্দেশ্য</b>Physical (Non-Consulting) Services এবং Professional/Intellectual (পরামর্শক) সেবা ক্রয়ের জন্য পৃথক পদ্ধতি ও মূল্যায়ন কাঠামো নির্ধারণ করা।</div>
+            <div class="mini"><b>কেন গুরুত্বপূর্ণ</b>পণ্য/কাজের তুলনায় সেবা ক্রয়ে গুণগত মান (Quality) বিবেচনা অনেক বেশি গুরুত্বপূর্ণ — শুধু সর্বনিম্ন মূল্যে সিদ্ধান্ত নিলে মান খারাপ হওয়ার ঝুঁকি থাকে।</div>
+            <div class="mini"><b>কোথায় প্রযোজ্য</b>নিরাপত্তা/পরিচ্ছন্নতা/পরিবহন সেবা (Physical) এবং ডিজাইন/তদারকি/স্টাডি/প্রশিক্ষণ (পরামর্শক) ক্রয়ে।</div>
+          </div>
+
+          <h4>অংশ-১: পদ্ধতি, কার্যপ্রণালি (Rule ১২৪–১৩৪)</h4>
+          <div class="mini">
+            <p>Non-Consulting/Physical Services (নিরাপত্তা সেবা, পরিচ্ছন্নতা সেবা, পরিবহন সেবা ইত্যাদি) ক্রয়ের নিজস্ব পদ্ধতি ও কার্যপ্রণালি — সাধারণত OTM/LTM-এর অনুরূপ কাঠামো অনুসরণ করলেও সেবার প্রকৃতি অনুযায়ী বিশেষ শর্ত যুক্ত থাকে। Framework Agreement (Rule ১০৯-এর সাথে সংযুক্ত) ও Negotiation-এর সুযোগ এই ক্যাটাগরিতে সম্প্রসারিত।</p>
+          </div>
+
+          <h4>অংশ-২: বুদ্ধিবৃত্তিক সেবা (Rule ১৩৫–১৪০)</h4>
+          <div class="mini">
+            <ul class="bullets">
+              <li>পরামর্শক নির্বাচন প্রক্রিয়া সাধারণত Request for Expressions of Interest (REOI) দিয়ে শুরু হয়ে Short-listing এবং অতঃপর Request for Proposal (RFP) পর্যন্ত এগোয়।</li>
+              <li>e-REOI হালনাগাদকৃত Standard Document-এর অংশ হিসেবে e-GP সিস্টেমে যুক্ত।</li>
+            </ul>
+          </div>
+
+          <h4>অংশ-৩: প্রস্তাব মূল্যায়ন (Rule ১৪১–১৪৮)</h4>
+          <div class="mini">
+            <p>মূল্যায়ন পদ্ধতির মধ্যে সাধারণত Quality and Cost-Based Selection (QCBS), Quality-Based Selection (QBS), Selection under a Fixed Budget (SFB), Least-Cost Selection (LCS) এবং Single-Source Selection (SSS) অন্তর্ভুক্ত।</p>
+            <div class="callout warn"><b>⚠️ গুরুত্বপূর্ণ</b>শুধুমাত্র সর্বনিম্ন মূল্যের ভিত্তিতে পরামর্শক নির্বাচন করা প্রায়ই দুর্বল গুণগত মান নিশ্চিত করে।</div>
+          </div>
+          <div class="phase-badge">🔜 গভীর পর্যায়ে যুক্ত হবে: QCBS/QBS/SFB/LCS/SSS-এর পৃথক Decision Tree ও Flow Chart, MCQ/FAQ।</div>
+        </div>
+      </details>
+
+      <details class="chapter" id="ch7">
+        <summary>
+          <div class="ch-num">০৭</div>
+          <div class="ch-title"><h3>সপ্তম অধ্যায়: অসদাচরণ</h3><div class="ch-sub">Rule ১৪৯ — ব্ল্যাকলিস্টিং ও ডিবারমেন্ট</div></div>
+          <div class="chev">▾</div>
+        </summary>
+        <div class="body">
+          <div class="tags"><span class="tag">Rule ১৪৯</span><span class="tag">Rule ১৮-সংশ্লিষ্ট DRC</span><span class="tag">তফসিল-২১</span></div>
+          <div class="grid2">
+            <div class="mini"><b>উদ্দেশ্য</b>জালিয়াতি, দুর্নীতি বা শর্তভঙ্গকারী প্রতিষ্ঠান/ব্যক্তিকে ভবিষ্যতে সরকারি ক্রয়ে অংশগ্রহণ থেকে বিরত রাখা।</div>
+            <div class="mini"><b>কেন গুরুত্বপূর্ণ</b>Debarment Review Committee (DRC, Rule ১৮)-এর মাধ্যমে এই সংবেদনশীল প্রক্রিয়া আরও স্বচ্ছ ও ন্যায্য করা হয়েছে।</div>
+            <div class="mini"><b>কোথায় প্রযোজ্য</b>জালিয়াতি, যোগসাজশ, স্বার্থের সংঘাত বা গুরুতর চুক্তি লঙ্ঘনের প্রমাণিত ক্ষেত্রে।</div>
+          </div>
+          <h4>সংক্ষিপ্ত মূল বিষয়</h4>
+          <ul class="bullets">
+            <li>Rule ১৪৯-এ অসদাচরণ (Misconduct)-এর সংজ্ঞা ও তার পরিণতি নির্ধারিত; সিদ্ধান্ত প্রক্রিয়া Rule ১৮-এর DRC দ্বারা পর্যালোচিত হয় — তফসিল-২১-এ ডিবারমেন্ট রিভিউ বোর্ডের কার্যপ্রণালি বর্ণিত।</li>
+            <li>Debarred (স্থায়ীভাবে বাতিল) ও Suspended (সাময়িকভাবে স্থগিত) — এই দুই ধরনের ব্যবস্থার মধ্যে পার্থক্য রয়েছে।</li>
+            <li>BPPA/e-GP ওয়েবসাইটে Debarment List প্রকাশ্যে প্রকাশিত থাকে, যা যাচাইযোগ্য।</li>
+          </ul>
+          <div class="callout warn"><b>⚠️ গুরুত্বপূর্ণ</b>ডিবারমেন্টের সিদ্ধান্তের আগে সংশ্লিষ্ট প্রতিষ্ঠানকে জবাব দেওয়ার সুযোগ (Show-cause) দেওয়া বাধ্যতামূলক — এটি না করলে সিদ্ধান্ত আইনগতভাবে চ্যালেঞ্জযোগ্য।</div>
+          <div class="phase-badge">🔜 গভীর পর্যায়ে যুক্ত হবে: ডিবারমেন্ট প্রক্রিয়ার Decision Tree, সময়সীমা, বাস্তব কেস স্টাডি, MCQ/FAQ।</div>
+        </div>
+      </details>
+
+      <details class="chapter" id="ch8">
+        <summary>
+          <div class="ch-num">০৮</div>
+          <div class="ch-title"><h3>অষ্টম অধ্যায়: ইলেকট্রনিক পদ্ধতি</h3><div class="ch-sub">Rule ১৫০ — বাধ্যতামূলক e-GP ব্যবহার</div></div>
+          <div class="chev">▾</div>
+        </summary>
+        <div class="body">
+          <div class="tags"><span class="tag">Rule ১৫০(১) (যাচাইকৃত)</span><span class="tag">eprocure.gov.bd</span></div>
+          <div class="grid2">
+            <div class="mini"><b>উদ্দেশ্য</b>ক্রয় প্রক্রিয়াকে ডিজিটালাইজড, স্বয়ংক্রিয় ও নিরীক্ষণযোগ্য করা।</div>
+            <div class="mini"><b>কেন গুরুত্বপূর্ণ</b>PPR 2025-এ e-GP পোর্টাল ব্যবহার আরও ব্যাপকভাবে বাধ্যতামূলক করা হয়েছে।</div>
+            <div class="mini"><b>কোথায় প্রযোজ্য</b>e-GP সিস্টেমে সমর্থিত সকল ক্রয় প্যাকেজে।</div>
+          </div>
+          <h4>সংক্ষিপ্ত মূল বিষয়</h4>
+          <ul class="bullets">
+            <li><b>Rule ১৫০(১)</b> অনুযায়ী, e-GP সিস্টেমে সমর্থিত যেকোনো ক্রয়ে সকল ক্রয়কারী প্রতিষ্ঠানের জন্য e-GP পোর্টাল ব্যবহার বাধ্যতামূলক।</li>
+            <li>www.eprocure.gov.bd (BPPA পরিচালিত) — জাতীয় e-GP পোর্টাল, যেখানে টেন্ডার আমন্ত্রণ থেকে NOA পর্যন্ত সম্পূর্ণ প্রক্রিয়া পরিচালিত হয়।</li>
+            <li>Bangladesh e-GP Guidelines (Revised) 2025 হালনাগাদ করা হয়েছে যাতে PPR 2025-এর সাথে সামঞ্জস্যপূর্ণ হয়।</li>
+          </ul>
+          <div class="callout tip"><b>💡 Tips</b>e-GP-তে প্রযুক্তিগত সমস্যা হলে BPPA-এর e-GP Help Desk-এর সাথে যোগাযোগ করা যায়।</div>
+          <div class="phase-badge">🔜 গভীর পর্যায়ে যুক্ত হবে: e-GP-তে ধাপ-ভিত্তিক টেন্ডার জমাদান প্রক্রিয়া, MCQ/FAQ।</div>
+        </div>
+      </details>
+
+      <details class="chapter" id="ch9">
+        <summary>
+          <div class="ch-num">০৯</div>
+          <div class="ch-title"><h3>নবম অধ্যায়: বিবিধ</h3><div class="ch-sub">Rule ১৫১–১৫৪ — PPP Alignment, আউটসোর্সিং, অন্যান্য বিবিধ বিধান</div></div>
+          <div class="chev">▾</div>
+        </summary>
+        <div class="body">
+          <div class="tags"><span class="tag">Rule ১৫১ (যাচাইকৃত)</span><span class="tag">Outsourcing Policy 2025</span></div>
+          <div class="grid2">
+            <div class="mini"><b>উদ্দেশ্য</b>বিশেষ ধরনের ক্রয় (PPP প্রকল্প, আউটসোর্সিং) কে নিয়মিত PPR কাঠামোর সাথে সামঞ্জস্যপূর্ণ করা এবং অবশিষ্ট বিবিধ বিধান অন্তর্ভুক্ত করা।</div>
+            <div class="mini"><b>কেন গুরুত্বপূর্ণ</b>PPR ও অন্যান্য নীতিমালার (PPP Policy, Outsourcing Policy) মধ্যে বিভ্রান্তি দূর করে।</div>
+            <div class="mini"><b>কোথায় প্রযোজ্য</b>PPP মডেলে বাস্তবায়িত প্রকল্প ও আউটসোর্সড সেবাসমূহে।</div>
+          </div>
+          <h4>সংক্ষিপ্ত মূল বিষয়</h4>
+          <ul class="bullets">
+            <li><b>Rule ১৫১</b> অনুযায়ী, Public-Private Partnership (PPP) প্রকল্পের ক্রয় প্রক্রিয়া পৃথক PPP নীতিমালা অনুসরণ করবে — PPR ও PPP নীতিমালার মধ্যে সীমারেখা স্পষ্ট।</li>
+            <li>Outsourcing Policy 2025 পৃথকভাবে প্রণীত — নির্দিষ্ট সেবা আউটসোর্স করার শর্তাবলি নির্ধারণ করে।</li>
+            <li>Rule ১৫২–১৫৪-এ প্রথাগত বিবিধ বিধান (রহিতকরণ, রূপান্তর/hardship ক্লজ, প্রয়োগ-সংক্রান্ত সাধারণ নির্দেশনা)।</li>
+            <li>উল্লেখ্য: Framework Agreement (যা "বিশেষ ব্যবস্থা" মনে হতে পারে) প্রকৃতপক্ষে <b>অধ্যায়-৪, Rule ১০৯</b>-এ অবস্থিত, এই অধ্যায়ে নয়।</li>
+          </ul>
+          <div class="callout tip"><b>💡 Tips</b>PPP প্রকল্পে PPR প্রয়োগের আগে যাচাই করুন প্রকল্পটি সংশ্লিষ্ট PPP গাইডলাইনের আওতায় পড়ে কিনা — Rule ১৫১ অনুযায়ী উভয় কাঠামো একসাথে প্রযোজ্য নয়।</div>
+          <div class="phase-badge">🔜 গভীর পর্যায়ে যুক্ত হবে: PPP ও PPR-এর সীমারেখা তুলনামূলক টেবিল, MCQ/FAQ।</div>
+        </div>
+      </details>
+
+      <details class="chapter" id="ch-schedules">
+        <summary>
+          <div class="ch-num">❖</div>
+          <div class="ch-title"><h3>তফসিলসমূহ (Schedules)</h3><div class="ch-sub">তফসিল ১–২১ — দ্রুত রেফারেন্স তালিকা</div></div>
+          <div class="chev">▾</div>
+        </summary>
+        <div class="body">
+          <div class="mini" style="margin-top:16px;">
+            PPR 2025-এ মোট ২১টি তফসিল রয়েছে, যেখানে STD, কমিটি গঠন, বিজ্ঞাপন, জামানত, ফ্লো-চার্ট (প্রতিটি ক্রয় পদ্ধতির জন্য পৃথক), NOA ফরম্যাট, রেকর্ড সংরক্ষণ, JVCA নমুনা চুক্তি, Code of Ethics এবং ডিবারমেন্ট রিভিউ বোর্ডের কার্যপ্রণালিসহ বিস্তারিত প্রয়োগ-নির্দেশিকা অন্তর্ভুক্ত। প্রতিটি Rule-এর ব্যবহারিক প্রয়োগ প্রায়শই সংশ্লিষ্ট তফসিলের ফরম্যাট/চেকলিস্ট অনুসরণ করে সম্পন্ন হয়।
+          </div>
+          <div class="phase-badge">🔜 গভীর পর্যায়ে যুক্ত হবে: প্রতিটি গুরুত্বপূর্ণ তফসিলের (বিশেষত তফসিল-১৪ ফ্লো-চার্ট ও তফসিল-২ থ্রেশহোল্ড/সময়সীমা) সংক্ষিপ্তসার।</div>
+        </div>
+      </details>
+
+      <details class="chapter" id="ch10">
+        <summary>
+          <div class="ch-num">🖥️</div>
+          <div class="ch-title"><h3>বিশেষ ব্যবহারিক অধ্যায়: e-GP System-এ সম্পূর্ণ টেন্ডার কার্যপ্রবাহ</h3><div class="ch-sub">Tender Upload → Publish → Opening → Evaluation (TEC) → Approval → Award — একজন নতুন ব্যবহারকারীর জন্য ধাপে ধাপে নির্দেশিকা</div></div>
+          <div class="chev">▾</div>
+        </summary>
+        <div class="body">
+          <div class="callout tip" style="margin-top:16px;">
+            <b>📘 কাঠামোগত নোট</b> এটি PPR 2025-এর কোনো নির্দিষ্ট আইনি অধ্যায় (Rule ১–১৫৪) নয় — বরং একটি <b>ব্যবহারিক/অপারেশনাল প্রশিক্ষণ অধ্যায়</b>, যা e-GP Guidelines, CPTU/BPPA-এর প্রচলিত User Manual এবং বাস্তব কার্যপ্রবাহের ভিত্তিতে প্রস্তুত। আইনগত বিধানের জন্য অধ্যায় ৪ (ক্রয় পদ্ধতি) ও অধ্যায় ৫ (প্রক্রিয়াকরণ) দেখুন — এই অধ্যায়টি সেগুলো <i>কীভাবে</i> সিস্টেমে বাস্তবায়িত হয় তা দেখায়।
+          </div>
+          <div class="tags">
+            <span class="tag">eprocure.gov.bd</span><span class="tag">e-Tendering Module</span><span class="tag">e-CMS</span><span class="tag">BPPA (পূর্বে CPTU)</span>
+          </div>
+
+          <!-- ================= 1. PORTAL & ROLES ================= -->
+          <h4>১. e-GP Portal পরিচিতি ও User Roles</h4>
+          <div class="mini">
+            <p><b>e-GP পোর্টাল কী?</b> <a href="https://www.eprocure.gov.bd" target="_blank">www.eprocure.gov.bd</a> — বাংলাদেশ সরকারের জাতীয় Electronic Government Procurement পোর্টাল, BPPA (পূর্বে CPTU) কর্তৃক পরিচালিত। এতে দুটি প্রধান মডিউল: <b>e-Tendering</b> (APP থেকে Contract Award পর্যন্ত) এবং <b>e-CMS / e-Contract Management System</b> (চুক্তি বাস্তবায়ন, Running Bill, iBAS++-এর মাধ্যমে পেমেন্ট)।</p>
+          </div>
+          <div class="ss-placeholder"><span class="cam">📸</span>[Screenshot Placeholder: eprocure.gov.bd হোমপেজ — Login বক্স, "e-Tenders", "e-CMS" মেনু দেখানো]</div>
+
+          <h5 style="margin:14px 0 6px;font-family:var(--sans);font-weight:700;color:var(--green-800);">মূল User Roles</h5>
+          <table class="role-table">
+            <tr><th>Role</th><th>সংক্ষিপ্ত পরিচিতি</th><th>প্রধান দায়িত্ব</th></tr>
+            <tr><td><b>Procuring Entity (PE)</b></td><td>ক্রয়কারী প্রতিষ্ঠান / প্রধান কর্মকর্তা</td><td>APP অনুমোদন, প্যাকেজ তৈরি, সামগ্রিক দায়বদ্ধতা</td></tr>
+            <tr><td><b>PE-Admin</b></td><td>অফিসের প্রশাসনিক ইউজার</td><td>অফিসের জন্য Government User তৈরি ও পরিচালনা</td></tr>
+            <tr><td><b>Authorized User (A.U / TIA)</b></td><td>Tender Inviting Authority</td><td>APP তৈরি ও প্রকাশ, Tender Document প্রস্তুত ও Notice প্রকাশ</td></tr>
+            <tr><td><b>Tender Opening Committee (TOC)</b></td><td>উন্মুক্তকরণ কমিটি</td><td>নির্ধারিত সময়ে দরপত্র অনলাইনে উন্মুক্তকরণ ও Opening Sheet প্রস্তুত</td></tr>
+            <tr><td><b>Tender Evaluation Committee (TEC)</b></td><td>মূল্যায়ন কমিটি</td><td>Preliminary → Responsiveness → Technical → Financial মূল্যায়ন ও প্রতিবেদন প্রস্তুত</td></tr>
+            <tr><td><b>Approving Authority</b></td><td>অনুমোদনকারী কর্তৃপক্ষ</td><td>Delegation of Financial Power অনুযায়ী মূল্যায়ন প্রতিবেদন অনুমোদন, NOA-তে সম্মতি</td></tr>
+          </table>
+          <div class="callout warn"><b>⚠️ গুরুত্বপূর্ণ</b>একই ব্যক্তি একাধিক পরস্পর-বিরোধী ভূমিকায় (যেমন TIA ও TEC সদস্য একইসাথে) থাকতে পারবেন না — এটি Conflict of Interest তৈরি করে (দেখুন অধ্যায়-৩, অংশ-১১)।</div>
+
+          <!-- ================= 2. TENDER PREPARATION ================= -->
+          <h4>২. Tender Preparation (দরপত্র প্রস্তুতি — সিস্টেমে প্রবেশের আগে)</h4>
+          <div class="stepline"><b>ধাপ ২.১ — Procurement Plan:</b> Annual Procurement Plan (APP) e-GP-তে অনুমোদিত ও প্রকাশিত থাকতে হবে; কোনো প্যাকেজ APP-তে না থাকলে তার জন্য টেন্ডার নোটিশ তৈরি করা যাবে না।</div>
+          <div class="stepline"><b>ধাপ ২.২ — Package Creation:</b> APP থেকে নির্দিষ্ট প্যাকেজ নির্বাচন করে তার Procurement Method (OTM/LTM/RFQ ইত্যাদি — দেখুন অধ্যায়-৪), Estimated Cost ও Category (Works/Goods/Services) নিশ্চিত করা হয়।</div>
+          <div class="stepline"><b>ধাপ ২.৩ — Tender Document Preparation:</b> সংশ্লিষ্ট Standard Tender Document (STD — যেমন e-PW1/e-PG1) টেমপ্লেট নির্বাচন করে PE-এর নির্দিষ্ট শর্তাবলি (Eligibility, Delivery Schedule, Payment Terms) যুক্ত করা হয়।</div>
+          <div class="stepline"><b>ধাপ ২.৪ — BOQ, Technical Specification ও Qualification Criteria:</b> Bill of Quantities (BOQ)-এ প্রতিটি আইটেমের বিবরণ, একক ও পরিমাণ; Technical Specification-এ মান নির্ধারণ (Generic — নির্দিষ্ট ব্র্যান্ড নয়); Qualification Criteria-তে ন্যূনতম টার্নওভার, অভিজ্ঞতা, সরঞ্জাম ইত্যাদি সুনির্দিষ্টভাবে লিখতে হয়।</div>
+          <div class="stepline"><b>ধাপ ২.৫ — Tender Schedule ও Key Dates:</b> বিজ্ঞাপন প্রকাশের তারিখ, Pre-Tender Meeting (যদি থাকে), সর্বশেষ জমাদানের তারিখ-সময়, উন্মুক্তকরণের তারিখ-সময় — সবকিছু Rule ৭৮(৪)-এর ন্যূনতম সময়সীমা মেনে নির্ধারণ করতে হয় (দেখুন অধ্যায়-৪)।</div>
+          <div class="callout tip"><b>💡 Tips</b>Key Dates নির্ধারণের সময় সরকারি ছুটি ও নির্বাচনী আচরণবিধি-সংক্রান্ত সময়কাল এড়িয়ে চলুন — উন্মুক্তকরণের দিন ছুটি পড়লে সিস্টেম সাধারণত পরবর্তী কার্যদিবস স্বয়ংক্রিয়ভাবে সাজেস্ট করে না, তাই নিজে যাচাই করুন।</div>
+
+          <!-- ================= 3. UPLOAD ================= -->
+          <h4>৩. e-GP System-এ Tender Upload</h4>
+          <div class="stepline"><b>ধাপ ৩.১ — Tender Notice তৈরি:</b> Login → "Tender Management" → "Create Tender Notice" → প্যাকেজ নির্বাচন → শিরোনাম, সংক্ষিপ্ত বিবরণ, Estimated Cost, Tender Security পরিমাণ পূরণ।</div>
+          <div class="ss-placeholder"><span class="cam">📸</span>[Screenshot Placeholder: "Create Tender Notice" ফর্ম — প্যাকেজ ড্রপডাউন, তারিখ ফিল্ড, Save/Next বাটন]</div>
+          <div class="stepline"><b>ধাপ ৩.২ — Document Upload:</b> সম্পূর্ণ Tender Document (PDF) আপলোড — সাধারণত ২০ এমবি পর্যন্ত ফাইল সাইজ সীমা; বড় ফাইল একাধিক অংশে ভাগ করে আপলোডের বিকল্প থাকে।</div>
+          <div class="stepline"><b>ধাপ ৩.৩ — BOQ Upload:</b> BOQ সাধারণত পূর্বনির্ধারিত Excel টেমপ্লেটে (.xls/.xlsx) আপলোড করতে হয় — কলামের ক্রম ও হেডার পরিবর্তন করা যাবে না, নাহলে সিস্টেম Reject করে।</div>
+          <div class="stepline"><b>ধাপ ৩.৪ — Required Forms ও Attachments:</b> Tender Data Sheet, Eligibility Declaration Form, Qualification Information Form, ড্রয়িং/ম্যাপ (যদি থাকে) — প্রতিটি নির্ধারিত ফরম্যাটে পৃথক ফাইল হিসেবে যুক্ত করতে হয়।</div>
+          <div class="stepline"><b>ধাপ ৩.৫ — Publishing ও Final Submission:</b> সব তথ্য "Preview" করে যাচাই করার পর "Publish" বাটনে ক্লিক করলে Tender Notice জনসম্মুখে প্রকাশিত হয় — <b>প্রকাশের পর মূল শর্তাবলিতে (Estimated Cost, Key Dates, Eligibility) পরিবর্তন সরাসরি সম্ভব নয়</b>; প্রয়োজনে আনুষ্ঠানিক Amendment/Corrigendum প্রক্রিয়া অনুসরণ করতে হয়।</div>
+
+          <h5 style="margin:14px 0 6px;font-family:var(--sans);font-weight:700;color:var(--green-800);">সাধারণ ভুল (Upload পর্যায়ে) ও এড়ানোর উপায়</h5>
+          <table class="role-table">
+            <tr><th>সাধারণ ভুল</th><th>এড়ানোর উপায়</th></tr>
+            <tr><td>BOQ Excel-এর কলাম/হেডার পরিবর্তন করা</td><td>সবসময় সিস্টেম থেকে ডাউনলোডকৃত মূল টেমপ্লেট ব্যবহার করুন</td></tr>
+            <tr><td>শেষ মুহূর্তে (Deadline-এর কয়েক মিনিট আগে) আপলোড শুরু করা</td><td>ন্যূনতম ১–২ কর্মদিবস আগে আপলোড সম্পন্ন করে Preview যাচাই করুন</td></tr>
+            <tr><td>PDF ফাইলে পাসওয়ার্ড/এডিট-প্রোটেকশন রেখে দেওয়া</td><td>আপলোডের আগে ফাইল প্রোটেকশন-মুক্ত ও প্রিন্টযোগ্য কিনা যাচাই করুন</td></tr>
+            <tr><td>ভুল প্যাকেজে ডকুমেন্ট সংযুক্ত করা (একাধিক সমান্তরাল প্যাকেজ থাকলে)</td><td>Publish করার আগে প্যাকেজ নম্বর ও নাম দুইবার মিলিয়ে দেখুন</td></tr>
+            <tr><td>Publish করার পর ভুল ধরা পড়া</td><td>Amendment/Corrigendum প্রক্রিয়া অনুসরণ করুন; কখনোই অফলাইনে আলাদাভাবে সংশোধনী পাঠাবেন না</td></tr>
+          </table>
+
+          <!-- ================= 4. OPENING ================= -->
+          <h4>৪. Tender Opening Process</h4>
+          <div class="stepline"><b>ধাপ ৪.১ — Bid Opening:</b> নির্ধারিত তারিখ-সময়ে TOC সদস্যরা লগইন করে "Tender Opening" মডিউলে প্রবেশ করেন; সময় শেষ হওয়ার সাথে সাথে সিস্টেম স্বয়ংক্রিয়ভাবে জমাদান বন্ধ করে দেয়।</div>
+          <div class="stepline"><b>ধাপ ৪.২ — Opening Committee-এর কার্যক্রম:</b> প্রতিটি জমাকৃত দরপত্র একে একে উন্মুক্ত করে মূল তথ্য (দরদাতার নাম, Tender Security-এর প্রমাণ, দর) রেকর্ড করা হয়; ন্যূনতম কোরাম (সাধারণত ৩ জন সদস্য) উপস্থিত থাকা আবশ্যক।</div>
+          <div class="stepline"><b>ধাপ ৪.৩ — Opening Sheet:</b> সিস্টেম স্বয়ংক্রিয়ভাবে একটি Opening Sheet তৈরি করে যাতে সকল দরদাতার নাম, জমাকৃত দর ও Tender Security-এর অবস্থা তালিকাভুক্ত থাকে — এটি TOC সদস্যদের ডিজিটালি অনুমোদন/সই করতে হয়।</div>
+          <div class="stepline"><b>ধাপ ৪.৪ — Bidder Information Verification:</b> প্রতিটি দরদাতার নিবন্ধন তথ্য, Tender Security-এর ধরন (Bank Guarantee/Pay Order) ও মেয়াদ প্রাথমিকভাবে যাচাই করা হয় — এই পর্যায়ে বিস্তারিত মূল্যায়ন নয়, শুধু উপস্থিতি ও সম্পূর্ণতা যাচাই।</div>
+          <div class="ss-placeholder"><span class="cam">📸</span>[Screenshot Placeholder: Opening Sheet — দরদাতার নাম, দর, Tender Security কলামসহ টেবিল ভিউ]</div>
+          <div class="callout warn"><b>⚠️ গুরুত্বপূর্ণ</b>উন্মুক্তকরণের সময় কোনো দরপত্র প্রত্যাখ্যান করা যাবে না — যোগ্যতা/সম্পূর্ণতা যাচাই TEC-এর কাজ, TOC-এর নয়। TOC শুধু তথ্য রেকর্ড করে।</div>
+
+          <!-- ================= 5. EVALUATION ================= -->
+          <h4>৫. Tender Evaluation (TEC)</h4>
+          <div class="mini">
+            <p>মূল্যায়ন একটি ধারাবাহিক, বহু-ধাপ প্রক্রিয়া — প্রতিটি ধাপ পূর্ণ না করে পরের ধাপে যাওয়া যায় না।</p>
+          </div>
+          <div class="flowwrap"><div class="flow" id="ch10evalflow"></div></div>
+
+          <table class="role-table" style="margin-top:16px;">
+            <tr><th>ধাপ</th><th>কী যাচাই হয়</th></tr>
+            <tr><td><b>Preliminary Examination</b></td><td>দরপত্র সঠিক ফরম্যাটে, সঠিক স্বাক্ষর ও Tender Security-সহ জমা হয়েছে কিনা</td></tr>
+            <tr><td><b>Responsiveness Check</b></td><td>দরপত্র মূল শর্তাবলি (Substantially Responsive) পূরণ করে কিনা — বড় বিচ্যুতি থাকলে Non-Responsive ঘোষণা</td></tr>
+            <tr><td><b>Technical Evaluation</b></td><td>কারিগরি বিনির্দেশ, অভিজ্ঞতা, সরঞ্জাম, জনবল পরিকল্পনা</td></tr>
+            <tr><td><b>Financial Evaluation</b></td><td>দাখিলকৃত দর, শর্তাবলি অনুযায়ী মূল্য সমন্বয় (যদি প্রযোজ্য)</td></tr>
+            <tr><td><b>BOQ Verification</b></td><td>প্রতিটি BOQ আইটেমের একক দর ও পরিমাণ সঠিকভাবে পূরণ হয়েছে কিনা</td></tr>
+            <tr><td><b>Arithmetic Correction</b></td><td>একক দর × পরিমাণ = মোট — এই গুণনে কোনো গাণিতিক ভুল থাকলে সংশোধন করে দরদাতাকে অবহিত করা</td></tr>
+            <tr><td><b>Price Comparison</b></td><td>সংশোধিত মূল্যের ভিত্তিতে দরদাতাদের ক্রমতালিকা তৈরি ও অধ্যায়-৫-এর ৫০-২০-৩০ সূত্র প্রয়োগ</td></tr>
+            <tr><td><b>Qualification Verification</b></td><td>নিম্নতম মূল্যায়িত দরদাতার (Lowest Evaluated Bidder) যোগ্যতা প্রমাণাদি বিস্তারিত যাচাই</td></tr>
+            <tr><td><b>Clarification Request</b></td><td>অস্পষ্ট তথ্যের ক্ষেত্রে দরদাতার কাছে লিখিত ব্যাখ্যা চাওয়া — <i>নতুন দর বা শর্ত পরিবর্তনের সুযোগ নয়</i></td></tr>
+            <tr><td><b>Post Qualification</b></td><td>প্রাথমিকভাবে নির্বাচিত দরদাতার আর্থিক সক্ষমতা, অতীত কর্মদক্ষতা চূড়ান্তভাবে যাচাই (Rule ৬৪–৬৯ অনুযায়ী)</td></tr>
+            <tr><td><b>Evaluation Report প্রস্তুতকরণ</b></td><td>সম্পূর্ণ প্রক্রিয়ার সারাংশ, সুপারিশ ও যুক্তি লিপিবদ্ধ করে TEC Report চূড়ান্ত করা ও ডিজিটালি সই করে অনুমোদনের জন্য জমা</td></tr>
+          </table>
+          <div class="callout mistake"><b>❌ সাধারণ ভুল</b>Clarification Request-কে দরদাতার জন্য দর সংশোধনের সুযোগ হিসেবে ব্যবহার করা — এটি সম্পূর্ণ নিষিদ্ধ; শুধুমাত্র বিদ্যমান তথ্যের ব্যাখ্যা চাওয়া যায়, নতুন শর্ত বা মূল্য নয়।</div>
+          <div class="ss-placeholder"><span class="cam">📸</span>[Screenshot Placeholder: TEC Evaluation ড্যাশবোর্ড — প্রতিটি দরদাতার Technical/Financial স্কোর ও Rank কলাম]</div>
+
+          <!-- ================= 6. APPROVAL & AWARD ================= -->
+          <h4>৬. Approval &amp; Award Process</h4>
+          <div class="stepline"><b>ধাপ ৬.১ — Evaluation Approval:</b> TEC Report সিস্টেমের মাধ্যমে Approving Authority-এর কাছে Workflow-এ পাঠানো হয়; Delegation of Financial Power অনুযায়ী নির্ধারিত কর্মকর্তা তা পর্যালোচনা করে অনুমোদন/আপত্তি জানান।</div>
+          <div class="stepline"><b>ধাপ ৬.২ — Notification of Award (NOA):</b> অনুমোদনের পর, টেন্ডার ভ্যালিডিটির মধ্যেই সিস্টেম থেকে সফল দরদাতাকে NOA ইস্যু করা হয় এবং সাথে সাথে অন্যান্য দরদাতাদের ফলাফল জানানো হয়।</div>
+          <div class="stepline"><b>ধাপ ৬.৩ — Contract Award:</b> NOA গ্রহণের পর সফল দরদাতা নির্ধারিত সময়ের মধ্যে Performance Security জমা দেন।</div>
+          <div class="stepline"><b>ধাপ ৬.৪ — Contract Signing:</b> Performance Security যাচাইয়ের পর উভয় পক্ষ ডিজিটালি/ভৌতভাবে Contract Agreement স্বাক্ষর করেন — e-GP-তে Contract নথি আপলোড হয়।</div>
+          <div class="stepline"><b>ধাপ ৬.৫ — Performance Security:</b> সাধারণত চুক্তিমূল্যের ৫–১০% (STD অনুযায়ী), Bank Guarantee আকারে জমা — DLP শেষ না হওয়া পর্যন্ত বলবৎ থাকে।</div>
+          <div class="stepline"><b>ধাপ ৬.৬ — Contract Management-এর প্রাথমিক ধাপ:</b> Contract Signing-এর পর e-CMS মডিউলে Work Plan, Milestone নির্ধারণ করে বাস্তবায়ন পর্যবেক্ষণ শুরু হয় — Running Bill iBAS++-এর মাধ্যমে প্রক্রিয়াকৃত হয়।</div>
+
+          <!-- ================= 7. FEATURES ================= -->
+          <h4>৭. e-GP System-এর গুরুত্বপূর্ণ Features</h4>
+          <div class="grid2">
+            <div class="mini"><b>Workflow</b>প্রতিটি সিদ্ধান্ত (APP অনুমোদন থেকে NOA পর্যন্ত) পূর্বনির্ধারিত ধারাবাহিক Workflow-এর মধ্য দিয়ে যায় — একজন Initiator, একাধিক Approver থাকতে পারে।</div>
+            <div class="mini"><b>Audit Trail</b>প্রতিটি কার্যক্রম (কে, কখন, কী পরিবর্তন করেছে) স্বয়ংক্রিয়ভাবে লগ হয় — Post-Procurement Review-এ এটি গুরুত্বপূর্ণ প্রমাণ (দেখুন অধ্যায়-৩, অংশ-৮)।</div>
+            <div class="mini"><b>Security Features</b>এনক্রিপ্টেড দরপত্র জমাদান (উন্মুক্তকরণের আগ পর্যন্ত কেউ দেখতে পারে না), ভূমিকাভিত্তিক Access Control, সেশন টাইমআউট।</div>
+            <div class="mini"><b>Digital Signature (যদি প্রযোজ্য)</b>কিছু নথি ও অনুমোদনে Digital Signature/OTP-ভিত্তিক যাচাইকরণ ব্যবহৃত হয়, প্রচলিত ICT Act অনুসরণে।</div>
+            <div class="mini"><b>Notification System</b>Key Dates, Clarification Request, NOA ইত্যাদির জন্য স্বয়ংক্রিয় SMS/Email নোটিফিকেশন — তবে এটিকে একমাত্র নির্ভরতা না বানিয়ে নিয়মিত পোর্টাল-চেক করা উচিত।</div>
+          </div>
+
+          <!-- ================= 8. CASE STUDY ================= -->
+          <h4>৮. বাস্তব উদাহরণ (Practical Case Study — ব্যাখ্যামূলক)</h4>
+          <div class="mini">
+            <p><b>প্রেক্ষাপট:</b> একটি উপজেলা প্রকৌশল অফিস একটি ২ কোটি টাকার গ্রামীণ রাস্তা নির্মাণ প্যাকেজ OTM পদ্ধতিতে ক্রয় করতে চায়।</p>
+            <ol style="padding-inline-start:20px;font-size:.9rem;line-height:1.9;">
+              <li><b>Package Creation:</b> APP-এ অনুমোদিত প্যাকেজ নির্বাচন করে "Create Tender Notice"।</li>
+              <li><b>Upload:</b> e-PW1 STD, BOQ Excel (২৪টি আইটেম), Technical Specification ও Drawing আপলোড; Estimated Cost, ১৪ দিনের বিজ্ঞাপন সময় (১–৫ কোটি স্ল্যাব) নির্ধারণ করে Publish।</li>
+              <li><b>Bid Submission Period:</b> ৭টি প্রতিষ্ঠান দরপত্র জমা দেয়; একটি প্রতিষ্ঠান শেষ মুহূর্তে BOQ আপলোডে ভুল করায় সিস্টেম Reject করে (Deadline পার হওয়ায় পুনরায় জমা দিতে পারেনি)।</li>
+              <li><b>Opening:</b> নির্ধারিত সময়ে TOC ৬টি বৈধ দরপত্র উন্মুক্ত করে Opening Sheet প্রস্তুত করে।</li>
+              <li><b>Evaluation:</b> TEC প্রাথমিক পরীক্ষায় ১টি Non-Responsive পায় (Tender Security-এর মেয়াদ অপর্যাপ্ত); বাকি ৫টির টেকনিক্যাল মূল্যায়নে ৪টি উত্তীর্ণ হয়; আর্থিক মূল্যায়নে একটি প্রতিষ্ঠানের BOQ-তে গুণনগত ভুল ধরা পড়ে ও Arithmetic Correction করে চূড়ান্ত ক্রমতালিকা তৈরি হয়।</li>
+              <li><b>Post-Qualification:</b> সর্বনিম্ন মূল্যায়িত দরদাতার অভিজ্ঞতা ও আর্থিক সক্ষমতা যাচাই করে যোগ্য বিবেচিত হয়।</li>
+              <li><b>Approval &amp; NOA:</b> Approving Authority অনুমোদন দেন; টেন্ডার ভ্যালিডিটি শেষ হওয়ার ৫ দিন আগে NOA ইস্যু হয়।</li>
+              <li><b>Award:</b> সফল ঠিকাদার ৭ দিনের মধ্যে ৫% Performance Security জমা দিয়ে চুক্তি স্বাক্ষর করেন; e-CMS-এ Work Plan আপলোড করে কাজ শুরু হয়।</li>
+            </ol>
+          </div>
+
+          <!-- ================= 9. TROUBLESHOOTING ================= -->
+          <h4>৯. Troubleshooting &amp; Best Practices</h4>
+          <h5 style="margin:14px 0 6px;font-family:var(--sans);font-weight:700;color:var(--green-800);">সাধারণ Error ও সমাধান</h5>
+          <table class="role-table">
+            <tr><th>সাধারণ সমস্যা</th><th>সম্ভাব্য কারণ ও সমাধান</th></tr>
+            <tr><td>"File size exceeds limit" ত্রুটি</td><td>ফাইল কম্প্রেস করুন বা একাধিক অংশে ভাগ করে পৃথক অ্যাটাচমেন্ট হিসেবে আপলোড করুন</td></tr>
+            <tr><td>"Session expired" বারবার দেখানো</td><td>ধীর ইন্টারনেট সংযোগে বড় ফাইল আপলোডের সময় এটি হতে পারে — স্থিতিশীল সংযোগ ব্যবহার করুন, প্রয়োজনে অফ-পিক সময়ে চেষ্টা করুন</td></tr>
+            <tr><td>BOQ আপলোড হচ্ছে না / ফরম্যাট Reject হচ্ছে</td><td>মূল টেমপ্লেট ছাড়া অন্য কোনো ফাইল থেকে কপি-পেস্ট করলে প্রায়ই হয় — সবসময় সিস্টেমের নিজস্ব ডাউনলোডকৃত টেমপ্লেটে সরাসরি কাজ করুন</td></tr>
+            <tr><td>Publish বাটন কাজ করছে না</td><td>সাধারণত কোনো আবশ্যিক ফিল্ড/ডকুমেন্ট অসম্পূর্ণ — Preview-এ ফিরে লাল-চিহ্নিত অংশ পূরণ করুন</td></tr>
+            <tr><td>দরদাতা "Tender Rejected" নোটিফিকেশন পেয়েছেন</td><td>সাধারণ কারণ: মেয়াদোত্তীর্ণ Tender Security, Non-Responsive দলিল, ভুল BOQ পূরণ, বা দেরিতে জমাদান</td></tr>
+          </table>
+
+          <h5 style="margin:14px 0 6px;font-family:var(--sans);font-weight:700;color:var(--green-800);">Evaluation-এর সময় সাধারণ ভুল</h5>
+          <ul class="bullets">
+            <li>Responsiveness ও Qualification-কে গুলিয়ে ফেলা — প্রথমটি দরপত্রের সম্পূর্ণতা, দ্বিতীয়টি দরদাতার সক্ষমতা যাচাই করে।</li>
+            <li>Arithmetic Correction না করে দরদাতার জমাকৃত ভুল মোট মূল্য সরাসরি গ্রহণ করা।</li>
+            <li>মূল্যায়ন প্রক্রিয়া চলাকালীন সময়ে অনানুষ্ঠানিকভাবে দরদাতার সাথে যোগাযোগ করা (এটি Conflict of Interest ও Fraud-এর ঝুঁকি তৈরি করে)।</li>
+          </ul>
+
+          <h5 style="margin:14px 0 6px;font-family:var(--sans);font-weight:700;color:var(--green-800);">Best Practices ও Professional Tips</h5>
+          <div class="callout tip"><b>💡 Tip ১</b>প্রতিটি ধাপের আগে সংশ্লিষ্ট Rule/STD-এর চেকলিস্ট (নিচে দেখুন) ব্যবহার করুন — স্মৃতি নির্ভর না করে।</div>
+          <div class="callout tip"><b>💡 Tip ২</b>Key Dates-এর অন্তত ৩ দিন আগে সকল ডকুমেন্ট প্রস্তুত ও ইন্টারনালি রিভিউ করে রাখুন — শেষ মুহূর্তের সিস্টেম Downtime সবচেয়ে বড় ঝুঁকি।</div>
+          <div class="callout tip"><b>💡 Tip ৩</b>Evaluation Report-এর প্রতিটি সিদ্ধান্তের পেছনে সুনির্দিষ্ট rule/STD রেফারেন্স উল্লেখ করুন — ভবিষ্যতে অভিযোগ বা অডিটের সময় এটি রক্ষাকবচ হিসেবে কাজ করে।</div>
+
+          <h4>Master Checklist — সম্পূর্ণ কার্যপ্রবাহ</h4>
+          <div class="checklist">
+            <label><input type="checkbox"> APP-তে প্যাকেজ অনুমোদিত ও প্রকাশিত</label>
+            <label><input type="checkbox"> STD, BOQ, Specification, Qualification Criteria প্রস্তুত ও অভ্যন্তরীণ পর্যালোচিত</label>
+            <label><input type="checkbox"> Key Dates Rule ৭৮(৪) তফসিল অনুযায়ী নির্ধারিত</label>
+            <label><input type="checkbox"> সব ডকুমেন্ট মূল টেমপ্লেটে আপলোড ও Preview-এ যাচাইকৃত</label>
+            <label><input type="checkbox"> TOC ও TEC যথাযথভাবে গঠিত (Conflict of Interest নেই)</label>
+            <label><input type="checkbox"> Opening Sheet প্রস্তুত ও TOC কর্তৃক অনুমোদিত</label>
+            <label><input type="checkbox"> Preliminary → Responsiveness → Technical → Financial — প্রতিটি ধাপ ক্রমানুসারে সম্পন্ন</label>
+            <label><input type="checkbox"> Arithmetic Correction প্রয়োজন হলে সম্পন্ন ও দরদাতাকে অবহিত</label>
+            <label><input type="checkbox"> Post-Qualification যাচাই সম্পন্ন</label>
+            <label><input type="checkbox"> Evaluation Report-এ প্রতিটি সিদ্ধান্তের rule-রেফারেন্স উল্লিখিত</label>
+            <label><input type="checkbox"> ভ্যালিডিটির মধ্যেই NOA ইস্যু</label>
+            <label><input type="checkbox"> Performance Security যাচাই করে Contract Signing সম্পন্ন</label>
+          </div>
+
+          <div class="callout tip" style="margin-top:18px;">
+            <b>উৎস</b> এই অধ্যায়টি e-GP Guidelines, BPPA/CPTU-এর প্রকাশিত User Manual এবং প্রচলিত e-Tendering কার্যপ্রবাহের ভিত্তিতে প্রস্তুত। সিস্টেমের প্রকৃত মেনু/বাটনের নাম ও অবস্থান সময়ে সময়ে আপডেট হতে পারে — সর্বশেষ ইন্টারফেসের জন্য সরাসরি <a href="https://www.eprocure.gov.bd" target="_blank">eprocure.gov.bd</a>-এর সহায়িকা ও Help Desk দেখুন।
+          </div>
+        </div>
+      </details>
+
+
+      <details class="chapter" id="ch11">
+        <summary>
+          <div class="ch-num">SLT</div>
+          <div class="ch-title"><h3>Significantly Low-priced Tender (SLT)</h3><div class="ch-sub">Rule ২৫–২৬, PPR 2025 — অস্বাভাবিক নিম্নমূল্যের দরপত্র শনাক্তকরণ ও মূল্যায়ন পদ্ধতি</div></div>
+          <div class="chev">▾</div>
+        </summary>
+        <div class="body">
+          <div class="callout warn" style="margin-top:16px;">
+            <b>⚠️ সংশোধনী নোট</b> পূর্ববর্তী অনুরোধে উল্লিখিত "Specialized Local Tender (SLT)" এবং "PPR 2026" — এই দুটি নামের কোনো অস্তিত্ব যাচাই করা যায়নি। প্রকৃতপক্ষে <b>SLT মানে "Significantly Low-priced Tender"</b> এবং এটি বর্তমানে কার্যকর <b>PPR 2025</b>-এর <b>Rule ২৫ ও ২৬</b>-এ বর্ণিত একটি নির্দিষ্ট <i>মূল্যায়ন প্রক্রিয়া</i> — এটি OTM/LTM-এর মতো কোনো স্বতন্ত্র "ক্রয় পদ্ধতি" নয়, বরং যেকোনো ক্রয় পদ্ধতিতে দরপত্র মূল্যায়নের একটি ধাপ। এই চ্যাপ্টারটি BPPA-প্রকাশিত Standard Tender Document (e-PG2, ITT Clause 49)-এর সরাসরি-যাচাইকৃত বিষয়বস্তুর ভিত্তিতে প্রস্তুত।
+          </div>
+          <div class="tags">
+            <span class="tag">Rule ২৫–২৬ (যাচাইকৃত)</span><span class="tag">verbatim-যাচাইকৃত সূত্র</span><span class="tag">STD e-PG1 / e-PG2, ITT ৪৯</span><span class="tag">NPPI</span>
+          </div>
+
+          <h4>১. SLT কী এবং এর উদ্দেশ্য</h4>
+          <div class="mini">
+            <p><b>সংজ্ঞা:</b> Significantly Low-priced Tender (SLT) হলো এমন একটি দরপত্র, যার দাখিলকৃত মূল্য পরিসংখ্যানগতভাবে নির্ধারিত একটি "গ্রহণযোগ্য নিম্নসীমা"-র চেয়েও কম — অর্থাৎ এতটাই কম যে বাস্তবে এই মূল্যে মানসম্মত কাজ/পণ্য সরবরাহ সম্ভব কিনা তা নিয়ে যুক্তিসঙ্গত সন্দেহ তৈরি হয়।</p>
+            <p><b>উদ্দেশ্য:</b> অস্বাভাবিক কম দর দিয়ে কাজ পাওয়ার পর নিম্নমানের কাজ, কাজ অসমাপ্ত রাখা, বা পরবর্তীতে Variation/মূল্য সমন্বয়ের মাধ্যমে ক্ষতি পুষিয়ে নেওয়ার প্রবণতা প্রতিরোধ করা — এটি পরোক্ষভাবে PPR 2025-এর "±১০% মূল্য ক্যাপ বাতিল"-এর পরিবর্তে আনা নতুন, আরও বৈজ্ঞানিক পদ্ধতির অংশ (দেখুন অধ্যায়-৫)।</p>
+            <p><b>কোথায় প্রযোজ্য:</b> সকল প্রতিযোগিতামূলক দরপত্র মূল্যায়নে (মূলত OTM/LTM-এ পণ্য ও কার্য ক্রয়ে), যেখানে কমপক্ষে দুইটি টেকনিক্যালি রেসপনসিভ দরপত্র পাওয়া গেছে।</p>
+          </div>
+
+          <h4>২. আইনি ভিত্তি (Legal Basis)</h4>
+          <div class="mini">
+            <ul class="bullets">
+              <li><b>Rule ২৫ ও ২৬, PPR 2025</b> — SLT-সংক্রান্ত মূল বিধান এখানে প্রতিষ্ঠিত (এই Rule দুটি অফিসিয়াল কাঠামোয় <b>অধ্যায়-৩ (ক্রয় নীতি), অংশ-১ "সাধারণ" (Rule ২২–২৭)</b>-এর অন্তর্ভুক্ত — দেখুন অধ্যায়-৩)।</li>
+              <li>এর ব্যবহারিক প্রয়োগ ঘটে মূল্যায়ন পর্যায়ে — <b>অধ্যায়-৫ (প্রক্রিয়াকরণ), অংশ-৩ "দরপত্র প্রক্রিয়াকরণ" (Rule ১১৪–১২৩)</b>-এর আওতায়, এবং এটি প্রতিটি STD-তে (e-PG1, e-PG2 ইত্যাদির ITT Clause ৪৯) সুনির্দিষ্টভাবে অন্তর্ভুক্ত।</li>
+              <li>PPA 2006-এর সাথে সম্পর্ক: PPA 2006 § ৭০ ক্ষমতাবলে PPR প্রণীত; SLT পদ্ধতি একটি Rule-স্তরের প্রক্রিয়াগত বিধান, যা PPA-তে সরাসরি উল্লেখ নেই কিন্তু PPR-এর মাধ্যমে বাস্তবায়িত।</li>
+              <li>সংশ্লিষ্ট Rule: দরপত্রের মধ্যে Collusive Practice সন্দেহ হলে <b>Rule ১৪৯</b> (অসদাচরণ, দেখুন অধ্যায়-৭) প্রয়োগ হতে পারে; SLT-এর কারণে প্রত্যাখ্যাত দরদাতার আপিলের অধিকার <b>Rule ৭২–৭৭</b> (দেখুন অধ্যায়-৩, অংশ-১২) অনুযায়ী সংরক্ষিত।</li>
+            </ul>
+          </div>
+
+          <h4>৩. মূল সূত্র ও গণনা পদ্ধতি (verbatim-যাচাইকৃত, STD e-PG2 ITT Clause ৪৯ থেকে)</h4>
+          <div class="mini">
+            <p>প্রথমে, কমপক্ষে দুইটি টেকনিক্যালি-রেসপনসিভ দরপত্র থাকলে, একটি <b>Weighted Average (ভারযুক্ত গড়)</b> নির্ণয় করা হয় তিনটি উপাদান থেকে:</p>
+            <table class="role-table">
+              <tr><th>উপাদান</th><th>ওজন (Weight)</th></tr>
+              <tr><td>সরকারি প্রাক্কলন (Official Cost Estimate)</td><td><b>০.২০ (২০%)</b></td></tr>
+              <tr><td>সাম্প্রতিক National Public Procurement Price Index (NPPI)-ভিত্তিক মূল্য</td><td><b>০.৩০ (৩০%)</b></td></tr>
+              <tr><td>সকল রেসপনসিভ দরদাতার দাখিলকৃত মূল্য</td><td><b>০.৫০ (৫০%)</b></td></tr>
+            </table>
+            <p style="margin-top:10px;">এরপর সকল রেসপনসিভ দরপত্রের দামের <b>Weighted Standard Deviation (Sd)</b> নির্ণয় করা হয়। চূড়ান্তভাবে —</p>
+            <div class="callout tip" style="font-family:var(--mono);text-align:center;font-size:1rem;">
+              গ্রহণযোগ্য নিম্নসীমা (Lower Limit) = Weighted Average (x̄) − Standard Deviation (Sd)
+            </div>
+            <p style="margin-top:10px;"><b>যেকোনো দরপত্র যদি এই নিম্নসীমার নিচে দর দেয়, তা "Significantly Low-priced Tender (SLT)" হিসেবে চিহ্নিত হয় এবং আর্থিকভাবে Non-Responsive ঘোষণা করে প্রত্যাখ্যান করা হয়।</b></p>
+          </div>
+
+          <h4>৪. NPPI (National Public Procurement Price Index) কীভাবে নির্ণিত হয়</h4>
+          <div class="mini">
+            <ul class="bullets">
+              <li>e-GP সিস্টেম থেকে গত <b>২৮ দিনের</b> তথ্য নিয়ে NPPI গণনা করা হয় — উন্মুক্তকরণের দিন এবং তার পূর্ববর্তী ২৭ দিন মিলিয়ে।</li>
+              <li>এই ২৮ দিনে যেসব ক্রয় প্রক্রিয়ায় NOA ইস্যু হয়েছে (LTM ব্যতীত), সেগুলোর <b>সরকারি প্রাক্কলন বনাম প্রদত্ত চুক্তিমূল্যের শতাংশ বিচ্যুতি</b> হিসাব করে জাতীয় গড় নির্ণয় করা হয়।</li>
+              <li>এই জাতীয় গড় বিচ্যুতিকে সরকারি প্রাক্কলনের সাথে গুণ করে নির্দিষ্ট প্যাকেজের জন্য প্রযোজ্য NPPI-ভিত্তিক মূল্য (তুলনার তৃতীয় উপাদান) নির্ণয় করা হয়।</li>
+              <li>এই গণনা সম্পূর্ণভাবে <b>স্বয়ংক্রিয়ভাবে e-GP সিস্টেমে</b> সম্পন্ন হয় — TEC-কে হাতে হিসাব করতে হয় না, সিস্টেম-জেনারেটেড Tender Evaluation Report (TER)-এ ফলাফল দেখানো হয়।</li>
+            </ul>
+          </div>
+
+          <h4>৫. বিশেষ পরিস্থিতি — মাত্র একটি রেসপনসিভ দরপত্র থাকলে</h4>
+          <div class="mini">
+            <p>যদি শুধুমাত্র <b>একটি</b> টেকনিক্যালি-রেসপনসিভ দরপত্র পাওয়া যায়, তাহলে উপরের Weighted Average/Sd পদ্ধতি প্রযোজ্য নয়। পরিবর্তে সরাসরি তুলনা করা হয়:</p>
+            <ul class="bullets">
+              <li>মূল্যায়িত দর যদি সরকারি প্রাক্কলন থেকে <b>২০%-এর বেশি বিচ্যুত</b> হয় → দরপত্রটি Non-Responsive ঘোষিত।</li>
+              <li>বিচ্যুতি <b>২০% বা তার কম</b> হলে → Post-Qualification যাচাই-সাপেক্ষে NOA-এর জন্য সুপারিশ করা যেতে পারে।</li>
+            </ul>
+          </div>
+
+          <h4>৬. মূল্যের ঊর্ধ্বসীমা — একটি সম্পর্কিত বিধান</h4>
+          <div class="callout tip">
+            <b>💡 গুরুত্বপূর্ণ পার্শ্ব-তথ্য</b> STD অনুযায়ী, দাখিলকৃত মূল্য সরকারি প্রাক্কলনের চেয়ে <b>১০%-এর বেশি বেশি (উপরে)</b> হলেও দরপত্রটি প্রত্যাখ্যাত হয় — অর্থাৎ, ±১০% ক্যাপ সম্পূর্ণ বাতিল হয়নি, বরং <b>ঊর্ধ্বসীমায় এখনও ১০% হার্ড-ক্যাপ বহাল আছে</b>, শুধু <b>নিম্নসীমায়</b> পুরনো ফ্ল্যাট -১০% পদ্ধতি প্রতিস্থাপিত হয়েছে এই পরিসংখ্যানগত SLT পদ্ধতি দ্বারা। (এই সূক্ষ্ম পার্থক্যটি অধ্যায়-৫-এর পূর্ববর্তী বিবরণে স্পষ্ট ছিল না — এখানে সংশোধন করে দেওয়া হলো।)
+          </div>
+
+          <h4>৭. সংখ্যাগত উদাহরণ (ব্যাখ্যামূলক)</h4>
+          <div class="mini">
+            <p>ধরা যাক, একটি পণ্য ক্রয় প্যাকেজে সরকারি প্রাক্কলন ১০০ লক্ষ টাকা, সাম্প্রতিক NPPI-ভিত্তিক মূল্য ৯৫ লক্ষ টাকা, এবং ৪টি রেসপনসিভ দরদাতার দর: ৯৮, ৯২, ৮৮ ও ৬০ লক্ষ টাকা।</p>
+            <ol style="padding-inline-start:20px;font-size:.9rem;line-height:1.9;">
+              <li>রেসপনসিভ দরের গড় (এই চারটির গড়) ধরা যাক ৮৪.৫ লক্ষ টাকা।</li>
+              <li>Weighted Average (x̄) = (০.২×১০০) + (০.৩×৯৫) + (০.৫×৮৪.৫) = ২০ + ২৮.৫ + ৪২.২৫ = <b>৯০.৭৫ লক্ষ টাকা</b>।</li>
+              <li>ধরা যাক গণনাকৃত Weighted Standard Deviation (Sd) = ১২ লক্ষ টাকা।</li>
+              <li>গ্রহণযোগ্য নিম্নসীমা = ৯০.৭৫ − ১২ = <b>৭৮.৭৫ লক্ষ টাকা</b>।</li>
+              <li>৬০ লক্ষ টাকার দরদাতা এই নিম্নসীমার (৭৮.৭৫ লক্ষ) নিচে — তাই তাকে <b>SLT হিসেবে চিহ্নিত করে আর্থিকভাবে Non-Responsive ঘোষণা করে প্রত্যাখ্যান করা হবে</b>, যদিও এটিই সর্বনিম্ন দর ছিল। বাকি ৩টি (৯৮, ৯২, ৮৮) গ্রহণযোগ্য সীমার মধ্যে — তাদের মধ্যে সর্বনিম্ন (৮৮ লক্ষ) দরদাতা Lowest Evaluated Responsive Tenderer হিসেবে বিবেচিত হবে।</li>
+            </ol>
+            <div class="callout mistake"><b>❌ সাধারণ ভুল-ধারণা</b> "সর্বনিম্ন দর মানেই জয়ী" — SLT পদ্ধতির কারণে এটি সবসময় সত্য নয়। পরিসংখ্যানগতভাবে অস্বাভাবিক কম দর স্বয়ংক্রিয়ভাবে বাতিল হয়, তা যতই আকর্ষণীয় মনে হোক না কেন।</div>
+          </div>
+
+          <h4>৮. e-GP-তে ব্যবহারিক প্রয়োগ</h4>
+          <div class="mini">
+            <ul class="bullets">
+              <li>Financial Evaluation পর্যায়ে e-GP সিস্টেম স্বয়ংক্রিয়ভাবে Weighted Average, Sd ও নিম্নসীমা গণনা করে Tender Evaluation Report (TER)-এ দেখায়।</li>
+              <li>TEC-কে শুধু সিস্টেম-জেনারেটেড ফলাফল যাচাই ও নিশ্চিত করতে হয় — ম্যানুয়াল গণনার প্রয়োজন নেই, তবে TEC চাইলে অন্তর্নিহিত তথ্য (NPPI উৎস তথ্য) পর্যালোচনা করতে পারে।</li>
+              <li>SLT হিসেবে চিহ্নিত দরদাতাকে "Clarification"-এর সুযোগ দেওয়া হয় না এই নির্দিষ্ট কারণে — এটি একটি পরিসংখ্যানগত/সূত্রভিত্তিক প্রত্যাখ্যান, ব্যাখ্যা-নির্ভর সিদ্ধান্ত নয়।</li>
+              <li>SLT-এর কারণে প্রত্যাখ্যাত দরদাতা রেজিস্ট্রেশন/ডিবার তালিকায় যুক্ত হয় না — শুধু ওই নির্দিষ্ট দরপত্রটি প্রত্যাখ্যাত হয়; ভবিষ্যতের অন্য দরপত্রে অংশগ্রহণে কোনো বাধা নেই।</li>
+            </ul>
+          </div>
+
+          <h4>৯. Checklist — SLT-সম্পর্কিত মূল্যায়ন পর্যালোচনার জন্য</h4>
+          <div class="checklist">
+            <label><input type="checkbox"> কমপক্ষে দুইটি টেকনিক্যালি রেসপনসিভ দরপত্র আছে কিনা যাচাই</label>
+            <label><input type="checkbox"> সিস্টেম-জেনারেটেড Weighted Average ও Sd মূল্য TER-এ পর্যালোচিত</label>
+            <label><input type="checkbox"> শুধুমাত্র একটি রেসপনসিভ দরপত্র থাকলে ২০% বিচ্যুতি নিয়ম প্রয়োগ করা হয়েছে কিনা</label>
+            <label><input type="checkbox"> SLT-চিহ্নিত দরপত্রকে যথাযথভাবে আর্থিকভাবে Non-Responsive ঘোষণা করা হয়েছে</label>
+            <label><input type="checkbox"> ঊর্ধ্বসীমা (+১০%) অতিক্রমকারী দরপত্রও পৃথকভাবে পরীক্ষিত</label>
+            <label><input type="checkbox"> Evaluation Report-এ Rule ২৫/২৬ রেফারেন্স স্পষ্টভাবে উল্লিখিত</label>
+          </div>
+
+          <h4>Frequently Asked Questions</h4>
+          <details class="faq"><summary>SLT মানে কী?</summary><p>Significantly Low-priced Tender — অর্থাৎ পরিসংখ্যানগতভাবে অস্বাভাবিক কম মূল্যের দরপত্র, যা Rule ২৫-২৬ অনুযায়ী চিহ্নিত ও প্রত্যাখ্যাত হয়।</p></details>
+          <details class="faq"><summary>SLT কি একটি ক্রয় পদ্ধতি (procurement method)?</summary><p>না। এটি OTM/LTM/RFQ-এর মতো কোনো পদ্ধতি নয়, বরং যেকোনো প্রতিযোগিতামূলক পদ্ধতির আর্থিক মূল্যায়ন পর্যায়ে ব্যবহৃত একটি যাচাই-প্রক্রিয়া।</p></details>
+          <details class="faq"><summary>সর্বনিম্ন দরদাতা কি সবসময় কাজ পায়?</summary><p>না — যদি তার দর SLT নিম্নসীমার নিচে পড়ে, তাহলে তাকে আর্থিকভাবে Non-Responsive ঘোষণা করে বাদ দেওয়া হয়, এমনকি সেটিই সর্বনিম্ন দর হলেও।</p></details>
+          <details class="faq"><summary>NPPI কী এবং কীভাবে হালনাগাদ হয়?</summary><p>National Public Procurement Price Index — e-GP সিস্টেম থেকে প্রতিনিয়ত (রোলিং ২৮-দিনের ভিত্তিতে) স্বয়ংক্রিয়ভাবে গণনাকৃত একটি জাতীয় গড় মূল্য-বিচ্যুতি সূচক।</p></details>
+          <details class="faq"><summary>SLT-চিহ্নিত দরদাতাকে কি ব্যাখ্যা দেওয়ার সুযোগ দেওয়া হয়?</summary><p>না, এটি একটি সূত্রভিত্তিক/পরিসংখ্যানগত সিদ্ধান্ত বলে Clarification Request-এর আওতায় পড়ে না।</p></details>
+          <details class="faq"><summary>মাত্র একজন রেসপনসিভ দরদাতা থাকলে কী হয়?</summary><p>Weighted Average/Sd পদ্ধতির পরিবর্তে সরাসরি সরকারি প্রাক্কলনের সাথে তুলনা করা হয়; বিচ্যুতি ২০%-এর মধ্যে থাকলে Post-Qualification সাপেক্ষে অগ্রসর হওয়া যায়।</p></details>
+          <details class="faq"><summary>SLT-এর কারণে বাতিল দরদাতা কি ডিবার হয়ে যান?</summary><p>না। এটি শুধু ওই নির্দিষ্ট দরপত্রকে প্রভাবিত করে; ডিবারমেন্ট একটি সম্পূর্ণ পৃথক প্রক্রিয়া (দেখুন অধ্যায়-৭, Rule ১৪৯)।</p></details>
+          <details class="faq"><summary>SLT নিয়ে দরদাতার আপিলের সুযোগ আছে কি?</summary><p>হ্যাঁ, Rule ৭২–৭৭ (অধ্যায়-৩, অংশ-১২) অনুযায়ী সাধারণ অভিযোগ-আপিল প্রক্রিয়া SLT-জনিত প্রত্যাখ্যানের ক্ষেত্রেও প্রযোজ্য।</p></details>
+
+          <div class="callout tip" style="margin-top:18px;">
+            <b>উৎস</b> এই চ্যাপ্টারের সূত্র, ওজন (০.২/০.৩/০.৫) ও প্রক্রিয়া BPPA-প্রকাশিত অফিসিয়াল Standard Tender Document e-PG2 (ITT Clause ৪৯, "Identifying Significantly Low-priced Tenders")-এর সরাসরি-যাচাইকৃত বিষয়বস্তু থেকে নেওয়া। Rule ২৫-২৬-এর সম্পূর্ণ মূল টেক্সটের জন্য মূল গেজেট যাচাই করুন।
+          </div>
+        </div>
+      </details>
+
+
+    </section>
+
+    <section class="chapters" id="partB">
+      <div class="partB-banner">
+        <span class="module-badge">🖥️ Training Manual · Procurement Officers &amp; TEC</span>
+        <h2 style="margin-top:10px;">পার্ট-B: দরপত্র মূল্যায়ন — সম্পূর্ণ প্রশিক্ষণ মডিউল</h2>
+        <p>PPR ২০২৫ অনুযায়ী বাংলাদেশের e-GP (Electronic Government Procurement) সিস্টেমে দরপত্র মূল্যায়নের সম্পূর্ণ ধাপে-ধাপে কার্যপ্রণালী — TEC কনফিগারেশন থেকে শুরু করে Eligibility, Technical ও Financial Evaluation, SLP/LERT নির্ণয়, Post Qualification, TER প্রস্তুতকরণ, Approval Workflow এবং চূড়ান্ত Award পর্যন্ত — একটি বাস্তবভিত্তিক কেস স্টাডিসহ (১২টি মডিউল)। এই অংশটি মূলত অধ্যায়-৫ ও অধ্যায়-১০-এ বর্ণিত মূল্যায়ন প্রক্রিয়ার একটি ব্যবহারিক গভীর সংস্করণ (practical deep-dive companion)। প্রতিটি মডিউলে প্রাসঙ্গিক Rule রেফারেন্স, স্ক্রিনশট-প্লেসহোল্ডার, Best Practice/Common Error তালিকা, Checklist ও FAQ অন্তর্ভুক্ত।</p>
+      </div>
+
+<details class="chapter" id="tec1">
+  <summary>
+    <div class="ch-num">M১</div>
+    <div class="ch-title"><h3>মূল্যায়ন কমিটি (TEC) কনফিগারেশন</h3><div class="ch-sub">Module One — দরপত্র মূল্যায়ন প্রশিক্ষণ মডিউল</div></div>
+    <div class="chev">▾</div>
+  </summary>
+  <div class="body">
+    <p style="color:var(--ink-soft)">e-GP-এ মূল্যায়ন প্রক্রিয়া শুরুর প্রথম ও সবচেয়ে গুরুত্বপূর্ণ ধাপ হলো Tender Evaluation Committee (TEC) সঠিকভাবে গঠন ও কনফিগার করা। ভুল কনফিগারেশন পুরো Workflow-কে পরবর্তীতে ব্যাহত করতে পারে।</p>
+    <h4>Tender Evaluation Committee (TEC) গঠন</h4>
+<p>Procuring Entity (PE)-এর দায়িত্বপ্রাপ্ত কর্মকর্তা e-GP পোর্টালে লগইন করে সংশ্লিষ্ট Tender ID নির্বাচন করে "Evaluation Committee" মডিউলে প্রবেশ করেন। এখানে ন্যূনতম সদস্য সংখ্যা, চেয়ারপারসনের পদমর্যাদা এবং কমিটির ধরন (Technical/Financial/Combined) নির্ধারণ করতে হয়।</p>
+<div class="tags"><span class="tag">PPR ২০২৫, বিধি ৪২ — TEC গঠন পদ্ধতি</span><span class="tag">PPR ২০২৫, তফসিল ৭ — কমিটির গঠনতন্ত্র</span></div>
+<div class="ss-placeholder"><span class="cam">📸</span>[Screenshot Placeholder: "Evaluation Committee Setup" স্ক্রিন — e-GP Dashboard → Tender Management → Evaluation Committee → Create New]</div>
+<h4>Team Evaluation Configuration</h4>
+<p>প্রতিটি সদস্যের জন্য User ID, Designation, এবং Role (Chairperson/Member/Member-Secretary) নির্ধারণ করে সিস্টেমে এন্ট্রি করতে হয়। সংগ্রহের প্রকৃতি অনুযায়ী (Goods/Works/Services) কমিটির গঠন ভিন্ন হতে পারে — যেমন Works ক্ষেত্রে ন্যূনতম একজন প্রকৌশলী সদস্য থাকা আবশ্যক।</p>
+<table class="role-table">
+<tr><th>ভূমিকা</th><th>নূন্যতম যোগ্যতা</th><th>সংখ্যা (সাধারণ)</th></tr>
+<tr><td>Chairperson</td><td>PE-এর সমমর্যাদার বা ঊর্ধ্বতন কর্মকর্তা, ক্রয়কারীর সরাসরি অধীন নন</td><td>১ জন</td></tr>
+<tr><td>Member</td><td>প্রাসঙ্গিক প্রযুক্তিগত/আর্থিক অভিজ্ঞতা সম্পন্ন কর্মকর্তা</td><td>২–৪ জন</td></tr>
+<tr><td>Member-Secretary</td><td>প্রকিউরমেন্ট সংক্রান্ত প্রশাসনিক দায়িত্বে অভিজ্ঞ</td><td>১ জন</td></tr>
+</table>
+<h4>Chairperson ও Member নির্বাচন</h4>
+<p>Chairperson নির্বাচনের সময় লক্ষ্য রাখতে হবে তিনি যেন প্রকিউরমেন্ট প্রক্রিয়ার সাথে সরাসরি স্বার্থসংশ্লিষ্ট না হন। e-GP সিস্টেম স্বয়ংক্রিয়ভাবে একই ব্যক্তিকে একাধিক ভূমিকায় (যেমন Bid Opening ও Evaluation উভয় কমিটিতে) নিয়োগ প্রতিরোধ করার সতর্কবার্তা প্রদর্শন করে।</p>
+<h4>সদস্যদের ভূমিকা ও দায়িত্ব</h4>
+<ul class="bullets">
+<li><strong>Chairperson:</strong> মূল্যায়ন সভা পরিচালনা, ঐকমত্য প্রতিষ্ঠা, চূড়ান্ত সুপারিশে স্বাক্ষর।</li>
+<li><strong>Member:</strong> নিজ নিজ Evaluation Form পূরণ, ডকুমেন্ট যাচাই, মতামত প্রদান।</li>
+<li><strong>Member-Secretary:</strong> সভার কার্যবিবরণী সংরক্ষণ, TER সংকলন, সিস্টেম এন্ট্রি সমন্বয়।</li>
+</ul>
+<h4>Workflow Configuration</h4>
+<p>কমিটি গঠনের পর PE কর্তৃক Approval Workflow-এর ধাপসমূহ (কতজন অনুমোদনকারী, কোন স্তরে কার অনুমোদন প্রয়োজন) সিস্টেমে সেট করতে হয়। এই কনফিগারেশন পরবর্তী প্রতিটি ধাপে (TER, Award) প্রযোজ্য হবে।</p>
+<div class="flowwrap"><div class="flow" style="min-width:auto"><div class="flowstep"><div class="fnum">1</div>TEC তৈরি</div><div class="flowarrow">→</div><div class="flowstep"><div class="fnum">2</div>সদস্য মনোনয়ন</div><div class="flowarrow">→</div><div class="flowstep"><div class="fnum">3</div>Workflow সেট</div><div class="flowarrow">→</div><div class="flowstep"><div class="fnum">4</div>Invitation প্রেরণ</div></div></div>
+<div class="grid2"><div class="mini"><b>✅ Best Practices</b><ul class="bullets"><li>কমিটি গঠনের আগে সংশ্লিষ্ট সবার Conflict of Interest যাচাই করুন।</li><li>Chairperson-কে সংগ্রহের প্রকৃতি সম্পর্কে অভিজ্ঞ কর্মকর্তা রাখুন।</li><li>Workflow Configuration চূড়ান্ত করার আগে PE-এর অনুমোদন নিন।</li></ul></div><div class="mini"><b>❌ Common Errors</b><ul class="bullets"><li>একই ব্যক্তিকে একাধিক সাংঘর্ষিক ভূমিকায় নিয়োগ।</li><li>Member-Secretary ছাড়াই কমিটি গঠন করা।</li><li>ন্যূনতম সদস্য সংখ্যা পূরণ না করেই Submit করা।</li></ul></div></div>
+<div class="callout tip"><b>💡 Evaluation Tip</b>একটি কমিটিতে বৈচিত্র্যময় দক্ষতা (কারিগরি + আর্থিক + আইনি) নিশ্চিত করলে মূল্যায়ন দ্রুত ও নির্ভুল হয়।</div>
+<h4>Compliance Checklist</h4>
+<div class="checklist"><label><input type="checkbox"> TEC-এ ন্যূনতম নির্ধারিত সদস্য সংখ্যা রয়েছে</label><label><input type="checkbox"> Chairperson-এর স্বার্থসংঘাত নেই মর্মে প্রাথমিক পরীক্ষা সম্পন্ন</label><label><input type="checkbox"> Workflow Configuration PE কর্তৃক অনুমোদিত</label><label><input type="checkbox"> প্রতিটি সদস্যের User ID সিস্টেমে সক্রিয়</label></div>
+<h4>FAQ</h4>
+<details class="faq"><summary>TEC-এর সদস্য পরবর্তীতে পরিবর্তন করা যায় কি?</summary><p>হ্যাঁ, তবে PE-এর লিখিত অনুমোদন এবং সিস্টেমে যথাযথ কারণ উল্লেখপূর্বক Replace করতে হয়; ইতিমধ্যে সম্পন্ন মূল্যায়ন অংশ পুনরায় যাচাই করার প্রয়োজন হতে পারে।</p></details>
+<details class="faq"><summary>Bid Opening Committee ও Evaluation Committee কি একই হতে পারে?</summary><p>PPR ২০২৫ অনুযায়ী উভয় কমিটি পৃথক রাখাই সমীচীন, যাতে স্বার্থসংঘাত এড়ানো যায় এবং নিরপেক্ষতা নিশ্চিত হয়।</p></details>
+  </div>
+</details>
+
+<details class="chapter" id="tec2">
+  <summary>
+    <div class="ch-num">M২</div>
+    <div class="ch-title"><h3>কমিটির সদস্যদের সম্মতি (Consent)</h3><div class="ch-sub">Module Two — দরপত্র মূল্যায়ন প্রশিক্ষণ মডিউল</div></div>
+    <div class="chev">▾</div>
+  </summary>
+  <div class="body">
+    <p style="color:var(--ink-soft)">কমিটি গঠনের পর প্রতিটি সদস্যের ডিজিটাল সম্মতি ও Conflict of Interest ঘোষণা ছাড়া মূল্যায়ন কার্যক্রম আনুষ্ঠানিকভাবে শুরু করা যায় না।</p>
+    <h4>Committee Invitation</h4>
+<p>TEC কনফিগারেশন সম্পন্ন হলে e-GP সিস্টেম স্বয়ংক্রিয়ভাবে প্রতিটি মনোনীত সদস্যের নিবন্ধিত ইমেইল ও ড্যাশবোর্ডে একটি Invitation Notification পাঠায়, যাতে Tender ID, ভূমিকা এবং সময়সীমা উল্লেখ থাকে।</p>
+<div class="tags"><span class="tag">PPR ২০২৫, বিধি ৪৩ — সদস্য অবহিতকরণ</span></div>
+<div class="ss-placeholder"><span class="cam">📸</span>[Screenshot Placeholder: Committee Invitation Notification — Member Dashboard → Notifications → Pending Invitations]</div>
+<h4>Member Acceptance</h4>
+<p>প্রতিটি সদস্য নিজ ড্যাশবোর্ডে লগইন করে Invitation দেখে "Accept" অথবা "Decline" নির্বাচন করেন। Decline করলে PE-কে বিকল্প সদস্য মনোনয়নের জন্য অবহিত করা হয়।</p>
+<h4>Digital Consent প্রদান</h4>
+<p>Accept করার পর সদস্যকে একটি Digital Consent Form পূরণ করতে হয়, যেখানে তিনি নিশ্চিত করেন যে তিনি স্বেচ্ছায়, কোনো প্রভাব বা চাপ ছাড়াই দায়িত্ব পালন করবেন।</p>
+<h4>ডিজিটাল Declaration Submission</h4>
+<p>Consent-এর সাথে একটি Declaration আপলোড/স্বাক্ষর করতে হয় যাতে সদস্য নিশ্চিত করেন তিনি প্রাসঙ্গিক আইন, বিধি এবং গোপনীয়তা মেনে চলবেন।</p>
+<h4>Conflict of Interest Declaration</h4>
+<p>প্রতিটি সদস্যকে ঘোষণা করতে হয় যে তার কোনো বিডারের সাথে আর্থিক, পারিবারিক বা ব্যবসায়িক সম্পর্ক নেই। থাকলে তা প্রকাশ করে সংশ্লিষ্ট মূল্যায়ন থেকে সরে দাঁড়াতে হবে।</p>
+<div class="tags"><span class="tag">PPR ২০২৫, বিধি ১২৭ — Conflict of Interest</span></div>
+<div class="callout warn"><b>⚠️ সতর্কতা</b>মিথ্যা Conflict of Interest ঘোষণা একটি গুরুতর শৃঙ্খলাভঙ্গ হিসেবে গণ্য হয় এবং তা Debarment পর্যন্ত গড়াতে পারে।</div>
+<div class="grid2"><div class="mini"><b>✅ Best Practices</b><ul class="bullets"><li>Invitation পাওয়ার ২৪ ঘণ্টার মধ্যে সাড়া দিন।</li><li>সন্দেহ থাকলে Conflict of Interest প্রকাশ করাই নিরাপদ।</li></ul></div><div class="mini"><b>❌ Common Errors</b><ul class="bullets"><li>Consent না দিয়েই Evaluation Form খোলার চেষ্টা।</li><li>Declaration আপলোড না করে এগিয়ে যাওয়া।</li></ul></div></div>
+<h4>Compliance Checklist</h4>
+<div class="checklist"><label><input type="checkbox"> সকল সদস্যের Acceptance সিস্টেমে নথিভুক্ত</label><label><input type="checkbox"> Digital Consent Form সম্পন্ন</label><label><input type="checkbox"> Conflict of Interest Declaration সংরক্ষিত</label></div>
+<h4>FAQ</h4>
+<details class="faq"><summary>একজন সদস্য Consent দিতে অস্বীকৃতি জানালে কী হবে?</summary><p>PE বিকল্প সদস্য মনোনীত করেন এবং নতুন Invitation প্রেরণ করা হয়; মূল্যায়ন সময়সীমা সেই অনুযায়ী সমন্বয় হতে পারে।</p></details>
+  </div>
+</details>
+
+<details class="chapter" id="tec3">
+  <summary>
+    <div class="ch-num">M৩</div>
+    <div class="ch-title"><h3>দরপত্র মূল্যায়ন শুরু</h3><div class="ch-sub">Module Three — দরপত্র মূল্যায়ন প্রশিক্ষণ মডিউল</div></div>
+    <div class="chev">▾</div>
+  </summary>
+  <div class="body">
+    <p style="color:var(--ink-soft)">সম্মতি সম্পন্ন হলে TEC আনুষ্ঠানিকভাবে মূল্যায়ন কার্যক্রমে প্রবেশ করে এবং সিস্টেমে জমাকৃত সকল দরপত্রের তথ্য পর্যালোচনা করে।</p>
+    <h4>Tender Opening Information Review</h4>
+<p>TEC সর্বপ্রথম Bid Opening মিনিটস, জমাকৃত মূল্য, এবং প্রাপ্ত Securities/Guarantee-এর তথ্য পর্যালোচনা করে নিশ্চিত হয় যে সবকিছু বিধি অনুযায়ী সম্পন্ন হয়েছে।</p>
+<div class="ss-placeholder"><span class="cam">📸</span>[Screenshot Placeholder: Bid Opening Summary]</div>
+<h4>Submitted Tender তালিকা</h4>
+<p>Evaluation Dashboard-এ প্রতিটি বিডারের নাম, জমার তারিখ-সময় এবং Tender Security-এর অবস্থা তালিকাভুক্ত থাকে। TEC এই তালিকা থেকে মূল্যায়নযোগ্য বিডার চিহ্নিত করে।</p>
+<h4>Evaluation Dashboard পরিচিতি</h4>
+<p>Dashboard-এ চারটি প্রধান ট্যাব থাকে — Eligibility, Technical, Financial এবং Post-Qualification — প্রতিটির অগ্রগতি (%) প্রদর্শিত হয়।</p>
+<div class="ss-placeholder"><span class="cam">📸</span>[Screenshot Placeholder: Evaluation Dashboard Overview]</div>
+<h4>Evaluation Timeline</h4>
+<p>PPR ২০২৫ অনুযায়ী মূল্যায়ন কার্যক্রম নির্ধারিত সময়সীমার মধ্যে সম্পন্ন করতে হয়; সিস্টেম স্বয়ংক্রিয়ভাবে দিনগণনা প্রদর্শন করে এবং সময়সীমা শেষ হওয়ার পূর্বে সতর্কবার্তা দেয়।</p>
+<div class="tags"><span class="tag">PPR ২০২৫, বিধি ৪৫ — মূল্যায়ন সম্পন্নের সময়সীমা</span></div>
+<div class="grid2"><div class="mini"><b>✅ Best Practices</b><ul class="bullets"><li>প্রথম সভাতেই Timeline নিয়ে কমিটির মধ্যে ঐকমত্য তৈরি করুন।</li></ul></div><div class="mini"><b>❌ Common Errors</b><ul class="bullets"><li>Tender Security যাচাই না করেই Technical Evaluation-এ চলে যাওয়া।</li></ul></div></div>
+<h4>FAQ</h4>
+<details class="faq"><summary>নির্ধারিত সময়ের মধ্যে মূল্যায়ন সম্পন্ন না হলে কী হয়?</summary><p>TEC-কে কারণ ব্যাখ্যাসহ সময় বর্ধিতকরণের জন্য PE বরাবর আবেদন করতে হয়; PE যথাযথ কারণে সময় বাড়াতে পারেন।</p></details>
+  </div>
+</details>
+
+<details class="chapter" id="tec4">
+  <summary>
+    <div class="ch-num">M৪</div>
+    <div class="ch-title"><h3>Eligibility ও Qualification Evaluation</h3><div class="ch-sub">Module Four — দরপত্র মূল্যায়ন প্রশিক্ষণ মডিউল</div></div>
+    <div class="chev">▾</div>
+  </summary>
+  <div class="body">
+    <p style="color:var(--ink-soft)">এই অধ্যায়টি e-GP-এর প্রতিটি Online Evaluation Form-কে পৃথকভাবে ব্যাখ্যা করে — যাচাই পদ্ধতি, সহায়ক দলিল, Pass/Fail নির্ণায়ক এবং সাধারণ ভুলসহ।</p>
+    <h4>Eligibility Criteria</h4>
+<p><strong>উদ্দেশ্য:</strong> বিডার আইনগতভাবে দরপত্রে অংশগ্রহণের যোগ্য কিনা তা নিশ্চিত করা।</p>
+<p><strong>যাচাই পদ্ধতি:</strong> Trade License, TIN, VAT Registration Certificate-এর সত্যতা যাচাই করুন এবং Blacklist তালিকার সাথে মিলিয়ে দেখুন।</p>
+<p><strong>Pass/Fail:</strong> যেকোনো একটি বাধ্যতামূলক দলিল অনুপস্থিত বা মেয়াদোত্তীর্ণ হলে <span class="fail">Fail</span>।</p>
+<p><strong>সাধারণ ভুল:</strong> মেয়াদোত্তীর্ণ Trade License গ্রহণ করা।</p>
+<h4>Legal Capacity</h4>
+<p>প্রতিষ্ঠানের নিবন্ধন সনদ, Power of Attorney এবং স্বাক্ষরকারীর অনুমোদন যাচাই করে নিশ্চিত হতে হয় যে চুক্তি সম্পাদনের বৈধ ক্ষমতা রয়েছে।</p>
+<div class="tags"><span class="tag">PPR ২০২৫, বিধি ২৯ — Legal Capacity</span></div>
+<h4>Tax &amp; VAT Compliance</h4>
+<p>সর্বশেষ অর্থবছরের Tax Return এবং VAT Return Acknowledgement যাচাই করতে হয়। NBR পোর্টালের সাথে ক্রস-চেক করা Best Practice।</p>
+<h4>Litigation History</h4>
+<p>বিডারের বিরুদ্ধে চলমান বা সমাপ্ত মামলার Self-Declaration যাচাই করা হয়; বড় ধরনের চুক্তি বিরোধ থাকলে ঝুঁকি মূল্যায়ন করতে হয়।</p>
+<h4>Financial Capacity</h4>
+<p>Bank Solvency Certificate, Audited Financial Statement এবং Credit Line-এর মাধ্যমে বিডারের আর্থিক সক্ষমতা যাচাই করা হয়।</p>
+<h4>Average Annual Construction Turnover</h4>
+<p>নির্ধারিত সংখ্যক (সাধারণত সর্বশেষ ৩–৫) অর্থবছরের গড় টার্নওভার Tender Document-এ উল্লিখিত Threshold-এর সাথে তুলনা করতে হয়।</p>
+<div class="callout"><b>ℹ️ উদাহরণ</b>Threshold ৳৫ কোটি হলে এবং বিডারের গড় টার্নওভার ৳৪.২ কোটি হলে তা <span class="fail">Fail</span> বিবেচিত হবে।</div>
+<h4>Liquid Assets</h4>
+<p>Bank Statement বা Line of Credit-এর মাধ্যমে ন্যূনতম নির্ধারিত তারল্য সক্ষমতা যাচাই করা হয় — সাধারণত প্রাক্কলিত মূল্যের একটি নির্দিষ্ট শতাংশ।</p>
+<h4>Similar Work Experience</h4>
+<p>গত নির্দিষ্ট বছরে সম্পন্ন সদৃশ প্রকৃতির কাজের Completion Certificate যাচাই করতে হয়; কাজের প্রকৃতি ও পরিমাণ Tender-এর চাহিদার সাথে তুলনীয় হতে হবে।</p>
+<div class="tags"><span class="tag">PPR ২০২৫, বিধি ৩২ — Similar Experience</span></div>
+<h4>Specific Experience</h4>
+<p>নির্দিষ্ট প্রযুক্তি বা কাজের ধরনে (যেমন বিশেষ কাঠামো নির্মাণ) পূর্ব অভিজ্ঞতা যাচাই করা হয়।</p>
+<h4>Equipment</h4>
+<p>Ownership বা Lease Agreement-এর মাধ্যমে প্রয়োজনীয় যন্ত্রপাতি প্রাপ্যতা নিশ্চিত করতে হবে; ভাড়াকৃত যন্ত্রপাতির ক্ষেত্রে চুক্তির মেয়াদ প্রকল্প সময়সীমা কভার করছে কিনা তা পরীক্ষা করুন।</p>
+<h4>Personnel</h4>
+<p>মূল কারিগরি পদে প্রস্তাবিত ব্যক্তির CV, শিক্ষাগত যোগ্যতা এবং অভিজ্ঞতার সনদ যাচাই করতে হয়; একই ব্যক্তি একাধিক দরপত্রে মূল পদে প্রস্তাবিত থাকলে তা সতর্কতার বিষয়।</p>
+<h4>Pending Commitments</h4>
+<p>বিডারের হাতে থাকা চলমান কাজের পরিমাণ যাচাই করে তার সক্ষমতা নতুন কাজ গ্রহণের উপযোগী কিনা তা নির্ধারণ করা হয় (Bid Capacity)।</p>
+<h4>Manufacturer Authorization (যেখানে প্রযোজ্য)</h4>
+<p>পণ্য সরবরাহের ক্ষেত্রে মূল উৎপাদনকারীর Authorization Letter যাচাই আবশ্যক, বিশেষত Agency/Dealer-এর মাধ্যমে দরপত্র জমা হলে।</p>
+<h4>Joint Venture Evaluation (যদি থাকে)</h4>
+<p>JV Agreement-এ অংশীদারদের দায়বদ্ধতার অনুপাত, Lead Partner-এর ঘোষণা এবং যৌথ ও পৃথক দায় (Joint and Several Liability) স্পষ্ট থাকতে হবে।</p>
+<div class="tags"><span class="tag">PPR ২০২৫, বিধি ৩৫ — Joint Venture</span></div>
+<div class="grid2"><div class="mini"><b>✅ Best Practices</b><ul class="bullets"><li>প্রতিটি দলিলের মূল কপি বা সত্যায়িত কপির সাথে আপলোডকৃত স্ক্যান কপি মিলিয়ে দেখুন।</li><li>সন্দেহজনক দলিলের ক্ষেত্রে ইস্যুকারী প্রতিষ্ঠানের সাথে সরাসরি যোগাযোগ করুন।</li></ul></div><div class="mini"><b>❌ Common Errors</b><ul class="bullets"><li>Threshold-এর সাথে ভুল বছরের Turnover তুলনা করা।</li><li>JV Agreement-এ Liability স্পষ্ট না থাকা সত্ত্বেও Pass করা।</li></ul></div></div>
+<h4>Compliance Checklist</h4>
+<div class="checklist"><label><input type="checkbox"> সকল বাধ্যতামূলক Eligibility দলিল আপলোড ও যাচাইকৃত</label><label><input type="checkbox"> Financial Capacity Threshold-এর সাথে তুলনা সম্পন্ন</label><label><input type="checkbox"> Similar/Specific Experience সনদ প্রকল্পের চাহিদার সাথে সামঞ্জস্যপূর্ণ</label><label><input type="checkbox"> JV থাকলে Agreement-এ Liability স্পষ্ট</label></div>
+<h4>FAQ</h4>
+<details class="faq"><summary>একটি Eligibility Form-এ Fail করলে কি অন্য Form মূল্যায়ন করা হয়?</summary><p>না, সাধারণত কোনো একটি বাধ্যতামূলক Eligibility Criteria-তে Fail করলে সংশ্লিষ্ট বিডারকে Non-responsive ঘোষণা করে পরবর্তী ধাপে অগ্রসর করা হয় না, তবে TEC রেকর্ডের জন্য সম্পূর্ণ পর্যালোচনা সম্পন্ন করতে পারে।</p></details>
+  </div>
+</details>
+
+<details class="chapter" id="tec5">
+  <summary>
+    <div class="ch-num">M৫</div>
+    <div class="ch-title"><h3>Technical Evaluation</h3><div class="ch-sub">Module Five — দরপত্র মূল্যায়ন প্রশিক্ষণ মডিউল</div></div>
+    <div class="chev">▾</div>
+  </summary>
+  <div class="body">
+    <p style="color:var(--ink-soft)">Eligibility উত্তীর্ণ বিডারদের কারিগরি প্রস্তাব নির্ধারিত Specification-এর সাথে তুলনা করে Responsiveness নির্ধারণ করা হয়।</p>
+    <h4>Technical Responsiveness</h4>
+<p>বিডারের প্রস্তাবিত Method Statement, Work Schedule এবং প্রস্তাবিত উপকরণ Tender Document-এর চাহিদার সাথে সামঞ্জস্যপূর্ণ কিনা তা যাচাই করা হয়।</p>
+<h4>Specification Compliance</h4>
+<p>প্রতিটি Technical Specification আইটেম-ভিত্তিক Compliance Statement-এর মাধ্যমে যাচাই করা হয় — "Comply / Deviate / Not Comply"।</p>
+<div class="ss-placeholder"><span class="cam">📸</span>[Screenshot Placeholder: Specification Compliance Matrix]</div>
+<h4>Deviation Analysis</h4>
+<p>ছোটখাটো বিচ্যুতি (Minor Deviation) যা মূল প্রয়োজনীয়তাকে প্রভাবিত করে না তা গ্রহণযোগ্য হতে পারে, তবে মূল প্রয়োজনীয়তায় বিচ্যুতি (Material Deviation) সাধারণত Non-responsive হিসেবে গণ্য হয়।</p>
+<div class="tags"><span class="tag">PPR ২০২৫, বিধি ৫০ — Material Deviation</span></div>
+<h4>Clarification (যদি প্রযোজ্য)</h4>
+<p>অস্পষ্ট তথ্যের ক্ষেত্রে TEC সিস্টেমের মাধ্যমে বিডারের কাছে লিখিত Clarification চাইতে পারে, তবে দর বা মূল প্রস্তাবের সারবত্তা পরিবর্তনের সুযোগ নেই।</p>
+<div class="callout warn"><b>⚠️ সতর্কতা</b>Clarification-এর নামে বিডারকে নতুন তথ্য যোগ করার সুযোগ দেওয়া বিধি লঙ্ঘন।</div>
+<h4>Technically Responsive ও Non-responsive Bidder নির্ধারণ</h4>
+<p>সকল বাধ্যতামূলক Specification পূরণকারী বিডারকে Technically Responsive ঘোষণা করে Financial Evaluation-এ অন্তর্ভুক্ত করা হয়।</p>
+<div class="grid2"><div class="mini"><b>✅ Best Practices</b><ul class="bullets"><li>প্রতিটি Deviation-এর প্রভাব লিখিতভাবে যুক্তিসহ নথিভুক্ত করুন।</li></ul></div><div class="mini"><b>❌ Common Errors</b><ul class="bullets"><li>Material Deviation-কে Minor বলে চিহ্নিত করা।</li></ul></div></div>
+<h4>FAQ</h4>
+<details class="faq"><summary>Clarification-এর জবাব না দিলে কী হবে?</summary><p>নির্ধারিত সময়ের মধ্যে জবাব না পেলে TEC উপলব্ধ তথ্যের ভিত্তিতেই মূল্যায়ন সম্পন্ন করে, যা বিডারের বিপক্ষে যেতে পারে।</p></details>
+  </div>
+</details>
+
+<details class="chapter" id="tec6">
+  <summary>
+    <div class="ch-num">M৬</div>
+    <div class="ch-title"><h3>Financial Evaluation</h3><div class="ch-sub">Module Six — দরপত্র মূল্যায়ন প্রশিক্ষণ মডিউল</div></div>
+    <div class="chev">▾</div>
+  </summary>
+  <div class="body">
+    <p style="color:var(--ink-soft)">শুধুমাত্র Technically Responsive বিডারদের আর্থিক প্রস্তাব উন্মুক্ত ও মূল্যায়ন করা হয়।</p>
+    <h4>Financial Bid Opening</h4>
+<p>নির্ধারিত তারিখে সিস্টেম স্বয়ংক্রিয়ভাবে Technically Responsive বিডারদের আর্থিক প্রস্তাব উন্মুক্ত করে এবং TEC-এর কাছে প্রদর্শন করে।</p>
+<div class="ss-placeholder"><span class="cam">📸</span>[Screenshot Placeholder: Financial Bid Opening Summary]</div>
+<h4>Arithmetic Correction</h4>
+<p>একক দর ও পরিমাণের গুণফলে গাণিতিক ভুল থাকলে সিস্টেম স্বয়ংক্রিয়ভাবে সংশোধন করে; সংশোধিত ও মূল দরের মধ্যে অসামঞ্জস্য থাকলে একক দরকে প্রাধান্য দেওয়া হয়।</p>
+<div class="tags"><span class="tag">PPR ২০২৫, বিধি ৫৫ — Arithmetic Correction</span></div>
+<h4>Discount Evaluation</h4>
+<p>বিডার প্রদত্ত শর্তসাপেক্ষ বা নিঃশর্ত ছাড় (Discount) মূল্যায়নে যথাযথভাবে প্রয়োগ করা হয় এবং তা চূড়ান্ত Evaluated Price-এ প্রতিফলিত হয়।</p>
+<h4>Currency Conversion (যদি প্রযোজ্য)</h4>
+<p>একাধিক মুদ্রায় দর জমা হলে Tender Document-এ উল্লিখিত নির্দিষ্ট তারিখের বিনিময় হার (সাধারণত Bangladesh Bank-এর হার) ব্যবহার করে একক মুদ্রায় রূপান্তর করতে হয়।</p>
+<h4>Price Adjustment</h4>
+<p>Tender Document-এ অনুমোদিত থাকলে কর, শুল্ক বা অন্যান্য সমন্বয়যোগ্য উপাদান যুক্ত/বাদ দিয়ে Evaluated Price নির্ণয় করা হয়।</p>
+<h4>Responsive Price নির্ধারণ</h4>
+<p>সকল সংশোধনী ও সমন্বয় শেষে প্রতিটি বিডারের চূড়ান্ত Evaluated Responsive Price নির্ধারিত হয়, যা SLP গণনার ভিত্তি হিসেবে ব্যবহৃত হবে।</p>
+<div class="grid2"><div class="mini"><b>✅ Best Practices</b><ul class="bullets"><li>প্রতিটি Arithmetic Correction-এর হিসাব পৃথকভাবে নথিভুক্ত রাখুন।</li></ul></div><div class="mini"><b>❌ Common Errors</b><ul class="bullets"><li>ভুল তারিখের বিনিময় হার ব্যবহার করা।</li></ul></div></div>
+  </div>
+</details>
+
+<details class="chapter" id="tec7">
+  <summary>
+    <div class="ch-num">M৭</div>
+    <div class="ch-title"><h3>SLP (Substantially Lowest Price) Calculation</h3><div class="ch-sub">Module Seven — দরপত্র মূল্যায়ন প্রশিক্ষণ মডিউল</div></div>
+    <div class="chev">▾</div>
+  </summary>
+  <div class="body">
+    <p style="color:var(--ink-soft)">চূড়ান্ত র‍্যাঙ্কিং ও Lowest Evaluated Responsive Tender (LERT) নির্ধারণের গাণিতিক ভিত্তি এই অধ্যায়ে ব্যাখ্যা করা হয়েছে।</p>
+    <h4>SLP Calculation Method</h4>
+<p>সকল Responsive বিডারের Evaluated Price থেকে সর্বনিম্ন মূল্যকে ভিত্তি ধরে প্রতিটি বিডের মূল্য তুলনা করা হয়; নির্ধারিত Threshold-এর মধ্যে থাকা দরসমূহকে Substantially Lowest হিসেবে বিবেচনা করা হয়।</p>
+<div class="tags"><span class="tag">PPR ২০২৫, বিধি ৫৮ — SLP নির্ণয় পদ্ধতি</span></div>
+<h4>Lowest Evaluated Responsive Tender (LERT)</h4>
+<p>সকল Responsiveness যাচাইয়ের পর সর্বনিম্ন Evaluated Price প্রদানকারী বিডারকে LERT হিসেবে চিহ্নিত করা হয়, যিনি Post Qualification-এর জন্য মনোনীত হবেন।</p>
+<h4>Ranking Process</h4>
+<p>সকল Responsive বিডারকে Evaluated Price অনুযায়ী ঊর্ধ্বক্রমে সাজিয়ে Ranking তৈরি করা হয়; প্রথম স্থানে থাকা বিডার Post Qualification-এ প্রবেশ করেন।</p>
+<h4>Worked Example</h4>
+<table class="role-table">
+<tr><th>র‍্যাংক</th><th>বিডার</th><th class="num">Evaluated Price (৳)</th><th>মন্তব্য</th></tr>
+<tr><td>১</td><td>মেসার্স আলফা কনস্ট্রাকশন</td><td class="num">৯৮,৪০,০০০</td><td class="pass">LERT — সর্বনিম্ন মূল্য</td></tr>
+<tr><td>২</td><td>মেসার্স বেটা বিল্ডার্স</td><td class="num">১,০১,২০,০০০</td><td>দ্বিতীয় সর্বনিম্ন</td></tr>
+<tr><td>৩</td><td>মেসার্স গামা ইঞ্জিনিয়ারিং</td><td class="num">১,০৫,৫০,০০০</td><td>তৃতীয় সর্বনিম্ন</td></tr>
+</table>
+<h4>PPR ২০২৫ অনুযায়ী ব্যাখ্যা</h4>
+<p>PPR ২০২৫-এর সংশ্লিষ্ট বিধান অনুযায়ী শুধুমাত্র সর্বনিম্ন মূল্যকেই স্বয়ংক্রিয়ভাবে গ্রহণ করা যায় না — LERT-কে অবশ্যই Post Qualification পরীক্ষায় উত্তীর্ণ হতে হবে; ব্যর্থ হলে পরবর্তী ক্রমের বিডারের দিকে অগ্রসর হতে হয়।</p>
+<div class="callout tip"><b>💡 Evaluation Tip</b>র‍্যাংকিং টেবিল TER-এ হুবহু সংযুক্ত করলে Committee Review দ্রুততর হয়।</div>
+<h4>FAQ</h4>
+<details class="faq"><summary>সর্বনিম্ন দরদাতা Post Qualification-এ Fail করলে কী হবে?</summary><p>র‍্যাংকিং-এ দ্বিতীয় স্থানে থাকা বিডারের Post Qualification পরীক্ষা করা হয়, এবং এভাবে ক্রমান্বয়ে অগ্রসর হয়।</p></details>
+  </div>
+</details>
+
+<details class="chapter" id="tec8">
+  <summary>
+    <div class="ch-num">M৮</div>
+    <div class="ch-title"><h3>Post Qualification</h3><div class="ch-sub">Module Eight — দরপত্র মূল্যায়ন প্রশিক্ষণ মডিউল</div></div>
+    <div class="chev">▾</div>
+  </summary>
+  <div class="body">
+    <p style="color:var(--ink-soft)">LERT হিসেবে চিহ্নিত বিডারের প্রকৃত সক্ষমতা মাঠপর্যায়ে ও দলিলের মাধ্যমে চূড়ান্তভাবে যাচাই করা হয়।</p>
+    <h4>Lowest Bidder Verification</h4>
+<p>জমাকৃত সকল দলিলের সত্যতা মূল উৎস থেকে পুনরায় নিশ্চিত করা হয়।</p>
+<div class="tags"><span class="tag">PPR ২০২৫, বিধি ৬২ — Post Qualification</span></div>
+<h4>Experience Verification</h4>
+<p>দাখিলকৃত Completion Certificate ইস্যুকারী কর্তৃপক্ষের সাথে সরাসরি যোগাযোগ করে নিশ্চিত করা হয়।</p>
+<h4>Financial Verification</h4>
+<p>Audited Statement ও Bank Statement-এর সাথে প্রকৃত হিসাব মিলিয়ে দেখা হয়।</p>
+<h4>Bank Solvency</h4>
+<p>Solvency Certificate ইস্যুকারী ব্যাংকের সাথে সরাসরি নিশ্চিতকরণ (Confirmation Letter) সংগ্রহ করা Best Practice।</p>
+<h4>Tax ও VAT যাচাই</h4>
+<p>NBR-এর অনলাইন যাচাই পদ্ধতির মাধ্যমে TIN ও VAT সনদের বৈধতা নিশ্চিত করা হয়।</p>
+<h4>Manufacturer Verification</h4>
+<p>Authorization Letter-এর সত্যতা সরাসরি প্রস্তুতকারকের কাছ থেকে নিশ্চিত করা হয়, বিশেষত আমদানিকৃত পণ্যের ক্ষেত্রে।</p>
+<h4>Site Verification (যদি প্রযোজ্য)</h4>
+<p>বড় কাজের ক্ষেত্রে TEC বা মনোনীত প্রতিনিধি বিডারের অফিস/ওয়ার্কশপ/সাইট পরিদর্শন করে যন্ত্রপাতি ও জনবলের প্রকৃত উপস্থিতি যাচাই করতে পারেন।</p>
+<div class="ss-placeholder"><span class="cam">📸</span>[Screenshot Placeholder: Site Verification Report Upload]</div>
+<h4>Post Qualification Pass/Fail Criteria</h4>
+<table class="role-table">
+<tr><th>যাচাই ক্ষেত্র</th><th>Pass শর্ত</th><th>Fail শর্ত</th></tr>
+<tr><td>Experience</td><td>সনদ সঠিক ও প্রত্যয়িত</td><td>সনদ জাল বা অসামঞ্জস্যপূর্ণ</td></tr>
+<tr><td>Financial</td><td>ঘোষিত তথ্যের সাথে হিসাব সামঞ্জস্যপূর্ণ</td><td>উল্লেখযোগ্য গরমিল</td></tr>
+<tr><td>Equipment/Personnel</td><td>প্রকৃত উপস্থিতি নিশ্চিত</td><td>দাবিকৃত সম্পদ অনুপস্থিত</td></tr>
+</table>
+<div class="grid2"><div class="mini"><b>✅ Best Practices</b><ul class="bullets"><li>মাঠ পরিদর্শনের রিপোর্ট ছবি ও তারিখসহ সংরক্ষণ করুন।</li></ul></div><div class="mini"><b>❌ Common Errors</b><ul class="bullets"><li>শুধু দলিল দেখে সরাসরি Pass দেওয়া, উৎস নিশ্চিত না করে।</li></ul></div></div>
+  </div>
+</details>
+
+<details class="chapter" id="tec9">
+  <summary>
+    <div class="ch-num">M৯</div>
+    <div class="ch-title"><h3>Tender Evaluation Report (TER)</h3><div class="ch-sub">Module Nine — দরপত্র মূল্যায়ন প্রশিক্ষণ মডিউল</div></div>
+    <div class="chev">▾</div>
+  </summary>
+  <div class="body">
+    <p style="color:var(--ink-soft)">সমস্ত মূল্যায়ন সম্পন্ন হওয়ার পর TEC একটি সুসংগঠিত প্রতিবেদন প্রস্তুত করে, যা অনুমোদনের ভিত্তি হিসেবে কাজ করবে।</p>
+    <h4>TER প্রস্তুত করার ধাপ</h4>
+<p>e-GP সিস্টেমে "Generate TER" অপশনে ক্লিক করলে সিস্টেম স্বয়ংক্রিয়ভাবে পূর্ববর্তী সকল ধাপের তথ্য সংকলন করে একটি খসড়া তৈরি করে, যা TEC পর্যালোচনা করে চূড়ান্ত করে।</p>
+<div class="tags"><span class="tag">PPR ২০২৫, বিধি ৬৫ — TER প্রস্তুতকরণ</span></div>
+<div class="ss-placeholder"><span class="cam">📸</span>[Screenshot Placeholder: TER Draft Generation Screen]</div>
+<h4>Summary Table</h4>
+<p>প্রতিটি বিডারের Eligibility, Technical, Financial ফলাফল এক নজরে দেখানো একটি সারসংক্ষেপ টেবিল অন্তর্ভুক্ত থাকে।</p>
+<h4>Evaluation Findings</h4>
+<p>প্রতিটি ধাপের বিস্তারিত পর্যবেক্ষণ, Deviation এবং যুক্তি লিখিতভাবে উপস্থাপন করা হয়।</p>
+<h4>Recommendation</h4>
+<p>TEC স্পষ্টভাবে LERT-কে কার্যাদেশের জন্য সুপারিশ করে, সাথে Post Qualification-এর ফলাফল উল্লেখ করে।</p>
+<h4>Annexure সংযুক্তকরণ</h4>
+<p>সকল Evaluation Form, যোগাযোগ পত্র, Site Verification Report ইত্যাদি সংযুক্তি হিসেবে যুক্ত করা হয়।</p>
+<h4>Committee Review</h4>
+<p>খসড়া TER TEC-এর প্রতিটি সদস্যের কাছে পর্যালোচনার জন্য প্রেরণ করা হয়; কোনো দ্বিমত থাকলে তা নথিভুক্ত করা হয়।</p>
+<h4>Digital Signature</h4>
+<p>সকল সদস্য সিস্টেমে Digital Signature বা OTP-ভিত্তিক অনুমোদনের মাধ্যমে TER স্বাক্ষর করেন।</p>
+<div class="callout warn"><b>⚠️ সতর্কতা</b>কোনো সদস্য দ্বিমত পোষণ করলে তা গোপন না রেখে TER-এ পৃথকভাবে নথিভুক্ত করতে হবে।</div>
+<h4>Compliance Checklist</h4>
+<div class="checklist"><label><input type="checkbox"> সকল Evaluation Form-এর ফলাফল TER-এ প্রতিফলিত</label><label><input type="checkbox"> সকল Annexure সংযুক্ত ও ক্রমানুসারে সাজানো</label><label><input type="checkbox"> সকল সদস্যের Digital Signature সম্পন্ন</label></div>
+  </div>
+</details>
+
+<details class="chapter" id="tec10">
+  <summary>
+    <div class="ch-num">M১০</div>
+    <div class="ch-title"><h3>Approval Workflow</h3><div class="ch-sub">Module Ten — দরপত্র মূল্যায়ন প্রশিক্ষণ মডিউল</div></div>
+    <div class="chev">▾</div>
+  </summary>
+  <div class="body">
+    <p style="color:var(--ink-soft)">স্বাক্ষরিত TER পূর্বনির্ধারিত অনুমোদন প্রবাহ অনুযায়ী পর্যায়ক্রমে অনুমোদনের জন্য প্রেরণ করা হয়।</p>
+    <h4>Workflow Initiation</h4>
+<p>Member-Secretary "Submit for Approval" বাটনে ক্লিক করলে TER প্রথম অনুমোদন স্তরে স্বয়ংক্রিয়ভাবে প্রেরিত হয়।</p>
+<div class="flowwrap"><div class="flow" style="min-width:auto"><div class="flowstep"><div class="fnum">1</div>TER Submit</div><div class="flowarrow">→</div><div class="flowstep"><div class="fnum">2</div>Internal Review</div><div class="flowarrow">→</div><div class="flowstep"><div class="fnum">3</div>PE Approval</div><div class="flowarrow">→</div><div class="flowstep"><div class="fnum">4</div>HOPE Approval</div></div></div>
+<h4>Internal Approval Process</h4>
+<p>প্রথম স্তরে সংশ্লিষ্ট বিভাগীয় প্রধান TER পর্যালোচনা করে মন্তব্যসহ পরবর্তী স্তরে অগ্রসর করেন।</p>
+<h4>PE Approval</h4>
+<p>Procuring Entity প্রধান TER-এর সুপারিশ পর্যালোচনা করে অনুমোদন বা Query উত্থাপন করেন।</p>
+<div class="tags"><span class="tag">PPR ২০২৫, বিধি ৬৮ — PE কর্তৃক অনুমোদন</span></div>
+<h4>HOPE Approval (যদি প্রযোজ্য)</h4>
+<p>নির্ধারিত অর্থমূল্যের ঊর্ধ্বে হলে Head of Procuring Entity (HOPE)-এর অনুমোদন আবশ্যক হয়।</p>
+<h4>Clarification Request</h4>
+<p>অনুমোদনকারী কোনো বিষয়ে ব্যাখ্যা চাইলে সিস্টেমের মাধ্যমে TEC-কে Query পাঠানো হয়, যার জবাব লিখিতভাবে দিতে হয়।</p>
+<h4>Revision Process</h4>
+<p>প্রয়োজনে TEC নির্দিষ্ট অংশ সংশোধন করে পুনরায় Submit করে; সম্পূর্ণ Version History সিস্টেমে সংরক্ষিত থাকে।</p>
+<div class="grid2"><div class="mini"><b>✅ Best Practices</b><ul class="bullets"><li>প্রতিটি Query-এর জবাব সময়মতো ও দলিলসহ দিন।</li></ul></div><div class="mini"><b>❌ Common Errors</b><ul class="bullets"><li>HOPE Approval প্রয়োজনীয় হলেও তা এড়িয়ে যাওয়া।</li></ul></div></div>
+  </div>
+</details>
+
+<details class="chapter" id="tec11">
+  <summary>
+    <div class="ch-num">M১১</div>
+    <div class="ch-title"><h3>Final Submission</h3><div class="ch-sub">Module Eleven — দরপত্র মূল্যায়ন প্রশিক্ষণ মডিউল</div></div>
+    <div class="chev">▾</div>
+  </summary>
+  <div class="body">
+    <p style="color:var(--ink-soft)">সকল অনুমোদন সম্পন্ন হওয়ার পর চূড়ান্ত ফাইল PE-এর নিকট প্রেরণ ও কার্যাদেশ প্রক্রিয়ার জন্য প্রস্তুত করা হয়।</p>
+    <h4>Required Attachments Checklist</h4>
+<div class="checklist"><label><input type="checkbox"> স্বাক্ষরিত TER (সকল Annexure-সহ)</label><label><input type="checkbox"> সকল Evaluation Form-এর সিস্টেম-জেনারেটেড কপি</label><label><input type="checkbox"> Post Qualification Verification Report</label><label><input type="checkbox"> Committee Consent ও Declaration ফরম</label></div>
+<h4>Supporting Documents Upload</h4>
+<p>সকল সংযুক্তি নির্ধারিত ফরম্যাটে (PDF) e-GP পোর্টালে আপলোড করতে হয়; ফাইলের আকার ও নামকরণ নির্দেশিকা অনুসরণ করা আবশ্যক।</p>
+<h4>Final Verification</h4>
+<p>Member-Secretary চূড়ান্তভাবে সকল সংযুক্তি ও তথ্যের সম্পূর্ণতা পুনরায় যাচাই করেন।</p>
+<h4>PE-এর নিকট ফাইল প্রেরণ</h4>
+<p>"Send to PE" বাটনের মাধ্যমে সম্পূর্ণ ফাইল আনুষ্ঠানিকভাবে PE-এর কাছে চূড়ান্ত অনুমোদনের জন্য প্রেরণ করা হয়।</p>
+<div class="ss-placeholder"><span class="cam">📸</span>[Screenshot Placeholder: Final File Submission to PE]</div>
+<h4>Approval Completion</h4>
+<p>PE-এর চূড়ান্ত অনুমোদনের পর সিস্টেমে Tender-এর স্ট্যাটাস "Award Recommended/Approved"-এ পরিবর্তিত হয়।</p>
+<h4>Notification Process</h4>
+<p>সিস্টেম স্বয়ংক্রিয়ভাবে সকল অংশগ্রহণকারী বিডার ও TEC সদস্যদের চূড়ান্ত ফলাফল সম্পর্কে অবহিত করে।</p>
+  </div>
+</details>
+
+<details class="chapter" id="tec12">
+  <summary>
+    <div class="ch-num">M১২</div>
+    <div class="ch-title"><h3>বাস্তব কেস স্টাডি — সম্পূর্ণ ব্যবহারিক উদাহরণ</h3><div class="ch-sub">Module Twelve — দরপত্র মূল্যায়ন প্রশিক্ষণ মডিউল</div></div>
+    <div class="chev">▾</div>
+  </summary>
+  <div class="body">
+    <p style="color:var(--ink-soft)">"গ্রামীণ সড়ক উন্নয়ন প্রকল্প — প্যাকেজ RD-07" শীর্ষক একটি কাল্পনিক কিন্তু বাস্তবধর্মী কাজের দরপত্রে ৫ জন বিডার অংশগ্রহণ করেছেন। নিচে সম্পূর্ণ প্রক্রিয়া ধাপে ধাপে দেখানো হলো।</p>
+    <h4>প্রকল্প সংক্ষিপ্ত বিবরণ</h4>
+<table class="role-table">
+<tr><th>বিষয়</th><th>বিবরণ</th></tr>
+<tr><td>প্রকল্পের নাম</td><td>গ্রামীণ সড়ক উন্নয়ন প্রকল্প — প্যাকেজ RD-07</td></tr>
+<tr><td>প্রাক্কলিত মূল্য</td><td>৳১,১০,০০,০০০</td></tr>
+<tr><td>সংগ্রহের ধরন</td><td>Works (NCT পদ্ধতি)</td></tr>
+<tr><td>অংশগ্রহণকারী বিডার</td><td>৫ জন</td></tr>
+</table>
+<h4>ধাপ ১ — Eligibility Evaluation ফলাফল</h4>
+<table class="role-table">
+<tr><th>বিডার</th><th>Trade License/TIN/VAT</th><th>Financial Capacity</th><th>ফলাফল</th></tr>
+<tr><td>আলফা কনস্ট্রাকশন</td><td>সম্পূর্ণ ও বৈধ</td><td>Threshold পূরণ</td><td class="pass">Pass</td></tr>
+<tr><td>বেটা বিল্ডার্স</td><td>সম্পূর্ণ ও বৈধ</td><td>Threshold পূরণ</td><td class="pass">Pass</td></tr>
+<tr><td>গামা ইঞ্জিনিয়ারিং</td><td>সম্পূর্ণ ও বৈধ</td><td>Threshold পূরণ</td><td class="pass">Pass</td></tr>
+<tr><td>ডেল্টা ট্রেডার্স</td><td>VAT সনদ মেয়াদোত্তীর্ণ</td><td>—</td><td class="fail">Fail</td></tr>
+<tr><td>এপসিলন এন্টারপ্রাইজ</td><td>সম্পূর্ণ ও বৈধ</td><td>Threshold-এর নিচে</td><td class="fail">Fail</td></tr>
+</table>
+<p>ফলাফল: ৩ জন বিডার Eligibility উত্তীর্ণ হয়ে Technical Evaluation-এ অগ্রসর হন।</p>
+<h4>ধাপ ২ — Technical Evaluation ফলাফল</h4>
+<table class="role-table">
+<tr><th>বিডার</th><th>Specification Compliance</th><th>Deviation</th><th>ফলাফল</th></tr>
+<tr><td>আলফা কনস্ট্রাকশন</td><td>সম্পূর্ণ সামঞ্জস্যপূর্ণ</td><td>নেই</td><td class="pass">Responsive</td></tr>
+<tr><td>বেটা বিল্ডার্স</td><td>সামঞ্জস্যপূর্ণ</td><td>Minor (উপকরণ ব্র্যান্ড)</td><td class="pass">Responsive</td></tr>
+<tr><td>গামা ইঞ্জিনিয়ারিং</td><td>মূল প্রযুক্তিগত চাহিদা অপূর্ণ</td><td>Material</td><td class="fail">Non-responsive</td></tr>
+</table>
+<h4>ধাপ ৩ — Financial Evaluation ও SLP Calculation</h4>
+<table class="role-table">
+<tr><th>র‍্যাংক</th><th>বিডার</th><th class="num">জমাকৃত মূল্য (৳)</th><th class="num">Arithmetic Correction পরবর্তী</th><th class="num">Evaluated Price (৳)</th></tr>
+<tr><td>১</td><td>আলফা কনস্ট্রাকশন</td><td class="num">৯৮,৫০,০০০</td><td class="num">৯৮,৪০,০০০</td><td class="num pass">৯৮,৪০,০০০</td></tr>
+<tr><td>২</td><td>বেটা বিল্ডার্স</td><td class="num">১,০১,২০,০০০</td><td class="num">১,০১,২০,০০০</td><td class="num">১,০১,২০,০০০</td></tr>
+</table>
+<p>যেহেতু গামা ইঞ্জিনিয়ারিং Technically Non-responsive, তাই তার আর্থিক প্রস্তাব মূল্যায়ন করা হয়নি। আলফা কনস্ট্রাকশন সর্বনিম্ন Evaluated Price প্রদানকারী হিসেবে <strong>LERT</strong> নির্ধারিত হয়।</p>
+<h4>ধাপ ৪ — Post Qualification (আলফা কনস্ট্রাকশন)</h4>
+<table class="role-table">
+<tr><th>যাচাই ক্ষেত্র</th><th>ফলাফল</th></tr>
+<tr><td>Experience Verification</td><td class="pass">Confirmed — ইস্যুকারী কর্তৃপক্ষ কর্তৃক নিশ্চিত</td></tr>
+<tr><td>Financial Verification</td><td class="pass">Bank Statement সামঞ্জস্যপূর্ণ</td></tr>
+<tr><td>Equipment/Personnel</td><td class="pass">সাইট পরিদর্শনে নিশ্চিত</td></tr>
+</table>
+<p>আলফা কনস্ট্রাকশন Post Qualification-এ সফলভাবে উত্তীর্ণ হন এবং চূড়ান্তভাবে <strong>Lowest Evaluated Responsive Bidder</strong> হিসেবে নির্ধারিত হন।</p>
+<h4>ধাপ ৫ — TER প্রস্তুতকরণ ও Workflow Approval</h4>
+<p>TEC উপরোক্ত সমস্ত তথ্য সংকলন করে TER প্রস্তুত করে, সকল সদস্য Digital Signature প্রদান করেন। TER Internal Review, PE Approval এবং প্রয়োজনীয় ক্ষেত্রে HOPE Approval-এর মধ্য দিয়ে অগ্রসর হয়।</p>
+<div class="flowwrap"><div class="flow" style="min-width:auto"><div class="flowstep"><div class="fnum">1</div>TER খসড়া</div><div class="flowarrow">→</div><div class="flowstep"><div class="fnum">2</div>Committee Sign</div><div class="flowarrow">→</div><div class="flowstep"><div class="fnum">3</div>PE Approval</div><div class="flowarrow">→</div><div class="flowstep"><div class="fnum">4</div>Final Send</div></div></div>
+<h4>ধাপ ৬ — চূড়ান্ত অনুমোদনের জন্য PE-এর নিকট ফাইল প্রেরণ</h4>
+<p>সকল অনুমোদন ও সংযুক্তিসহ সম্পূর্ণ ফাইল e-GP সিস্টেমের মাধ্যমে PE-এর নিকট প্রেরণ করা হয় এবং Tender স্ট্যাটাস "Award Recommended" হিসেবে আপডেট হয়।</p>
+<div class="callout tip"><b>💡 সারসংক্ষেপ</b>৫ জন বিডারের মধ্যে ২ জন Eligibility-তে, ১ জন Technical-এ বাদ পড়ে; অবশিষ্ট ২ জনের মধ্যে সর্বনিম্ন Evaluated Price প্রদানকারী আলফা কনস্ট্রাকশন Post Qualification-এ উত্তীর্ণ হয়ে চূড়ান্তভাবে সুপারিশপ্রাপ্ত হন।</div>
+  </div>
+</details>
+    </section>
+
+    <section class="section-pad" id="comparison">
+      <h2>↔️ PPR 2025-এ মূল সংস্কার — এক নজরে (vs PPR 2008)</h2>
+      <p style="color:var(--ink-soft);max-width:760px;">এই গাইড জুড়ে উল্লেখিত পরিবর্তনগুলোর একটি সংক্ষিপ্ত তুলনামূলক সারসংক্ষেপ — সম্পূর্ণ তালিকা নয়, শুধু এই গাইডে ব্যাখ্যা করা প্রধান সংস্কারগুলোর কুইক-রেফারেন্স।</p>
+      <table class="term-table">
+        <tr><th>বিষয়</th><th>PPR 2008-এ যেমন ছিল</th><th>PPR 2025-এ যা হয়েছে</th></tr>
+        <tr><td>রুলসেট</td><td>PPR 2008 কার্যকর ছিল</td><td>সম্পূর্ণ নতুন রুলসেটে প্রতিস্থাপিত (২৮ সেপ্টেম্বর ২০২৫ থেকে)</td></tr>
+        <tr><td>পরিভাষা</td><td>Supplier/Contractor/Consultant পৃথকভাবে সংজ্ঞায়িত</td><td>"Economic Operator" — একীভূত ছাতা-পরিভাষা</td></tr>
+        <tr><td>ক্রয় ক্যাটাগরি</td><td>তিনটি প্রধান ক্যাটাগরি</td><td>চারটি — Non-Consulting/Physical Services নতুন পৃথক ক্যাটাগরি হিসেবে যুক্ত</td></tr>
+        <tr><td>মূল্য মূল্যায়ন সূত্র</td><td>প্রাক্কলনের ±১০% ক্যাপ পদ্ধতি</td><td>ওজনযুক্ত সূত্র — গ্রহণযোগ্য দরের গড় (৫০%) + সরকারি প্রাক্কলন (২০%) + সাম্প্রতিক e-GP বাজারমূল্য (৩০%)</td></tr>
+        <tr><td>টেন্ডার ভ্যালিডিটি</td><td>৬০–১২০ দিন</td><td>৬০–১৫০ দিন</td></tr>
+        <tr><td>Sustainable Procurement</td><td>সুনির্দিষ্ট বিধান ছিল না</td><td>Rule ৬ (SPP) — পরিবেশগত, সামাজিক ও অর্থনৈতিক টেকসইতা আবশ্যিক বিবেচ্য বিষয়</td></tr>
+        <tr><td>ব্ল্যাকলিস্টিং পর্যালোচনা</td><td>পৃথক পর্যালোচনা কমিটি ছিল না</td><td>Debarment Review Committee (DRC) — Rule ১৮, সম্পূর্ণ নতুন সংযোজন</td></tr>
+        <tr><td>নতুন সংজ্ঞা</td><td>"Responsive", "Procurement Strategy" অনুপস্থিত</td><td>উভয়ই সুনির্দিষ্টভাবে সংজ্ঞায়িত</td></tr>
+        <tr><td>নারী/ক্ষুদ্র উদ্যোক্তা</td><td>সীমিত বিধান</td><td>Rule ৮০(১)(ঘ) — প্রতিযোগিতা সহজতরকরণ বিধান জোরদার</td></tr>
+      </table>
+      <div class="callout tip"><b>💡 মনে রাখুন</b>এই তুলনাটি ব্যাখ্যামূলক সারসংক্ষেপ। প্রতিটি বিধির চূড়ান্ত ও নির্ভুল টেক্সটের জন্য সর্বদা BPPA-প্রকাশিত মূল গেজেট যাচাই করুন।</div>
+    </section>
+
+    <section class="section-pad" id="quickref">
+      <h2>⏱️ থ্রেশহোল্ড ও সময়সীমা — Quick Reference</h2>
+      <p style="color:var(--ink-soft);max-width:760px;">গাইড জুড়ে ছড়িয়ে থাকা গুরুত্বপূর্ণ সংখ্যাগুলো একত্রে — দ্রুত রেফারেন্সের জন্য প্রিন্ট করে হাতের কাছে রাখুন (🖨️ প্রিন্ট বাটন উপরে দেখুন)।</p>
+
+      <h4 style="margin-top:22px;">ক্রয় পদ্ধতির থ্রেশহোল্ড</h4>
+      <table class="term-table">
+        <tr><th>পদ্ধতি</th><th>প্রযোজ্য সীমা</th></tr>
+        <tr><td>LTM (কার্য)</td><td>সর্বোচ্চ ৳১ কোটি পর্যন্ত (Rule ৮০(১)(ঘ))</td></tr>
+        <tr><td>LTM (পণ্য/ভৌতসেবা)</td><td>সর্বোচ্চ ৳২০ লক্ষ পর্যন্ত (Rule ৮০(১)(ঘ))</td></tr>
+        <tr><td>RFQ (কোটেশন)</td><td>ন্যূনতম ৩ জন সরবরাহকারীর কাছ থেকে quotation (Rule ৯০–৯৪)</td></tr>
+        <tr><td>OTM</td><td>ডিফল্ট/অগ্রাধিকারপ্রাপ্ত পদ্ধতি — থ্রেশহোল্ডের ঊর্ধ্বে সকল ক্ষেত্রে (Rule ৭৮)</td></tr>
+      </table>
+
+      <h4>OTM বিজ্ঞাপনের ন্যূনতম সময়সীমা (Rule ৭৮(৪))</h4>
+      <table class="term-table">
+        <tr><th>মূল্যসীমা</th><th>ন্যূনতম বিজ্ঞাপন সময়</th></tr>
+        <tr><td>৳১ কোটি পর্যন্ত</td><td>১০ দিন</td></tr>
+        <tr><td>৳১–৫ কোটি</td><td>১৪ দিন</td></tr>
+        <tr><td>৳৫–৩০ কোটি</td><td>২১ দিন</td></tr>
+        <tr><td>৳৩০ কোটির ঊর্ধ্বে</td><td>২৮ দিন</td></tr>
+        <tr><td>বিপর্যয়কর/জরুরি ক্রয়</td><td>৭ দিন</td></tr>
+        <tr><td>পুনঃদরপত্র (≤১ কোটি)</td><td>৭ দিন</td></tr>
+      </table>
+
+      <h4>অন্যান্য গুরুত্বপূর্ণ সংখ্যা</h4>
+      <table class="term-table">
+        <tr><th>বিষয়</th><th>মান</th></tr>
+        <tr><td>টেন্ডার ভ্যালিডিটি পিরিয়ড</td><td>৬০–১৫০ দিন</td></tr>
+        <tr><td>মূল্য মূল্যায়ন সূত্র (weighted)</td><td>গড় দর ৫০% + প্রাক্কলন ২০% + e-GP বাজারমূল্য ৩০%</td></tr>
+        <tr><td>SLT বিচ্যুতি সীমা (একক রেসপনসিভ দরদাতা)</td><td>প্রাক্কলন থেকে ২০%-এর মধ্যে</td></tr>
+        <tr><td>মোট Rule / Schedule</td><td>১৫৪ Rule / ২১ Schedule</td></tr>
+      </table>
+      <div class="callout warn"><b>⚠️ সতর্কতা</b>এই সংখ্যাগুলো এই গাইডের ব্যাখ্যামূলক অংশ থেকে সংকলিত। চূড়ান্ত সিদ্ধান্তের পূর্বে সর্বদা মূল গেজেট টেক্সট ও প্রযোজ্য তফসিল/STD Clause-এ হালনাগাদ মান যাচাই করুন।</div>
+    </section>
+
+    <section class="section-pad" id="glossary">
+      <h2>Aa শব্দকোষ (Glossary)</h2>
+      <p style="color:var(--ink-soft);max-width:760px;">এই গাইডে ব্যবহৃত গুরুত্বপূর্ণ পরিভাষার সংক্ষিপ্ত ব্যাখ্যা — বর্ণানুক্রমিক নয়, বরং প্রাসঙ্গিক গুরুত্ব অনুযায়ী সাজানো।</p>
+      <table class="term-table">
+        <tr><th>পরিভাষা</th><th>ব্যাখ্যা</th></tr>
+        <tr><td>Economic Operator</td><td>Supplier, Contractor, Service Provider ও Consultant-কে একটি অভিন্ন ছাতা-পরিভাষায় অন্তর্ভুক্ত করার জন্য PPR ২০২৫-এ প্রবর্তিত নতুন সংজ্ঞা।</td></tr>
+        <tr><td>Responsive / Non-responsive</td><td>দরপত্র যদি Tender Document-এর সকল বাধ্যতামূলক শর্ত (Eligibility, Technical, Financial) পূরণ করে তবে তা Responsive; কোনো গুরুত্বপূর্ণ (Material) বিচ্যুতি থাকলে Non-responsive ঘোষিত হয়।</td></tr>
+        <tr><td>TEC (Tender Evaluation Committee)</td><td>দরপত্র মূল্যায়নের জন্য PE কর্তৃক গঠিত কমিটি — Chairperson, Member ও Member-Secretary সমন্বয়ে গঠিত।</td></tr>
+        <tr><td>TER (Tender Evaluation Report)</td><td>TEC কর্তৃক প্রস্তুতকৃত চূড়ান্ত মূল্যায়ন প্রতিবেদন, যা অনুমোদন প্রক্রিয়ার ভিত্তি হিসেবে কাজ করে।</td></tr>
+        <tr><td>LERT (Lowest Evaluated Responsive Tender)</td><td>সকল Responsive দরদাতার মধ্যে সর্বনিম্ন Evaluated Price প্রদানকারী — যিনি Post Qualification-এর জন্য মনোনীত হন।</td></tr>
+        <tr><td>SLP (Substantially Lowest Price)</td><td>চূড়ান্ত র‍্যাঙ্কিং ও LERT নির্ধারণের গাণিতিক ভিত্তি — Threshold-এর মধ্যে থাকা সর্বনিম্ন দরসমূহকে চিহ্নিত করার পদ্ধতি।</td></tr>
+        <tr><td>SLT (Significantly Low-priced Tender)</td><td>পরিসংখ্যানগতভাবে অস্বাভাবিক কম মূল্যের দরপত্র — Rule ২৫–২৬ অনুযায়ী চিহ্নিত ও যাচাইসাপেক্ষে প্রত্যাখ্যাত হতে পারে।</td></tr>
+        <tr><td>Post Qualification</td><td>LERT হিসেবে চিহ্নিত বিডারের অভিজ্ঞতা, আর্থিক সক্ষমতা ও সরঞ্জাম দলিলের মাধ্যমে চূড়ান্তভাবে যাচাই করার ধাপ।</td></tr>
+        <tr><td>NOA (Notification of Award)</td><td>সফল দরদাতাকে কার্যাদেশ প্রদানের আনুষ্ঠানিক অবহিতকরণ পত্র।</td></tr>
+        <tr><td>PE (Procuring Entity)</td><td>ক্রয়কারী প্রতিষ্ঠান — যে সরকারি দপ্তর/সংস্থা ক্রয় প্রক্রিয়া পরিচালনা করে।</td></tr>
+        <tr><td>HOPE (Head of Procuring Entity)</td><td>ক্রয়কারী প্রতিষ্ঠানের প্রধান — চূড়ান্ত অনুমোদন-ক্ষমতাসম্পন্ন কর্মকর্তা।</td></tr>
+        <tr><td>DRC (Debarment Review Committee)</td><td>Rule ১৮ অনুযায়ী গঠিত কমিটি, যা ব্ল্যাকলিস্টিং/ডিবারমেন্ট সিদ্ধান্ত পর্যালোচনা করে।</td></tr>
+        <tr><td>BOQ (Bill of Quantities)</td><td>কাজের পরিমাণ ও একক দর বিস্তারিতভাবে উল্লেখিত দলিল, সাধারণত পূর্বনির্ধারিত Excel টেমপ্লেটে জমা দিতে হয়।</td></tr>
+        <tr><td>STD (Standard Tender Document)</td><td>BPPA-অনুমোদিত প্রমিত দরপত্র দলিল ফরম্যাট (যেমন e-PW, e-PG সিরিজ)।</td></tr>
+        <tr><td>NPPI</td><td>National Public Procurement Price Index — e-GP থেকে রোলিং ২৮-দিনের ভিত্তিতে স্বয়ংক্রিয়ভাবে গণনাকৃত জাতীয় গড় মূল্য-বিচ্যুতি সূচক।</td></tr>
+        <tr><td>Conflict of Interest (COI)</td><td>মূল্যায়ন কমিটির কোনো সদস্যের সাথে কোনো দরদাতার ব্যক্তিগত/আর্থিক সম্পর্ক, যা নিরপেক্ষতাকে প্রভাবিত করতে পারে — কমিটি গঠনের আগে ঘোষণা বাধ্যতামূলক।</td></tr>
+        <tr><td>Framework Agreement</td><td>পুনরাবৃত্তিমূলক প্রয়োজনে পূর্ব-নির্বাচিত একাধিক সরবরাহকারীর মধ্যে মিনি-প্রতিযোগিতার মাধ্যমে দ্রুত অর্ডার প্রদানের ব্যবস্থা (Rule ১০৯)।</td></tr>
+        <tr><td>Debarment / Blacklisting</td><td>গুরুতর অসদাচরণের কারণে কোনো Economic Operator-কে নির্দিষ্ট মেয়াদের জন্য ভবিষ্যৎ সরকারি ক্রয় প্রক্রিয়ায় অংশগ্রহণ থেকে বিরত রাখা (Rule ১৪৯)।</td></tr>
+        <tr><td>e-GP</td><td>Electronic Government Procurement — বাংলাদেশের সরকারি ক্রয়ের বাধ্যতামূলক অনলাইন প্ল্যাটফর্ম (Rule ১৫০)।</td></tr>
+        <tr><td>Package Splitting</td><td>থ্রেশহোল্ডের নিচে আনার উদ্দেশ্যে একটি কাজকে কৃত্রিমভাবে একাধিক প্যাকেজে ভাগ করা — একটি গুরুতর অনিয়ম (Rule ৭৯(১)-এর লঙ্ঘন)।</td></tr>
+      </table>
+    </section>
+
+    <section class="section-pad" id="redflags">
+      <h2>🚩 মূল্যায়নকারীর জন্য সতর্কতা সংকেত (Integrity Red Flags)</h2>
+      <p style="color:var(--ink-soft);max-width:760px;">এগুলো সাধারণ, বহুল-স্বীকৃত প্রকিউরমেন্ট ইন্টিগ্রিটি ইঙ্গিত (indicative good-practice guidance) — কোনো নির্দিষ্ট PPR বিধির উদ্ধৃতি নয়। কোনো লক্ষণ দেখা দিলে তা স্বয়ংক্রিয়ভাবে দুর্নীতি প্রমাণ করে না, বরং অতিরিক্ত সতর্কতা ও যাচাইয়ের প্রয়োজনীয়তা নির্দেশ করে।</p>
+      <ul class="redflag-list">
+        <li>অস্বাভাবিকভাবে একই রকম দর, ফরম্যাট বা টাইপোগ্রাফির একাধিক দরপত্র — সম্ভাব্য যোগসাজশ (Collusive Bidding)-এর ইঙ্গিত।</li>
+        <li>একাধিক দরদাতার ঠিকানা, ফোন নম্বর বা মালিকানায় মিল — Common Ownership সন্দেহজনক।</li>
+        <li>একই দরপত্রে একজন দরদাতা ইচ্ছাকৃতভাবে উচ্চমূল্যে অংশ নিচ্ছেন বলে মনে হওয়া (Cover/Decoy Bidding)।</li>
+        <li>শেষ মুহূর্তে সর্বনিম্ন দরদাতার আকস্মিক প্রত্যাহার, যা দ্বিতীয় দরদাতাকে সুবিধা দেয় (Bid Rotation প্যাটার্ন)।</li>
+        <li>বারবার একই একজন দরদাতাই সর্বনিম্ন হিসেবে জয়ী হওয়া, বিশেষত যখন প্রতিযোগী সীমিত।</li>
+        <li>মূল্যায়ন কমিটির কোনো সদস্যের কোনো দরদাতার সাথে আত্মীয়তা বা ব্যবসায়িক সম্পর্ক গোপন রাখা (Undisclosed COI)।</li>
+        <li>দরদাতার কাছ থেকে উপহার, আতিথেয়তা বা অন্য কোনো সুবিধা গ্রহণের ইঙ্গিত।</li>
+        <li>মূল্যায়ন সময়সীমা অস্বাভাবিকভাবে সংক্ষিপ্ত করার জন্য অভ্যন্তরীণ চাপ — পর্যাপ্ত যাচাই এড়ানোর প্রবণতা।</li>
+        <li>অভিজ্ঞতা সনদ, ব্যাংক সলভেন্সি সনদ বা ট্যাক্স/ভ্যাট রিটার্নে অসামঞ্জস্যপূর্ণ তারিখ, ফন্ট বা সিল।</li>
+        <li>e-GP সিস্টেমে মূল্যায়ন-সংক্রান্ত কার্যক্রমের অডিট ট্রেইল অনুপস্থিত বা অসম্পূর্ণ।</li>
+        <li>প্রাক্কলনের সাথে জমাকৃত দরের অস্বাভাবিক নৈকট্য (round-number clustering), যা তথ্য ফাঁসের ইঙ্গিত হতে পারে।</li>
+        <li>নির্দিষ্ট একজন দরদাতার পক্ষে অস্বাভাবিক আগ্রহ প্রদর্শনকারী কর্মকর্তা বা কমিটি সদস্য।</li>
+      </ul>
+      <div class="callout warn"><b>⚠️ কী করবেন</b>উপরের যেকোনো লক্ষণ দেখা দিলে তা লিখিতভাবে নথিভুক্ত করুন, প্রয়োজনে Chairperson/PE-কে জানান এবং Committee Review-এর মাধ্যমে অতিরিক্ত যাচাই ছাড়া এগিয়ে যাবেন না। সন্দেহজনক ক্ষেত্রে DRC বা সংশ্লিষ্ট অভিযোগ-নিষ্পত্তি প্রক্রিয়ার সহায়তা নিন (দেখুন অধ্যায়-৭)।</div>
+    </section>
+
+    <section class="section-pad" id="ter-template">
+      <h2>📋 TER (Tender Evaluation Report) — প্রস্তুতিমূলক টেমপ্লেট</h2>
+      <p style="color:var(--ink-soft);max-width:760px;">মডিউল-৯ (TER প্রস্তুতকরণ)-এ বর্ণিত কাঠামো অনুসরণ করে তৈরি একটি ফিল-ইন-দ্য-ব্ল্যাংক প্র্যাকটিস টেমপ্লেট। এটি একটি শিক্ষামূলক/সাংগঠনিক সহায়ক দলিল — আপনার প্রতিষ্ঠানের অফিসিয়াল TER ফরম্যাট বা e-GP-এর সিস্টেম-জেনারেটেড ফরম্যাটকে প্রতিস্থাপন করে না।</p>
+      <div style="max-width:720px;">
+        <div class="ter-field"><b>প্যাকেজ / টেন্ডার আইডি</b>[Tender ID / Package No. পূরণ করুন]</div>
+        <div class="ter-field"><b>PE / ক্রয়কারী প্রতিষ্ঠান</b>[প্রতিষ্ঠানের নাম]</div>
+        <div class="ter-field"><b>সংগ্রহের ধরন</b>☐ Works ☐ Goods ☐ Services — [বিস্তারিত]</div>
+        <div class="ter-field"><b>প্রাক্কলিত মূল্য</b>৳ [পরিমাণ]</div>
+        <div class="ter-field"><b>অংশগ্রহণকারী দরদাতার সংখ্যা</b>[সংখ্যা]</div>
+        <div class="ter-field"><b>Eligibility Evaluation — সারসংক্ষেপ</b>[কতজন Pass/Fail, প্রধান কারণসহ]</div>
+        <div class="ter-field"><b>Technical Evaluation — সারসংক্ষেপ</b>[Responsive/Non-responsive তালিকা, বিচ্যুতির প্রকৃতি]</div>
+        <div class="ter-field"><b>Financial Evaluation — সারসংক্ষেপ</b>[Arithmetic Correction পরবর্তী Evaluated Price তালিকা, র‍্যাংকিং]</div>
+        <div class="ter-field"><b>LERT নির্ধারণ</b>[সর্বনিম্ন Evaluated Price প্রদানকারী দরদাতার নাম]</div>
+        <div class="ter-field"><b>Post Qualification ফলাফল</b>☐ Pass ☐ Fail — [বিস্তারিত যাচাই মন্তব্য]</div>
+        <div class="ter-field"><b>সুপারিশ (Recommendation)</b>[চূড়ান্তভাবে প্রস্তাবিত দরদাতা ও চুক্তিমূল্য]</div>
+        <div class="ter-field"><b>সংযুক্তি (Annexure)</b>☐ Opening Sheet ☐ Evaluation Forms ☐ Correspondence ☐ অন্যান্য</div>
+        <div class="ter-field"><b>TEC সদস্যদের স্বাক্ষর</b>Chairperson: ___________  Member: ___________  Member-Secretary: ___________</div>
+      </div>
+      <div class="callout tip" style="max-width:720px;"><b>💡 ব্যবহার</b>এই টেমপ্লেটটি প্রিন্ট করে বা কপি করে TEC সভার সময় খসড়া নোট হিসেবে ব্যবহার করতে পারেন, পরবর্তীতে e-GP সিস্টেমের অফিসিয়াল ফরম্যাটে চূড়ান্ত এন্ট্রি করুন।</div>
+    </section>
+
+    <section class="section-pad" id="finalquiz">
+      <h2>✅ চূড়ান্ত মূল্যায়ন কুইজ — পার্ট-B (১৫টি প্রশ্ন)</h2>
+      <p style="color:var(--ink-soft);max-width:760px;">পার্ট-B-তে বর্ণিত সম্পূর্ণ মূল্যায়ন কার্যপ্রবাহ ও কেস স্টাডির উপর ভিত্তি করে আপনার প্রস্তুতি যাচাই করুন। প্রতিটি প্রশ্নে সঠিক উত্তর বাছাই করুন — ব্যাখ্যাসহ ফলাফল সাথে সাথে দেখতে পাবেন।</p>
+      <div id="finalmcq"></div>
+    </section>
+
+    <section class="section-pad" id="faq">
+      <h2>❖ সাধারণ জিজ্ঞাসা (FAQ) — PPR 2025 সম্পর্কে</h2>
+      <div id="faqList">
+        <details class="faq"><summary>PPR 2025 কবে থেকে কার্যকর হয়েছে?</summary><p>২৮ সেপ্টেম্বর ২০২৫ থেকে, Public Procurement (Amendment) Ordinance, 2025 কার্যকর হওয়ার একই দিনে PPR 2025 গেজেটভুক্ত ও কার্যকর হয়।</p></details>
+        <details class="faq"><summary>PPR 2025-এ মোট কতগুলো Rule ও Schedule আছে?</summary><p>PPR 2025-এ মোট ১৫৪টি Rule এবং ২১টি Schedule রয়েছে।</p></details>
+        <details class="faq"><summary>PPR 2025 কি PPR 2008-কে সম্পূর্ণভাবে প্রতিস্থাপন করেছে?</summary><p>হ্যাঁ। স্টেকহোল্ডার পরামর্শের ভিত্তিতে PPR 2008-এ সংশোধনী আনার পরিবর্তে সম্পূর্ণ নতুন রুলসেট প্রণয়নের সিদ্ধান্ত নেওয়া হয়, যা BPPA-এর Technical Working Group ৯টিরও বেশি সভা এবং ১২টি স্টেকহোল্ডার পরামর্শের মাধ্যমে প্রস্তুত করে।</p></details>
+        <details class="faq"><summary>PPR 2025-এ ক্রয়ের ক্যাটাগরি কয়টি?</summary><p>চারটি — Works (নির্মাণ), Goods (পণ্য), Professional Services (পরামর্শক সেবা) এবং Non-Consulting/Physical Services (শারীরিক সেবা), যেখানে সর্বশেষটি এই আইনে নতুনভাবে পৃথক ক্যাটাগরি হিসেবে স্বীকৃত।</p></details>
+        <details class="faq"><summary>পূর্বের ±১০% মূল্য ক্যাপের পরিবর্তে এখন কী পদ্ধতি ব্যবহৃত হয়?</summary><p>একটি ওজনযুক্ত মূল্যায়ন সূত্র — গ্রহণযোগ্য দরপত্রের গড় (৫০%), সরকারি প্রাক্কলন (২০%) এবং সাম্প্রতিক e-GP বাজারমূল্য (৩০%) — গ্রহণযোগ্য মূল্যসীমা নির্ধারণে ব্যবহৃত হয়।</p></details>
+        <details class="faq"><summary>টেন্ডার ভ্যালিডিটি পিরিয়ড কত দিন?</summary><p>সাধারণত ৬০ থেকে ১৫০ দিন পর্যন্ত অনুমোদিত, আগে যা ছিল ৬০–১২০ দিন। ক্রয়কারী প্রতিষ্ঠানকে এই সময়ের মধ্যেই মূল্যায়ন সম্পন্ন করে NOA ইস্যু করতে হয়।</p></details>
+        <details class="faq"><summary>Debarment Review Committee (DRC) কী?</summary><p>Rule 18 অনুযায়ী গঠিত একটি নতুন কমিটি, যা ব্ল্যাকলিস্টিং/ডিবারমেন্ট সংক্রান্ত সিদ্ধান্ত পর্যালোচনা করে প্রক্রিয়াটিকে আরও স্বচ্ছ ও ন্যায্য করে।</p></details>
+        <details class="faq"><summary>নারী উদ্যোক্তা ও ক্ষুদ্র উদ্যোগের জন্য কোনো বিশেষ সুবিধা আছে কি?</summary><p>হ্যাঁ। Rule 80(1)(ঘ)-তে নারী মালিকানাধীন প্রতিষ্ঠান, ক্ষুদ্র ও ক্ষুদ্রায়তন উদ্যোগ এবং নতুন উদ্যোগগুলোর জন্য প্রতিযোগিতা সহজতর করার বিধান রাখা হয়েছে, যা Sustainable Public Procurement উদ্যোগের অংশ।</p></details>
+        <details class="faq"><summary>e-GP পোর্টাল ব্যবহার কি সব ক্রয়ে বাধ্যতামূলক?</summary><p>Rule 150(1) অনুযায়ী, e-GP সিস্টেমে সমর্থনযোগ্য যেকোনো ক্রয়ে e-GP পোর্টাল ব্যবহার বাধ্যতামূলক করা হয়েছে।</p></details>
+        <details class="faq"><summary>PPP প্রকল্পে কি PPR 2025 প্রযোজ্য?</summary><p>Rule 151 অনুযায়ী, PPP প্রকল্পের ক্রয় প্রক্রিয়া পৃথক PPP নীতিমালা অনুসরণ করবে, যা PPR ও PPP নীতিমালার মধ্যে সীমারেখা স্পষ্ট করে।</p></details>
+        <details class="faq"><summary>পার্ট-B (দরপত্র মূল্যায়ন প্রশিক্ষণ মডিউল) কি একটি পৃথক আইনি দলিল বা সরকারি সার্কুলার?</summary><p>না। এটি একটি ব্যাখ্যামূলক প্রশিক্ষণ উপকরণ — PPR ২০২৫-এর প্রাসঙ্গিক বিধি এবং e-GP-তে প্রচলিত কার্যপ্রবাহের আলোকে প্রস্তুত। বাস্তব ব্যবহারের ক্ষেত্রে সর্বদা আপনার প্রতিষ্ঠানের অফিসিয়াল নির্দেশনা ও e-GP-এর User Manual অনুসরণ করুন।</p></details>
+        <details class="faq"><summary>এই সংস্করণে (merged edition) নতুন কী যুক্ত হয়েছে?</summary><p>মূল ৯-অধ্যায় PPR 2025 গাইডের সাথে সম্পূর্ণ ১২-মডিউল দরপত্র মূল্যায়ন প্রশিক্ষণ ম্যানুয়াল (পার্ট-B), একটি PPR 2025 vs 2008 তুলনামূলক সারসংক্ষেপ, একটি একত্রিত Threshold/Timeline Quick Reference টেবিল, একটি শব্দকোষ, মূল্যায়নকারীর জন্য Integrity Red-Flag চেকলিস্ট, একটি TER টেমপ্লেট এবং একটি ১৫-প্রশ্নের চূড়ান্ত মূল্যায়ন কুইজ যুক্ত করা হয়েছে।</p></details>
+      </div>
+    </section>
+  </main>
+</div>
+
+<footer>
+  <div class="fgrid">
+    <div>
+      <h4 style="margin-bottom:8px;">উৎস ও দায়মুক্তি</h4>
+      <p>
+        এই গাইডটি একটি <b>স্ব-শিক্ষা ও প্রশিক্ষণ উপকরণ</b> — সরকারি বিজ্ঞপ্তি বা আইনি দলিল নয়। প্রতিটি তথ্য BPPA (Bangladesh Public Procurement Authority)-এর সরকারি প্রকাশনা, সংবাদ বিজ্ঞপ্তি ও গেজেট নোটিশের সাথে যাচাই করে সংকলিত হয়েছে। পার্ট-B (দরপত্র মূল্যায়ন প্রশিক্ষণ মডিউল)-ও একই উদ্দেশ্যে — প্রশিক্ষণ ও দাপ্তরিক রেফারেন্সের জন্য — প্রস্তুতকৃত। বাস্তব ব্যবহারের ক্ষেত্রে সর্বদা PPR ২০২৫-এর হালনাগাদ কপি ও CPTU/e-GP-এর অফিসিয়াল User Manual অনুসরণ করুন।
+      </p>
+      <p style="margin-top:10px;">
+        মূল উৎস: <a href="https://www.bppa.gov.bd/upload/policyandprocedure/2025-09-29-20-12-59-PPR2025.pdf" target="_blank">PPR 2025 — সরকারি গেজেট PDF (bppa.gov.bd)</a> ·
+        <a href="https://www.bppa.gov.bd/" target="_blank">BPPA ওয়েবসাইট</a>
+      </p>
+    </div>
+    <div>
+      <h4 style="margin-bottom:8px;">এই সংস্করণে যা আছে</h4>
+      <p>✅ PPR 2025-এর সম্পূর্ণ ৯-অধ্যায় কাঠামো + তফসিল ও SLT গাইড<br>✅ ১২-মডিউল দরপত্র মূল্যায়ন প্রশিক্ষণ ম্যানুয়াল (পার্ট-B), বাস্তব কেস স্টাডিসহ<br>✅ Quick Reference, শব্দকোষ, Red-Flag চেকলিস্ট, TER টেমপ্লেট<br>✅ সাইট-জোড়া সার্চ, চূড়ান্ত মূল্যায়ন কুইজ ও সাধারণ FAQ</p>
+    </div>
+  </div>
+</footer>
+
+<button id="toTop" title="উপরে যান">↑</button>
+
+<script>
+/* ---------------- lifecycle flow ---------------- */
+const steps=["প্রয়োজন চিহ্নিতকরণ","প্রাক্কলন","APP","টেন্ডার প্রস্তুতি","অনুমোদন","আমন্ত্রণ","জমাদান","উন্মুক্তকরণ","মূল্যায়ন","অনুমোদন","NOA","চুক্তি স্বাক্ষর","বাস্তবায়ন","সমাপ্তি","চূড়ান্ত পেমেন্ট"];
+const flow=document.getElementById('flowChart');
+steps.forEach((s,i)=>{
+  const d=document.createElement('div');d.className='flowstep';
+  d.innerHTML=`<div class="fnum">${i+1}</div>${s}`;
+  flow.appendChild(d);
+  if(i<steps.length-1){const a=document.createElement('div');a.className='flowarrow';a.textContent='→';flow.appendChild(a);}
+});
+
+/* ---------------- progress bar ---------------- */
+window.addEventListener('scroll',()=>{
+  const h=document.documentElement;
+  const pct=(h.scrollTop)/(h.scrollHeight-h.clientHeight)*100;
+  document.getElementById('progress').style.width=pct+'%';
+  document.getElementById('toTop').style.display=h.scrollTop>500?'flex':'none';
+});
+document.getElementById('toTop').addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+
+/* ---------------- dark mode (session only, no storage) ---------------- */
+document.getElementById('darkBtn').addEventListener('click',()=>document.body.classList.toggle('dark'));
+
+/* ---------------- print ---------------- */
+document.getElementById('printBtn').addEventListener('click',()=>window.print());
+
+/* ---------------- mobile sidebar ---------------- */
+document.getElementById('menuBtn').addEventListener('click',()=>document.getElementById('sidebar').classList.toggle('open'));
+document.getElementById('tocNav').addEventListener('click',()=>document.getElementById('sidebar').classList.remove('open'));
+
+/* ---------------- search ---------------- */
+const searchInput=document.getElementById('searchInput');
+const searchResults=document.getElementById('searchResults');
+function buildIndex(){
+  const idx=[];
+  document.querySelectorAll('.chapter').forEach(ch=>{
+    const title=ch.querySelector('h3').textContent.trim();
+    const id=ch.id;
+    const text=ch.textContent;
+    idx.push({title,id,text});
+  });
+  return idx;
+}
+let SEARCH_INDEX=[];
+window.addEventListener('load',()=>{SEARCH_INDEX=buildIndex();});
+searchInput.addEventListener('input',()=>{
+  const q=searchInput.value.trim().toLowerCase();
+  if(!q){searchResults.style.display='none';return;}
+  const hits=SEARCH_INDEX.filter(i=>i.text.toLowerCase().includes(q)).slice(0,8);
+  if(!hits.length){searchResults.innerHTML='<div style="padding:12px;font-size:.85rem;">কোনো ফলাফল পাওয়া যায়নি।</div>';searchResults.style.display='block';return;}
+  searchResults.innerHTML=hits.map(h=>`<a href="#${h.id}"><span class="sr-tag">${h.id}</span><br>${h.title}</a>`).join('');
+  searchResults.style.display='block';
+});
+searchResults.addEventListener('click',e=>{
+  const a=e.target.closest('a');
+  if(a){
+    setTimeout(()=>{
+      const id=a.getAttribute('href').slice(1);
+      const det=document.getElementById(id);
+      if(det) det.open=true;
+    },50);
+    searchResults.style.display='none';
+    searchInput.value='';
+  }
+});
+document.addEventListener('click',e=>{
+  if(!e.target.closest('.searchbox')) searchResults.style.display='none';
+});
+
+/* ---------------- Chapter 6 (Procurement Methods) OTM flow ---------------- */
+const ch6Steps=["Procurement Strategy/APP-এ পদ্ধতি নির্ধারণ","OTM প্রযোজ্যতা যাচাই (Rule 78)","STD/বিনির্দেশ প্রস্তুত","Rule 110 অনুযায়ী বিজ্ঞাপন প্রচার","তফসিল অনুযায়ী ন্যূনতম সময় প্রতীক্ষা","দরপত্র জমাদান","উন্মুক্তকরণ","TEC মূল্যায়ন","অনুমোদন ও NOA","চুক্তি স্বাক্ষর"];
+const ch6flow=document.getElementById('ch6flow');
+if(ch6flow){
+  ch6Steps.forEach((s,i)=>{
+    const d=document.createElement('div');d.className='flowstep';
+    d.innerHTML=`<div class="fnum">${i+1}</div>${s}`;
+    ch6flow.appendChild(d);
+    if(i<ch6Steps.length-1){const a=document.createElement('div');a.className='flowarrow';a.textContent='→';ch6flow.appendChild(a);}
+  });
+}
+
+/* ---------------- Chapter 6 MCQs ---------------- */
+const ch6MCQ=[
+["PPR 2025-এ ক্রয় পদ্ধতি সংক্রান্ত অধ্যায়ে মোট কতটি Rule আছে (৭৮–১০৯)?","২৯টি","৩২টি","২৫টি","৩৫টি",0,"Rule 78 থেকে 109 পর্যন্ত = ৩২টি Rule।"],
+["OTM-কে PPR 2025-এ কী হিসেবে বিবেচনা করা হয়?","ডিফল্ট/অগ্রাধিকারপ্রাপ্ত পদ্ধতি","বিকল্প পদ্ধতি","শুধুমাত্র আন্তর্জাতিক ক্রয়ের পদ্ধতি","শুধু RFQ-এর বিকল্প",0,"Rule 78(1) অনুযায়ী OTM-কে অগ্রে বিবেচ্য পদ্ধতি রাখা হয়েছে।"],
+["OTM-এর ক্ষেত্রে ৫ কোটি থেকে ৩০ কোটি টাকা পর্যন্ত ক্রয়ে ন্যূনতম বিজ্ঞাপন সময় কত?","১৪ দিন","২১ দিন","২৮ দিন","১০ দিন",1,"Rule 78(4) তফসিল অনুযায়ী ৫–৩০ কোটির জন্য ন্যূনতম ২১ দিন।"],
+["LTM প্রয়োগের থ্রেশহোল্ড অনুযায়ী কার্য ক্রয়ে সর্বোচ্চ কত টাকা পর্যন্ত অনুমোদিত?","৫০ লক্ষ টাকা","১ কোটি টাকা","২ কোটি টাকা","২০ লক্ষ টাকা",1,"Rule 80(1)(ঘ) অনুযায়ী কার্যে ১ কোটি টাকা পর্যন্ত।"],
+["পণ্য বা ভৌতসেবা ক্রয়ে LTM থ্রেশহোল্ড কত?","১০ লক্ষ টাকা","১৫ লক্ষ টাকা","২০ লক্ষ টাকা","৩০ লক্ষ টাকা",2,"Rule 80(1)(ঘ) অনুযায়ী পণ্য/ভৌতসেবায় ২০ লক্ষ টাকা পর্যন্ত।"],
+["RFQ পদ্ধতি কোন Rule পরিসরে পরিচালিত হয়?","৮০–৮১","৯০–৯৪","৯৫–৯৬","১০২–১০৮",1,"RFQ (কোটেশন) অংশ-৫, Rule 90–94।"],
+["Reverse Auction কোন Rule-এ বর্ণিত?","৯৫–৯৬","৯৭–১০১","১০৯","৮২–৮৫",0,"বিপরীত নিলাম পদ্ধতি অংশ-৬, Rule 95–96।"],
+["Framework Agreement সংক্রান্ত বিধান কোন Rule-এ?","১০২","১০৯","৯০","৭৮",1,"Framework Agreement অংশ-৯, একক Rule 109।"],
+["OTM-এর সময়সীমা এককভাবে কে কমাতে পারে?","ক্রয়কারী প্রতিষ্ঠানের প্রধান","অর্থনৈতিক বিষয়সংক্রান্ত মন্ত্রিসভা কমিটির সুপারিশক্রমে সরকার","TEC","BPPA চেয়ারম্যান একাই",1,"Rule 78(5) অনুযায়ী শুধুমাত্র এই কমিটির সুপারিশক্রমে সরকার সময় কমাতে পারে।"],
+["একটি কাজকে থ্রেশহোল্ডের নিচে আনতে একাধিক প্যাকেজে ভাগ করাকে কী বলা হয়?","Framework Agreement","Package Splitting","Reverse Auction","Two-Stage Tendering",1,"Package Splitting একটি গুরুতর অনিয়ম, Rule 79(1)-এর লঙ্ঘন।"],
+["TSTM পদ্ধতি সাধারণত কোন পরিস্থিতিতে ব্যবহৃত হয়?","প্রমিত সহজলভ্য পণ্যে","সম্পূর্ণ Specification আগাম নির্ধারণ সম্ভব না হলে","জরুরি প্রাকৃতিক দুর্যোগে","কেবল আন্তর্জাতিক ক্রয়ে",1,"Two-Stage Tendering জটিল/অনির্ধারিত specification-এর ক্ষেত্রে ব্যবহৃত।"],
+["OSTEM পদ্ধতিতে দরদাতা কয়টি খামে প্রস্তাব জমা দেয়?","একটি","দুইটি (টেকনিক্যাল ও ফাইন্যান্সিয়াল পৃথক)","তিনটি","কোনো নির্দিষ্ট সংখ্যা নেই",1,"One-Stage Two-Envelope-এ দুটি পৃথক খামে প্রস্তাব জমা দেওয়া হয়।"],
+["DPM ব্যবহারের জন্য সবচেয়ে গুরুত্বপূর্ণ শর্ত কোনটি?","কম মূল্যের ক্রয় হওয়া","যথাযথ কর্তৃপক্ষের অনুমোদন ও লিখিত justification","শুধু বিদেশি সরবরাহকারী হওয়া","শুধু জরুরি অবস্থায় প্রযোজ্য, অন্য কোনো শর্ত নেই",1,"প্রতিটি DPM সিদ্ধান্তে সুনির্দিষ্ট লিখিত কারণ ও অনুমোদন আবশ্যক।"],
+["১ কোটি টাকা পর্যন্ত ক্রয়ে OTM-এর ন্যূনতম বিজ্ঞাপন সময় কত?","৭ দিন","১০ দিন","১৪ দিন","২১ দিন",1,"Rule 78(4) তফসিল অনুযায়ী ১ কোটি পর্যন্ত ন্যূনতম ১০ দিন।"],
+["বিপর্যয়কর ঘটনা মোকাবিলায় জরুরি ক্রয়ে OTM-এর ন্যূনতম সময় কত?","৭ দিন","১০ দিন","১৪ দিন","২৮ দিন",0,"দুর্যোগকালীন জরুরি ক্রয়ে ন্যূনতম ৭ দিন নির্ধারিত।"],
+["Rule 79(1)-এর প্রধান শর্ত কী?","OTM সবসময় বাধ্যতামূলক","OTM ব্যতীত অন্য পদ্ধতি ব্যবহারের কারণ রেকর্ড রাখতে হবে","শুধু RFQ ব্যবহার করা যাবে","আন্তর্জাতিক ক্রয় নিষিদ্ধ",1,"বিকল্প পদ্ধতি ব্যবহারের যৌক্তিকতা লিখিতভাবে রেকর্ড রাখা আবশ্যক।"],
+["Framework Agreement-এর মূল সুবিধা কী?","একবারই ক্রয় করা যায়","পুনরাবৃত্তিমূলক প্রয়োজনে দ্রুত মিনি-প্রতিযোগিতার মাধ্যমে অর্ডার","কোনো প্রতিযোগিতা লাগে না","শুধু আন্তর্জাতিক সরবরাহকারীদের জন্য প্রযোজ্য",1,"পুনরাবৃত্তিমূলক প্রয়োজনে সময় ও প্রশাসনিক খরচ সাশ্রয় করে।"],
+["আন্তর্জাতিক ক্রয় পদ্ধতি সংক্রান্ত বিধান কোন Rule পরিসরে?","৯৭–১০১","১০২–১০৮","১০৯","৮৬–৮৯",1,"অংশ-৮, Rule 102–108 আন্তর্জাতিক ক্রয় সংক্রান্ত বিশেষ বিধান।"],
+["RFQ-তে সাধারণত কী আবশ্যক নয় বলে ধরা হয়?","কারিগরি বিনির্দেশ","Tender Security (সাধারণত)","সরবরাহকারীর নাম","মূল্য উল্লেখ",1,"Rule 91(6) অনুযায়ী RFQ-তে সাধারণত Tender Security আবশ্যক নয়।"],
+["পুনঃদরপত্র আহ্বানের ক্ষেত্রে (≤১ কোটি) ন্যূনতম বিজ্ঞাপন সময় কত?","৫ দিন","৭ দিন","১০ দিন","১৪ দিন",1,"Rule 78(4) তফসিল অনুযায়ী পুনঃদরপত্রে (≤১ কোটি) ন্যূনতম ৭ দিন।"]
+];
+const ch6mcqDiv=document.getElementById('ch6mcq');
+if(ch6mcqDiv){
+  ch6MCQ.forEach((q,i)=>{
+    const opts=q.slice(1,5);const correctIdx=q[5];const exp=q[6];
+    const div=document.createElement('div');div.className='mcq-q';
+    div.innerHTML=`<p class="qtext">${i+1}. ${q[0]}</p>`+
+      opts.map((o,j)=>`<button type="button" class="mcq-opt" data-correct="${j===correctIdx?1:0}">${String.fromCharCode(2453+j)}) ${o}</button>`).join('')+
+      `<div class="mcq-exp">✅ ব্যাখ্যা: ${exp}</div>`;
+    ch6mcqDiv.appendChild(div);
+  });
+}
+
+/* ---------------- Part B Final Assessment Quiz (১৫টি) ---------------- */
+const finalMCQ=[
+["TEC (Tender Evaluation Committee) গঠন পদ্ধতি PPR ২০২৫-এর কোন বিধিতে বর্ণিত?","বিধি ১৮","বিধি ৪২","বিধি ৯০","বিধি ১০৯",1,"মডিউল-১ অনুযায়ী, PPR ২০২৫, বিধি ৪২-এ TEC গঠন পদ্ধতি নির্ধারিত।"],
+["TEC সদস্যদের মূল্যায়ন কার্যক্রম আনুষ্ঠানিকভাবে শুরুর আগে কী বাধ্যতামূলক?","শুধু Tender Security জমা","ডিজিটাল সম্মতি ও Conflict of Interest ঘোষণা","শুধু Site Visit Report","Bank Solvency Certificate",1,"মডিউল-২ অনুযায়ী, প্রতিটি সদস্যের ডিজিটাল সম্মতি ও COI ঘোষণা ছাড়া মূল্যায়ন শুরু করা যায় না।"],
+["Eligibility Evaluation-এ কোনো বাধ্যতামূলক দলিল অনুপস্থিত বা মেয়াদোত্তীর্ণ হলে ফলাফল কী হয়?","Pass, শর্তসাপেক্ষে","Fail","পরবর্তী রাউন্ডে বিবেচনা","শুধু সতর্কীকরণ",1,"মডিউল-৪ অনুযায়ী, বাধ্যতামূলক দলিল অনুপস্থিত/মেয়াদোত্তীর্ণ হলে সরাসরি Fail।"],
+["Technical Evaluation-এ কোনো বিডারকে Non-responsive ঘোষণার প্রধান কারণ কী?","সামান্য মূল্য পার্থক্য","মূল Specification থেকে গুরুত্বপূর্ণ (Material) বিচ্যুতি","দেরিতে জমাদান","ভাষাগত ভুল",1,"মডিউল-৫ অনুযায়ী, Material Deviation থাকলে Non-responsive ঘোষিত হয়; Minor বিচ্যুতি সাধারণত গ্রহণযোগ্য।"],
+["Financial Evaluation-এ কোন বিডারের আর্থিক প্রস্তাব মূল্যায়ন করা হয় না?","যিনি সর্বোচ্চ দর দিয়েছেন","যিনি Technically Non-responsive","যিনি দেরিতে জমা দিয়েছেন","যিনি বিদেশি প্রতিষ্ঠান",1,"মডিউল-৬ অনুযায়ী, শুধুমাত্র Technically Responsive বিডারদের আর্থিক প্রস্তাব উন্মুক্ত ও মূল্যায়ন করা হয়।"],
+["LERT-এর পূর্ণরূপ কী?","Lowest Estimated Reference Tender","Lowest Evaluated Responsive Tender","Latest Evaluated Ranking Table","Legal Evaluation Review Team",1,"মডিউল-৭ অনুযায়ী, LERT = Lowest Evaluated Responsive Tender — সর্বনিম্ন Evaluated Price প্রদানকারী Responsive বিডার।"],
+["LERT নির্ধারিত হওয়ার অবিলম্বে পরবর্তী ধাপ কোনটি?","সরাসরি চুক্তি স্বাক্ষর","Post Qualification","NOA ইস্যু","Tender বাতিল",1,"মডিউল-৭ ও ৮ অনুযায়ী, LERT নির্ধারণের পর তাকে Post Qualification যাচাইয়ের মধ্য দিয়ে যেতে হয়।"],
+["Post Qualification-এ LERT ব্যর্থ হলে কী করা হয়?","পুরো প্রক্রিয়া বাতিল করা হয়","র‍্যাংকিং-এ পরবর্তী বিডারকে Post Qualification করা হয়","LERT-কেই পুনরায় সুযোগ দেওয়া হয়","সর্বোচ্চ দরদাতাকে বিবেচনা করা হয়",1,"মডিউল-৮ অনুযায়ী, ব্যর্থ হলে র‍্যাংকিং-এ পরবর্তী স্থানে থাকা Responsive বিডারের Post Qualification করা হয়।"],
+["TER (Tender Evaluation Report)-এ ডিজিটাল স্বাক্ষর কাদের প্রদান করতে হয়?","শুধু Chairperson-এর","শুধু PE-এর","TEC-এর সকল সদস্যের","শুধু Member-Secretary-এর",2,"মডিউল-৯ অনুযায়ী, TER-এ TEC-এর সকল সদস্য Digital Signature প্রদান করেন।"],
+["TER স্বাক্ষরের পর সাধারণ Approval Workflow-এর ক্রম কোনটি?","PE Approval → Committee Sign → Final Send","Committee Sign → PE Approval → (প্রয়োজনে HOPE) → Final Send","Final Send → Committee Sign → PE Approval","HOPE Approval → Committee Sign",1,"মডিউল-১০ অনুযায়ী, TER খসড়া → Committee Sign → PE Approval → Final Send — এই ক্রমে অগ্রসর হয়।"],
+["Final Submission ধাপে \"Send to PE\"-এর পর Tender-এর স্ট্যাটাস সাধারণত কী দেখায়?","Draft","Under Review","Award Recommended","Cancelled",2,"মডিউল-১১ অনুযায়ী, সকল অনুমোদনের পর সম্পূর্ণ ফাইল PE-এর নিকট প্রেরিত হলে স্ট্যাটাস \"Award Recommended\"-এ পরিবর্তিত হয়।"],
+["কেস স্টাডি (RD-07 প্যাকেজ)-এ ৫ জন বিডারের মধ্যে কতজন Eligibility Evaluation-এ বাদ পড়েন?","১ জন","২ জন","৩ জন","কেউ বাদ পড়েননি",1,"মডিউল-১২ অনুযায়ী, ডেল্টা ট্রেডার্স ও এপসিলন এন্টারপ্রাইজ — এই ২ জন Eligibility-তে Fail করেন।"],
+["একই কেস স্টাডিতে গামা ইঞ্জিনিয়ারিং কোন ধাপে বাদ পড়েন?","Eligibility Evaluation","Technical Evaluation","Financial Evaluation","Post Qualification",1,"মডিউল-১২ অনুযায়ী, গামা ইঞ্জিনিয়ারিং মূল প্রযুক্তিগত চাহিদা পূরণ না করায় Technical Evaluation-এ Non-responsive ঘোষিত হন।"],
+["কেস স্টাডিতে চূড়ান্তভাবে সুপারিশপ্রাপ্ত (LERT ও Post Qualification উভয়ে উত্তীর্ণ) বিডার কে?","বেটা বিল্ডার্স","আলফা কনস্ট্রাকশন","গামা ইঞ্জিনিয়ারিং","ডেল্টা ট্রেডার্স",1,"মডিউল-১২ অনুযায়ী, আলফা কনস্ট্রাকশন সর্বনিম্ন Evaluated Price প্রদানকারী হিসেবে LERT নির্ধারিত হয়ে Post Qualification-এও উত্তীর্ণ হন।"],
+["একই ব্যক্তিকে Bid Opening Committee ও Evaluation Committee — উভয় কমিটিতে নিয়োগের ক্ষেত্রে e-GP সিস্টেম কী করে?","স্বয়ংক্রিয়ভাবে অনুমোদন দেয়","স্বয়ংক্রিয়ভাবে সতর্কবার্তা প্রদর্শন করে","কোনো পদক্ষেপ নেয় না","নিয়োগ সম্পূর্ণ ব্লক করে দেয়",1,"মডিউল-১ অনুযায়ী, স্বার্থসংঘাত এড়াতে e-GP সিস্টেম এমন দ্বৈত নিয়োগের ক্ষেত্রে স্বয়ংক্রিয় সতর্কবার্তা প্রদর্শন করে।"]
+];
+const finalmcqDiv=document.getElementById('finalmcq');
+if(finalmcqDiv){
+  finalMCQ.forEach((q,i)=>{
+    const opts=q.slice(1,5);const correctIdx=q[5];const exp=q[6];
+    const div=document.createElement('div');div.className='mcq-q';
+    div.innerHTML=`<p class="qtext">${i+1}. ${q[0]}</p>`+
+      opts.map((o,j)=>`<button type="button" class="mcq-opt" data-correct="${j===correctIdx?1:0}">${String.fromCharCode(2453+j)}) ${o}</button>`).join('')+
+      `<div class="mcq-exp">✅ ব্যাখ্যা: ${exp}</div>`;
+    finalmcqDiv.appendChild(div);
+  });
+}
+
+/* ---------------- Chapter 10: TEC evaluation flow ---------------- */
+const ch10Steps=["Preliminary Examination","Responsiveness Check","Technical Evaluation","Financial Evaluation","BOQ Verification","Arithmetic Correction","Price Comparison","Qualification Verification","Clarification (প্রয়োজনে)","Post Qualification","Evaluation Report"];
+const ch10evalflow=document.getElementById('ch10evalflow');
+if(ch10evalflow){
+  ch10Steps.forEach((s,i)=>{
+    const d=document.createElement('div');d.className='flowstep';
+    d.innerHTML=`<div class="fnum">${i+1}</div>${s}`;
+    ch10evalflow.appendChild(d);
+    if(i<ch10Steps.length-1){const a=document.createElement('div');a.className='flowarrow';a.textContent='→';ch10evalflow.appendChild(a);}
+  });
+}
+
+/* ---------------- MCQ interactivity (delegated) ---------------- */
+document.addEventListener('click',e=>{
+  const opt=e.target.closest('.mcq-opt');
+  if(!opt) return;
+  const q=opt.closest('.mcq-q');
+  q.querySelectorAll('.mcq-opt').forEach(o=>o.classList.remove('correct','wrong'));
+  if(opt.dataset.correct==='1'){opt.classList.add('correct');}
+  else{opt.classList.add('wrong'); q.querySelector('[data-correct="1"]').classList.add('correct');}
+  const exp=q.querySelector('.mcq-exp');
+  if(exp) exp.style.display='block';
+});
+</script>
+
+<style>
+.mcq-q{background:var(--bg-sunken);border-radius:8px;padding:12px 14px;margin-bottom:12px;}
+.mcq-q p.qtext{font-weight:600;margin:0 0 8px;font-size:.92rem;}
+.mcq-opt{display:block;width:100%;text-align:right;background:var(--bg-panel);border:1px solid var(--line);
+  border-radius:6px;padding:8px 12px;margin-bottom:6px;cursor:pointer;font-family:var(--sans);font-size:.87rem;color:var(--ink);}
+.mcq-opt:hover{border-color:var(--green-700);}
+.mcq-opt.correct{background:var(--green-100);border-color:var(--green-700);font-weight:700;}
+.mcq-opt.wrong{background:var(--red-100);border-color:var(--red);}
+.mcq-exp{display:none;font-size:.85rem;color:var(--ink-soft);margin-top:6px;border-top:1px dashed var(--line);padding-top:6px;}
+</style>
+
+<script>
+/* ---------------- PWA: service worker registration ---------------- */
+if('serviceWorker' in navigator){
+  window.addEventListener('load',()=>{
+    navigator.serviceWorker.register('sw.js').catch(err=>console.log('SW registration failed:',err));
+  });
+}
+
+/* ---------------- PWA: install button (Android/Chrome) ---------------- */
+let deferredPrompt=null;
+const installBtn=document.getElementById('installBtn');
+window.addEventListener('beforeinstallprompt',(e)=>{
+  e.preventDefault();
+  deferredPrompt=e;
+  if(installBtn) installBtn.style.display='inline-flex';
+});
+if(installBtn){
+  installBtn.addEventListener('click',async()=>{
+    if(!deferredPrompt) return;
+    installBtn.style.display='none';
+    deferredPrompt.prompt();
+    await deferredPrompt.userChoice;
+    deferredPrompt=null;
+  });
+}
+window.addEventListener('appinstalled',()=>{
+  if(installBtn) installBtn.style.display='none';
+});
+
+/* ---------------- PWA: offline indicator ---------------- */
+const offlineBadge=document.getElementById('offlineBadge');
+function updateOnlineStatus(){
+  if(offlineBadge) offlineBadge.style.display = navigator.onLine ? 'none' : 'block';
+}
+window.addEventListener('online',updateOnlineStatus);
+window.addEventListener('offline',updateOnlineStatus);
+updateOnlineStatus();
+</script>
+
+</body>
+</html>
