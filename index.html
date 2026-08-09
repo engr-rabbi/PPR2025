@@ -314,6 +314,71 @@ mark{background:var(--gold-100);color:inherit;border-radius:3px;padding:0 2px;}
   .shell{display:block;}
 }
 </style>
+
+<!-- PPR 2025 Visual Upgrade: additive enhancement layer -->
+<meta name="theme-color" content="#04382A">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="author" content="PPR 2025 Interactive Training Guide">
+<meta property="og:type" content="website">
+<meta property="og:title" content="PPR 2025 — Interactive Procurement Training Guide">
+<meta property="og:description" content="PPR 2025 interactive learning, procurement methods, tender evaluation, e-GP and TEC training guide.">
+<meta name="twitter:card" content="summary_large_image">
+
+
+<style id="visual-upgrade-css">
+/* ================= VISUAL UPGRADE LAYER ================= */
+:root{--vu-accent:#D9A83E;--vu-cyan:#2E7D7B;--vu-purple:#5D4E8C;--vu-soft:#F7F4EA;--vu-radius:14px;}
+.visual-upgrade{max-width:1080px;margin:0 auto;padding:0 30px 30px;}
+.vu-panel{background:var(--bg-panel);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);overflow:hidden;margin:22px 0;}
+.vu-panel-head{padding:20px 22px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:12px;}
+.vu-panel-head .vu-kicker{font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;color:var(--gold);text-transform:uppercase;}
+.vu-panel-head h2,.vu-panel-head h3{margin:2px 0 0;font-size:1.3rem;}
+.vu-icon{width:44px;height:44px;border-radius:12px;background:var(--green-100);display:grid;place-items:center;font-size:1.3rem;flex:none;}
+.learning-path{display:grid;grid-template-columns:repeat(6,1fr);gap:0;padding:20px;}
+.lp-step{position:relative;text-align:center;padding:10px 7px;}
+.lp-step:not(:last-child)::after{content:'→';position:absolute;right:-8px;top:26px;color:var(--gold);font-weight:800;z-index:2;}
+.lp-num{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;margin:0 auto 8px;background:var(--green-700);color:#fff;font-family:var(--mono);font-size:.75rem;font-weight:700;box-shadow:0 4px 12px rgba(4,56,42,.18);}
+.lp-step strong{display:block;font-family:var(--serif);font-size:.86rem;color:var(--green-900);}.dark .lp-step strong{color:#EFE6C4;}
+.lp-step span{display:block;color:var(--ink-soft);font-size:.72rem;line-height:1.45;margin-top:3px;}
+.visual-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;padding:20px;}
+.visual-card{background:var(--bg-sunken);border:1px solid var(--line);border-radius:12px;padding:14px;min-height:155px;transition:transform .2s ease,box-shadow .2s ease;}
+.visual-card:hover{transform:translateY(-2px);box-shadow:var(--shadow);}
+.visual-card h4{font-family:var(--sans);font-size:.9rem;margin:0 0 7px;color:var(--green-800);}.dark .visual-card h4{color:#9FD9BB;}
+.visual-card p{font-size:.78rem;color:var(--ink-soft);margin:0 0 10px;}
+.visual-card svg{width:100%;height:70px;display:block;}
+.vu-caption{font-size:.72rem;color:var(--ink-soft);padding:8px 14px 14px;text-align:center;}
+.method-tool{padding:20px;}
+.method-q{margin-bottom:18px;}
+.method-q label{display:block;font-weight:700;font-size:.88rem;margin-bottom:8px;}
+.method-options{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;}
+.method-options button{border:1px solid var(--line);background:var(--bg-panel);color:var(--ink);border-radius:10px;padding:9px 8px;font-family:var(--sans);font-size:.78rem;cursor:pointer;}
+.method-options button:hover,.method-options button.active{border-color:var(--green-700);background:var(--green-100);}
+.method-result{margin-top:18px;padding:15px;border-radius:12px;background:var(--green-100);border:1px solid var(--green-700);display:none;}
+.method-result strong{font-family:var(--serif);font-size:1.1rem;color:var(--green-900);}.dark .method-result strong{color:#EFE6C4;}
+.method-result small{display:block;color:var(--ink-soft);margin-top:4px;}
+.vu-disclaimer{padding:12px 16px;margin:0 20px 20px;border-radius:10px;background:var(--amber-100);border:1px solid #D8A93E55;font-size:.78rem;color:var(--ink-soft);}
+.chapter-visual{margin:18px 0 20px;border:1px solid var(--line);border-radius:12px;background:linear-gradient(135deg,var(--bg-sunken),var(--bg-panel));overflow:hidden;}
+.chapter-visual figure{margin:0;padding:12px 14px 0;}
+.chapter-visual svg{width:100%;height:125px;display:block;}
+.chapter-visual figcaption{padding:8px 4px 12px;font-size:.76rem;color:var(--ink-soft);text-align:center;}
+.vu-flow{display:flex;gap:8px;align-items:stretch;overflow:auto;padding:14px;scrollbar-width:thin;}
+.vu-flow .node{min-width:145px;border:1px solid var(--line);background:var(--bg-panel);border-radius:10px;padding:10px;text-align:center;font-size:.76rem;box-shadow:0 3px 10px rgba(4,56,42,.05);}
+.vu-flow .node b{display:block;color:var(--green-800);margin-bottom:3px;}.dark .vu-flow .node b{color:#9FD9BB;}
+.vu-flow .arrow{display:grid;place-items:center;color:var(--gold);font-weight:800;min-width:18px;}
+.audit-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;padding:0 20px 20px;}
+.audit-item{border-radius:10px;padding:11px 12px;font-size:.78rem;border:1px solid var(--line);background:var(--bg-panel);}
+.audit-item b{display:block;margin-bottom:3px;}
+.audit-high{border-left:4px solid var(--red);}.audit-caution{border-left:4px solid var(--gold);}.audit-good{border-left:4px solid var(--green-700);}
+.quick-summary{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;padding:20px;}
+.quick-summary .qs{background:var(--bg-sunken);border-radius:10px;padding:12px;border:1px solid var(--line);}
+.quick-summary .qs b{display:block;font-size:.73rem;color:var(--gold);font-family:var(--mono);text-transform:uppercase;margin-bottom:4px;}
+.quick-summary .qs span{font-size:.8rem;}
+@media(max-width:900px){.learning-path{grid-template-columns:repeat(3,1fr);}.lp-step:nth-child(3)::after{display:none;}.visual-grid{grid-template-columns:1fr 1fr;}.method-options{grid-template-columns:1fr 1fr;}.quick-summary{grid-template-columns:1fr 1fr;}}
+@media(max-width:600px){.visual-upgrade{padding:0 14px 22px;}.learning-path{grid-template-columns:1fr 1fr;padding:12px;}.lp-step:not(:last-child)::after{display:none;}.visual-grid,.audit-strip{grid-template-columns:1fr;}.method-options{grid-template-columns:1fr;}.quick-summary{grid-template-columns:1fr;}.chapter-visual svg{height:145px;}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important;}}
+@media print{.visual-upgrade{padding:0 0 15px;}.method-tool{display:none!important;}.vu-panel{box-shadow:none;}.chapter-visual{break-inside:avoid;}.learning-path{grid-template-columns:repeat(3,1fr);}}
+</style>
+
 </head>
 <body>
 
@@ -410,6 +475,63 @@ mark{background:var(--gold-100);color:inherit;border-radius:3px;padding:0 2px;}
       </div>
     </section>
 
+<!-- ================= VISUAL LEARNING HUB ================= -->
+<section class="visual-upgrade" id="visualLearningHub" aria-label="Visual learning hub">
+  <div class="vu-panel">
+    <div class="vu-panel-head"><div class="vu-icon">🧭</div><div><div class="vu-kicker">Learning Path</div><h2>PPR 2025 — শেখার পথ</h2></div></div>
+    <div class="learning-path">
+      <div class="lp-step"><div class="lp-num">01</div><strong>PPR Basics</strong><span>Rule, Schedule, terminology</span></div>
+      <div class="lp-step"><div class="lp-num">02</div><strong>Methods</strong><span>OTM, LTM, RFQ ও অন্যান্য</span></div>
+      <div class="lp-step"><div class="lp-num">03</div><strong>Evaluation</strong><span>Eligibility → Technical → Financial</span></div>
+      <div class="lp-step"><div class="lp-num">04</div><strong>e-GP Practical</strong><span>Upload → Opening → Award</span></div>
+      <div class="lp-step"><div class="lp-num">05</div><strong>TEC Advanced</strong><span>SLP, LERT, TER ও approval</span></div>
+      <div class="lp-step"><div class="lp-num">06</div><strong>Case Study</strong><span>বাস্তবধর্মী decision practice</span></div>
+    </div>
+    <div class="vu-disclaimer">📌 <b>Learning aid:</b> এই visual layer existing content-কে প্রতিস্থাপন করে না। আইনগত সিদ্ধান্তের ক্ষেত্রে মূল PPR 2025/BPPA Gazette যাচাই করুন।</div>
+  </div>
+
+  <div class="vu-panel">
+    <div class="vu-panel-head"><div class="vu-icon">📊</div><div><div class="vu-kicker">At a Glance</div><h2>Procurement Process Visual Map</h2></div></div>
+    <div class="vu-flow" aria-label="Procurement process visual map">
+      <div class="node"><b>01 · Need</b>প্রয়োজন চিহ্নিতকরণ</div><div class="arrow">→</div>
+      <div class="node"><b>02 · Plan</b>APP / Strategy</div><div class="arrow">→</div>
+      <div class="node"><b>03 · Method</b>পদ্ধতি নির্বাচন</div><div class="arrow">→</div>
+      <div class="node"><b>04 · Tender</b>দরপত্র / RFQ</div><div class="arrow">→</div>
+      <div class="node"><b>05 · Evaluate</b>TEC মূল্যায়ন</div><div class="arrow">→</div>
+      <div class="node"><b>06 · Approve</b>অনুমোদন</div><div class="arrow">→</div>
+      <div class="node"><b>07 · Award</b>NOA / Contract</div>
+    </div>
+    <div class="vu-caption">Visual summary — existing chapters-এর বিস্তারিত rule ও workflow-তে যেতে নিচের সূচিপত্র ব্যবহার করুন।</div>
+  </div>
+
+  <div class="vu-panel" id="methodDecisionTool">
+    <div class="vu-panel-head"><div class="vu-icon">🌳</div><div><div class="vu-kicker">Interactive Decision Tree</div><h2>Which Procurement Method Should I Review?</h2></div></div>
+    <div class="method-tool">
+      <div class="method-q"><label>১. কী ধরনের procurement?</label><div class="method-options" data-group="category">
+        <button data-value="works">Works</button><button data-value="goods">Goods</button><button data-value="service">Physical / Non-consulting Service</button><button data-value="consultancy">Consultancy</button>
+      </div></div>
+      <div class="method-q"><label>২. Requirement কি standard এবং competitive?</label><div class="method-options" data-group="competition">
+        <button data-value="standard">হ্যাঁ — standard</button><button data-value="special">না — specialized</button><button data-value="limited">Competition সীমিত</button><button data-value="unknown">নিশ্চিত নই</button>
+      </div></div>
+      <div class="method-q"><label>৩. বিশেষ পরিস্থিতি আছে?</label><div class="method-options" data-group="situation">
+        <button data-value="normal">Normal</button><button data-value="urgent">Urgent / emergency</button><button data-value="repeat">Repeated requirement</button><button data-value="direct">Specific exceptional basis</button>
+      </div></div>
+      <div class="method-result" id="methodResult" aria-live="polite"></div>
+    </div>
+    <div class="vu-disclaimer">⚠️ <b>Important:</b> এই decision aid কোনো legal determination নয়। Final method নির্বাচন করার আগে সংশ্লিষ্ট Rule, threshold/condition, approval requirement এবং official STD/PPR যাচাই করুন।</div>
+  </div>
+
+  <div class="vu-panel">
+    <div class="vu-panel-head"><div class="vu-icon">🎯</div><div><div class="vu-kicker">Visual Learning System</div><h2>Rule → Practice → e-GP</h2></div></div>
+    <div class="visual-grid">
+      <article class="visual-card"><h4>📖 Rule</h4><p>আইনি/বিধিগত ধারণা আগে বুঝুন।</p><svg viewBox="0 0 300 70" role="img" aria-label="Rule document illustration"><rect x="110" y="7" width="80" height="56" rx="5" fill="none" stroke="currentColor"/><path d="M122 22h56M122 33h56M122 44h38" stroke="currentColor" stroke-width="3" fill="none"/></svg></article>
+      <article class="visual-card"><h4>🏗️ Practice</h4><p>একটি field-level scenario দিয়ে প্রয়োগ বুঝুন।</p><svg viewBox="0 0 300 70" role="img" aria-label="Practical construction scenario illustration"><path d="M45 58h210M70 58V30h55v28M135 58V22h65v36M205 58V38h25v20" fill="none" stroke="currentColor" stroke-width="3"/><path d="M77 30l20-18 28 18M142 22l25-16 33 16" fill="none" stroke="currentColor" stroke-width="3"/></svg></article>
+      <article class="visual-card"><h4>💻 e-GP</h4><p>সিস্টেমে কোন ধাপে কী কাজ হবে তা দেখুন।</p><svg viewBox="0 0 300 70" role="img" aria-label="e-GP screen illustration"><rect x="70" y="9" width="160" height="46" rx="5" fill="none" stroke="currentColor" stroke-width="3"/><path d="M82 21h136M95 31h35M95 40h75M95 49h55" stroke="currentColor" stroke-width="3" fill="none"/><path d="M135 62h30" stroke="currentColor" stroke-width="3"/></svg></article>
+    </div>
+  </div>
+</section>
+
+
     <section class="section-pad" id="lifecycle">
       <h2>🔄 ক্রয় প্রক্রিয়ার ধাপ (Procurement Life-Cycle)</h2>
       <p style="color:var(--ink-soft);max-width:760px;">প্রয়োজন চিহ্নিতকরণ থেকে চূড়ান্ত পেমেন্ট পর্যন্ত একটি সাধারণ Works/Goods প্রকিউরমেন্টের ধাপগুলো (ব্যাখ্যামূলক ফ্লো) —</p>
@@ -429,6 +551,12 @@ mark{background:var(--gold-100);color:inherit;border-radius:3px;padding:0 2px;}
           <div class="chev">▾</div>
         </summary>
         <div class="body">
+<div class="chapter-visual" data-vu="ch1">
+  <figure>
+    <svg viewBox="0 0 1000 125" role="img" aria-label="Preliminary visual workflow"><title>Preliminary</title><desc>Name / Scope → Definitions → Applicability</desc><rect x="22" y="46" width="306" height="42" rx="10" fill="none" stroke="currentColor" stroke-width="2"/><text x="175.0" y="71" text-anchor="middle" font-family="sans-serif" font-size="14" fill="currentColor">Name / Scope</text><path d="M333 67.0h8m0 0-6-5m6 5-6 5" stroke="currentColor" stroke-width="2" fill="none"/><rect x="346" y="46" width="306" height="42" rx="10" fill="none" stroke="currentColor" stroke-width="2"/><text x="499.0" y="71" text-anchor="middle" font-family="sans-serif" font-size="14" fill="currentColor">Definitions</text><path d="M657 67.0h8m0 0-6-5m6 5-6 5" stroke="currentColor" stroke-width="2" fill="none"/><rect x="670" y="46" width="306" height="42" rx="10" fill="none" stroke="currentColor" stroke-width="2"/><text x="823.0" y="71" text-anchor="middle" font-family="sans-serif" font-size="14" fill="currentColor">Applicability</text><text x="22" y="24" font-family="monospace" font-size="11" fill="currentColor">01 · Preliminary</text></svg>
+    <figcaption><b>Preliminary</b> — PPR framework → definitions → applicability · Illustrative learning visual</figcaption>
+  </figure>
+</div>
           <div class="tags"><span class="tag">Rule ১–৩ (অফিসিয়াল কাঠামো-যাচাইকৃত)</span><span class="tag">সংজ্ঞা</span><span class="tag">Economic Operator</span></div>
           <div class="grid2">
             <div class="mini"><b>উদ্দেশ্য</b>PPR 2025-এর নামকরণ, কার্যকরের তারিখ, প্রযোজ্যতা এবং আইনে ব্যবহৃত মূল পরিভাষার সংজ্ঞা নির্ধারণ করা।</div>
@@ -447,6 +575,12 @@ mark{background:var(--gold-100);color:inherit;border-radius:3px;padding:0 2px;}
         </div>
       </details>
 
+<div class="audit-strip" aria-label="Visual audit checklist">
+  <div class="audit-item audit-high"><b>🔴 HIGH AUDIT RISK</b>ভুল method, unsupported justification, missing approval বা documentation-এর ক্ষেত্রে source rule যাচাই করুন।</div>
+  <div class="audit-item audit-caution"><b>🟠 CAUTION</b>Threshold, validity, timeline ও qualification condition পরিবর্তনশীল/Rule-specific হতে পারে।</div>
+  <div class="audit-item audit-good"><b>🟢 GOOD PRACTICE</b>Rule reference + evidence + evaluation trail + approval record একসঙ্গে রাখুন।</div>
+</div>
+
       <details class="chapter" id="ch2">
         <summary>
           <div class="ch-num">০২</div>
@@ -454,6 +588,12 @@ mark{background:var(--gold-100);color:inherit;border-radius:3px;padding:0 2px;}
           <div class="chev">▾</div>
         </summary>
         <div class="body">
+<div class="chapter-visual" data-vu="ch2">
+  <figure>
+    <svg viewBox="0 0 1000 125" role="img" aria-label="Tender Preparation &amp; Committees visual workflow"><title>Tender Preparation &amp; Committees</title><desc>Preparation → Committees → TEC</desc><rect x="22" y="46" width="306" height="42" rx="10" fill="none" stroke="currentColor" stroke-width="2"/><text x="175.0" y="71" text-anchor="middle" font-family="sans-serif" font-size="14" fill="currentColor">Preparation</text><path d="M333 67.0h8m0 0-6-5m6 5-6 5" stroke="currentColor" stroke-width="2" fill="none"/><rect x="346" y="46" width="306" height="42" rx="10" fill="none" stroke="currentColor" stroke-width="2"/><text x="499.0" y="71" text-anchor="middle" font-family="sans-serif" font-size="14" fill="currentColor">Committees</text><path d="M657 67.0h8m0 0-6-5m6 5-6 5" stroke="currentColor" stroke-width="2" fill="none"/><rect x="670" y="46" width="306" height="42" rx="10" fill="none" stroke="currentColor" stroke-width="2"/><text x="823.0" y="71" text-anchor="middle" font-family="sans-serif" font-size="14" fill="currentColor">TEC</text><text x="22" y="24" font-family="monospace" font-size="11" fill="currentColor">02 · Tender Preparation &amp; Committees</text></svg>
+    <figcaption><b>Tender Preparation &amp; Committees</b> — Planning → documents → committee structure · Illustrative learning visual</figcaption>
+  </figure>
+</div>
           <div class="tags"><span class="tag">Rule ৪–২১</span><span class="tag">Rule ৬ SPP (যাচাইকৃত)</span><span class="tag">Rule ১৮ DRC (যাচাইকৃত)</span></div>
           <div class="grid2">
             <div class="mini"><b>উদ্দেশ্য</b>ক্রয় শুরুর আগেই দরপত্র প্রস্তুতির নীতিমালা এবং সিদ্ধান্তগ্রহণকারী কমিটিসমূহের কাঠামো নির্ধারণ করা।</div>
@@ -484,6 +624,12 @@ mark{background:var(--gold-100);color:inherit;border-radius:3px;padding:0 2px;}
         </div>
       </details>
 
+<div class="audit-strip" aria-label="Visual audit checklist">
+  <div class="audit-item audit-high"><b>🔴 HIGH AUDIT RISK</b>ভুল method, unsupported justification, missing approval বা documentation-এর ক্ষেত্রে source rule যাচাই করুন।</div>
+  <div class="audit-item audit-caution"><b>🟠 CAUTION</b>Threshold, validity, timeline ও qualification condition পরিবর্তনশীল/Rule-specific হতে পারে।</div>
+  <div class="audit-item audit-good"><b>🟢 GOOD PRACTICE</b>Rule reference + evidence + evaluation trail + approval record একসঙ্গে রাখুন।</div>
+</div>
+
       <details class="chapter" id="ch3">
         <summary>
           <div class="ch-num">০৩</div>
@@ -491,6 +637,12 @@ mark{background:var(--gold-100);color:inherit;border-radius:3px;padding:0 2px;}
           <div class="chev">▾</div>
         </summary>
         <div class="body">
+<div class="chapter-visual" data-vu="ch3">
+  <figure>
+    <svg viewBox="0 0 1000 125" role="img" aria-label="Procurement Principles visual workflow"><title>Procurement Principles</title><desc>Plan → Tender → Contract → Review</desc><rect x="22" y="46" width="225" height="42" rx="10" fill="none" stroke="currentColor" stroke-width="2"/><text x="134.5" y="71" text-anchor="middle" font-family="sans-serif" font-size="14" fill="currentColor">Plan</text><path d="M252 67.0h8m0 0-6-5m6 5-6 5" stroke="currentColor" stroke-width="2" fill="none"/><rect x="265" y="46" width="225" height="42" rx="10" fill="none" stroke="currentColor" stroke-width="2"/><text x="377.5" y="71" text-anchor="middle" font-family="sans-serif" font-size="14" fill="currentColor">Tender</text><path d="M495 67.0h8m0 0-6-5m6 5-6 5" stroke="currentColor" stroke-width="2" fill="none"/><rect x="508" y="46" width="225" height="42" rx="10" fill="none" stroke="currentColor" stroke-width="2"/><text x="620.5" y="71" text-anchor="middle" font-family="sans-serif" font-size="14" fill="currentColor">Contract</text><path d="M738 67.0h8m0 0-6-5m6 5-6 5" stroke="currentColor" stroke-width="2" fill="none"/><rect x="751" y="46" width="225" height="42" rx="10" fill="none" stroke="currentColor" stroke-width="2"/><text x="863.5" y="71" text-anchor="middle" font-family="sans-serif" font-size="14" fill="currentColor">Review</text><text x="22" y="24" font-family="monospace" font-size="11" fill="currentColor">03 · Procurement Principles</text></svg>
+    <figcaption><b>Procurement Principles</b> — Strategy → validity → contract → complaint · Illustrative learning visual</figcaption>
+  </figure>
+</div>
           <div class="tags"><span class="tag">Rule ২২–৭৭</span><span class="tag">১২টি অংশ</span><span class="tag">Rule ৭২–৭৭ (যাচাইকৃত — অভিযোগ)</span></div>
           <div class="grid2">
             <div class="mini"><b>উদ্দেশ্য</b>ক্রয় পরিকল্পনা থেকে শুরু করে চুক্তি বাস্তবায়ন, রেকর্ড সংরক্ষণ ও অভিযোগ নিষ্পত্তি পর্যন্ত সামগ্রিক ক্রয়নীতি নির্ধারণ করা।</div>
@@ -555,6 +707,12 @@ mark{background:var(--gold-100);color:inherit;border-radius:3px;padding:0 2px;}
       </details>
 
       <!-- CHAPTER 4 (official) — FULL DEEP DIVE, PRESERVED AS-IS —placeholder replaced below by splice script -->
+<div class="audit-strip" aria-label="Visual audit checklist">
+  <div class="audit-item audit-high"><b>🔴 HIGH AUDIT RISK</b>ভুল method, unsupported justification, missing approval বা documentation-এর ক্ষেত্রে source rule যাচাই করুন।</div>
+  <div class="audit-item audit-caution"><b>🟠 CAUTION</b>Threshold, validity, timeline ও qualification condition পরিবর্তনশীল/Rule-specific হতে পারে।</div>
+  <div class="audit-item audit-good"><b>🟢 GOOD PRACTICE</b>Rule reference + evidence + evaluation trail + approval record একসঙ্গে রাখুন।</div>
+</div>
+
       <details class="chapter" id="ch4">
         <summary>
           <div class="ch-num">০৪</div>
@@ -562,6 +720,12 @@ mark{background:var(--gold-100);color:inherit;border-radius:3px;padding:0 2px;}
           <div class="chev">▾</div>
         </summary>
         <div class="body">
+<div class="chapter-visual" data-vu="ch4">
+  <figure>
+    <svg viewBox="0 0 1000 125" role="img" aria-label="Procurement Methods visual workflow"><title>Procurement Methods</title><desc>OTM → LTM / RFQ → Special methods</desc><rect x="22" y="46" width="306" height="42" rx="10" fill="none" stroke="currentColor" stroke-width="2"/><text x="175.0" y="71" text-anchor="middle" font-family="sans-serif" font-size="14" fill="currentColor">OTM</text><path d="M333 67.0h8m0 0-6-5m6 5-6 5" stroke="currentColor" stroke-width="2" fill="none"/><rect x="346" y="46" width="306" height="42" rx="10" fill="none" stroke="currentColor" stroke-width="2"/><text x="499.0" y="71" text-anchor="middle" font-family="sans-serif" font-size="14" fill="currentColor">LTM / RFQ</text><path d="M657 67.0h8m0 0-6-5m6 5-6 5" stroke="currentColor" stroke-width="2" fill="none"/><rect x="670" y="46" width="306" height="42" rx="10" fill="none" stroke="currentColor" stroke-width="2"/><text x="823.0" y="71" text-anchor="middle" font-family="sans-serif" font-size="14" fill="currentColor">Special methods</text><text x="22" y="24" font-family="monospace" font-size="11" fill="currentColor">04 · Procurement Methods</text></svg>
+    <figcaption><b>Procurement Methods</b> — Method selection → competition → procedure · Illustrative learning visual</figcaption>
+  </figure>
+</div>
           <div class="callout tip" style="margin-top:16px;">
             <b>📘 কাঠামোগত নোট</b> PPR 2025-এর অফিসিয়াল সূচি অনুযায়ী এই বিষয়টি প্রকৃতপক্ষে <b>চতুর্থ অধ্যায় (Rule 78–109)</b> — "পণ্য, কার্য ও ভৌতসেবার ক্রয় পদ্ধতি এবং উহার প্রয়োগ"। এখানে অধ্যায় নম্বর "০৬" এই গাইডের নিজস্ব বিষয়ভিত্তিক ক্রমে রাখা হয়েছে, কিন্তু Rule রেফারেন্সগুলো PPR 2025-এর প্রকৃত (official) নম্বরায়ন অনুসরণ করে।
           </div>
@@ -753,6 +917,12 @@ mark{background:var(--gold-100);color:inherit;border-radius:3px;padding:0 2px;}
         </div>
       </details>
 
+<div class="audit-strip" aria-label="Visual audit checklist">
+  <div class="audit-item audit-high"><b>🔴 HIGH AUDIT RISK</b>ভুল method, unsupported justification, missing approval বা documentation-এর ক্ষেত্রে source rule যাচাই করুন।</div>
+  <div class="audit-item audit-caution"><b>🟠 CAUTION</b>Threshold, validity, timeline ও qualification condition পরিবর্তনশীল/Rule-specific হতে পারে।</div>
+  <div class="audit-item audit-good"><b>🟢 GOOD PRACTICE</b>Rule reference + evidence + evaluation trail + approval record একসঙ্গে রাখুন।</div>
+</div>
+
       <details class="chapter" id="ch5">
         <summary>
           <div class="ch-num">০৫</div>
@@ -760,6 +930,12 @@ mark{background:var(--gold-100);color:inherit;border-radius:3px;padding:0 2px;}
           <div class="chev">▾</div>
         </summary>
         <div class="body">
+<div class="chapter-visual" data-vu="ch5">
+  <figure>
+    <svg viewBox="0 0 1000 125" role="img" aria-label="Advertisement &amp; Evaluation visual workflow"><title>Advertisement &amp; Evaluation</title><desc>Advertise → Evaluate → Approve</desc><rect x="22" y="46" width="306" height="42" rx="10" fill="none" stroke="currentColor" stroke-width="2"/><text x="175.0" y="71" text-anchor="middle" font-family="sans-serif" font-size="14" fill="currentColor">Advertise</text><path d="M333 67.0h8m0 0-6-5m6 5-6 5" stroke="currentColor" stroke-width="2" fill="none"/><rect x="346" y="46" width="306" height="42" rx="10" fill="none" stroke="currentColor" stroke-width="2"/><text x="499.0" y="71" text-anchor="middle" font-family="sans-serif" font-size="14" fill="currentColor">Evaluate</text><path d="M657 67.0h8m0 0-6-5m6 5-6 5" stroke="currentColor" stroke-width="2" fill="none"/><rect x="670" y="46" width="306" height="42" rx="10" fill="none" stroke="currentColor" stroke-width="2"/><text x="823.0" y="71" text-anchor="middle" font-family="sans-serif" font-size="14" fill="currentColor">Approve</text><text x="22" y="24" font-family="monospace" font-size="11" fill="currentColor">05 · Advertisement &amp; Evaluation</text></svg>
+    <figcaption><b>Advertisement &amp; Evaluation</b> — Advertisement → opening → evaluation → approval · Illustrative learning visual</figcaption>
+  </figure>
+</div>
           <div class="tags"><span class="tag">Rule ১১০–১২৩</span><span class="tag">৫০-২০-৩০ ফর্মুলা</span><span class="tag">±১০% ক্যাপ বাতিল</span></div>
           <div class="grid2">
             <div class="mini"><b>উদ্দেশ্য</b>বিজ্ঞাপন প্রচার, প্রাকযোগ্যতা যাচাই এবং দরপত্র উন্মুক্তকরণ থেকে মূল্যায়ন পর্যন্ত কার্যক্রমের প্রক্রিয়াগত নিয়ম নির্ধারণ করা।</div>
@@ -800,6 +976,12 @@ mark{background:var(--gold-100);color:inherit;border-radius:3px;padding:0 2px;}
         </div>
       </details>
 
+<div class="audit-strip" aria-label="Visual audit checklist">
+  <div class="audit-item audit-high"><b>🔴 HIGH AUDIT RISK</b>ভুল method, unsupported justification, missing approval বা documentation-এর ক্ষেত্রে source rule যাচাই করুন।</div>
+  <div class="audit-item audit-caution"><b>🟠 CAUTION</b>Threshold, validity, timeline ও qualification condition পরিবর্তনশীল/Rule-specific হতে পারে।</div>
+  <div class="audit-item audit-good"><b>🟢 GOOD PRACTICE</b>Rule reference + evidence + evaluation trail + approval record একসঙ্গে রাখুন।</div>
+</div>
+
       <details class="chapter" id="ch6">
         <summary>
           <div class="ch-num">০৬</div>
@@ -807,6 +989,12 @@ mark{background:var(--gold-100);color:inherit;border-radius:3px;padding:0 2px;}
           <div class="chev">▾</div>
         </summary>
         <div class="body">
+<div class="chapter-visual" data-vu="ch6">
+  <figure>
+    <svg viewBox="0 0 1000 125" role="img" aria-label="Consultancy Services visual workflow"><title>Consultancy Services</title><desc>Need → Selection → Contract</desc><rect x="22" y="46" width="306" height="42" rx="10" fill="none" stroke="currentColor" stroke-width="2"/><text x="175.0" y="71" text-anchor="middle" font-family="sans-serif" font-size="14" fill="currentColor">Need</text><path d="M333 67.0h8m0 0-6-5m6 5-6 5" stroke="currentColor" stroke-width="2" fill="none"/><rect x="346" y="46" width="306" height="42" rx="10" fill="none" stroke="currentColor" stroke-width="2"/><text x="499.0" y="71" text-anchor="middle" font-family="sans-serif" font-size="14" fill="currentColor">Selection</text><path d="M657 67.0h8m0 0-6-5m6 5-6 5" stroke="currentColor" stroke-width="2" fill="none"/><rect x="670" y="46" width="306" height="42" rx="10" fill="none" stroke="currentColor" stroke-width="2"/><text x="823.0" y="71" text-anchor="middle" font-family="sans-serif" font-size="14" fill="currentColor">Contract</text><text x="22" y="24" font-family="monospace" font-size="11" fill="currentColor">06 · Consultancy Services</text></svg>
+    <figcaption><b>Consultancy Services</b> — Need → selection process → negotiation → contract · Illustrative learning visual</figcaption>
+  </figure>
+</div>
           <div class="tags"><span class="tag">Rule ১২৪–১৪৮</span><span class="tag">Physical Services</span><span class="tag">QCBS / QBS</span></div>
           <div class="grid2">
             <div class="mini"><b>উদ্দেশ্য</b>Physical (Non-Consulting) Services এবং Professional/Intellectual (পরামর্শক) সেবা ক্রয়ের জন্য পৃথক পদ্ধতি ও মূল্যায়ন কাঠামো নির্ধারণ করা।</div>
@@ -836,6 +1024,12 @@ mark{background:var(--gold-100);color:inherit;border-radius:3px;padding:0 2px;}
         </div>
       </details>
 
+<div class="audit-strip" aria-label="Visual audit checklist">
+  <div class="audit-item audit-high"><b>🔴 HIGH AUDIT RISK</b>ভুল method, unsupported justification, missing approval বা documentation-এর ক্ষেত্রে source rule যাচাই করুন।</div>
+  <div class="audit-item audit-caution"><b>🟠 CAUTION</b>Threshold, validity, timeline ও qualification condition পরিবর্তনশীল/Rule-specific হতে পারে।</div>
+  <div class="audit-item audit-good"><b>🟢 GOOD PRACTICE</b>Rule reference + evidence + evaluation trail + approval record একসঙ্গে রাখুন।</div>
+</div>
+
       <details class="chapter" id="ch7">
         <summary>
           <div class="ch-num">০৭</div>
@@ -843,6 +1037,12 @@ mark{background:var(--gold-100);color:inherit;border-radius:3px;padding:0 2px;}
           <div class="chev">▾</div>
         </summary>
         <div class="body">
+<div class="chapter-visual" data-vu="ch7">
+  <figure>
+    <svg viewBox="0 0 1000 125" role="img" aria-label="Debarment visual workflow"><title>Debarment</title><desc>Issue → Review → Decision</desc><rect x="22" y="46" width="306" height="42" rx="10" fill="none" stroke="currentColor" stroke-width="2"/><text x="175.0" y="71" text-anchor="middle" font-family="sans-serif" font-size="14" fill="currentColor">Issue</text><path d="M333 67.0h8m0 0-6-5m6 5-6 5" stroke="currentColor" stroke-width="2" fill="none"/><rect x="346" y="46" width="306" height="42" rx="10" fill="none" stroke="currentColor" stroke-width="2"/><text x="499.0" y="71" text-anchor="middle" font-family="sans-serif" font-size="14" fill="currentColor">Review</text><path d="M657 67.0h8m0 0-6-5m6 5-6 5" stroke="currentColor" stroke-width="2" fill="none"/><rect x="670" y="46" width="306" height="42" rx="10" fill="none" stroke="currentColor" stroke-width="2"/><text x="823.0" y="71" text-anchor="middle" font-family="sans-serif" font-size="14" fill="currentColor">Decision</text><text x="22" y="24" font-family="monospace" font-size="11" fill="currentColor">07 · Debarment</text></svg>
+    <figcaption><b>Debarment</b> — Issue → review → decision → record · Illustrative learning visual</figcaption>
+  </figure>
+</div>
           <div class="tags"><span class="tag">Rule ১৪৯</span><span class="tag">Rule ১৮-সংশ্লিষ্ট DRC</span><span class="tag">তফসিল-২১</span></div>
           <div class="grid2">
             <div class="mini"><b>উদ্দেশ্য</b>জালিয়াতি, দুর্নীতি বা শর্তভঙ্গকারী প্রতিষ্ঠান/ব্যক্তিকে ভবিষ্যতে সরকারি ক্রয়ে অংশগ্রহণ থেকে বিরত রাখা।</div>
@@ -860,6 +1060,12 @@ mark{background:var(--gold-100);color:inherit;border-radius:3px;padding:0 2px;}
         </div>
       </details>
 
+<div class="audit-strip" aria-label="Visual audit checklist">
+  <div class="audit-item audit-high"><b>🔴 HIGH AUDIT RISK</b>ভুল method, unsupported justification, missing approval বা documentation-এর ক্ষেত্রে source rule যাচাই করুন।</div>
+  <div class="audit-item audit-caution"><b>🟠 CAUTION</b>Threshold, validity, timeline ও qualification condition পরিবর্তনশীল/Rule-specific হতে পারে।</div>
+  <div class="audit-item audit-good"><b>🟢 GOOD PRACTICE</b>Rule reference + evidence + evaluation trail + approval record একসঙ্গে রাখুন।</div>
+</div>
+
       <details class="chapter" id="ch8">
         <summary>
           <div class="ch-num">০৮</div>
@@ -867,6 +1073,12 @@ mark{background:var(--gold-100);color:inherit;border-radius:3px;padding:0 2px;}
           <div class="chev">▾</div>
         </summary>
         <div class="body">
+<div class="chapter-visual" data-vu="ch8">
+  <figure>
+    <svg viewBox="0 0 1000 125" role="img" aria-label="e-GP visual workflow"><title>e-GP</title><desc>Create → Publish → Evaluate → Award</desc><rect x="22" y="46" width="225" height="42" rx="10" fill="none" stroke="currentColor" stroke-width="2"/><text x="134.5" y="71" text-anchor="middle" font-family="sans-serif" font-size="14" fill="currentColor">Create</text><path d="M252 67.0h8m0 0-6-5m6 5-6 5" stroke="currentColor" stroke-width="2" fill="none"/><rect x="265" y="46" width="225" height="42" rx="10" fill="none" stroke="currentColor" stroke-width="2"/><text x="377.5" y="71" text-anchor="middle" font-family="sans-serif" font-size="14" fill="currentColor">Publish</text><path d="M495 67.0h8m0 0-6-5m6 5-6 5" stroke="currentColor" stroke-width="2" fill="none"/><rect x="508" y="46" width="225" height="42" rx="10" fill="none" stroke="currentColor" stroke-width="2"/><text x="620.5" y="71" text-anchor="middle" font-family="sans-serif" font-size="14" fill="currentColor">Evaluate</text><path d="M738 67.0h8m0 0-6-5m6 5-6 5" stroke="currentColor" stroke-width="2" fill="none"/><rect x="751" y="46" width="225" height="42" rx="10" fill="none" stroke="currentColor" stroke-width="2"/><text x="863.5" y="71" text-anchor="middle" font-family="sans-serif" font-size="14" fill="currentColor">Award</text><text x="22" y="24" font-family="monospace" font-size="11" fill="currentColor">08 · e-GP</text></svg>
+    <figcaption><b>e-GP</b> — Digital procurement lifecycle · Illustrative learning visual</figcaption>
+  </figure>
+</div>
           <div class="tags"><span class="tag">Rule ১৫০(১) (যাচাইকৃত)</span><span class="tag">eprocure.gov.bd</span></div>
           <div class="grid2">
             <div class="mini"><b>উদ্দেশ্য</b>ক্রয় প্রক্রিয়াকে ডিজিটালাইজড, স্বয়ংক্রিয় ও নিরীক্ষণযোগ্য করা।</div>
@@ -884,6 +1096,12 @@ mark{background:var(--gold-100);color:inherit;border-radius:3px;padding:0 2px;}
         </div>
       </details>
 
+<div class="audit-strip" aria-label="Visual audit checklist">
+  <div class="audit-item audit-high"><b>🔴 HIGH AUDIT RISK</b>ভুল method, unsupported justification, missing approval বা documentation-এর ক্ষেত্রে source rule যাচাই করুন।</div>
+  <div class="audit-item audit-caution"><b>🟠 CAUTION</b>Threshold, validity, timeline ও qualification condition পরিবর্তনশীল/Rule-specific হতে পারে।</div>
+  <div class="audit-item audit-good"><b>🟢 GOOD PRACTICE</b>Rule reference + evidence + evaluation trail + approval record একসঙ্গে রাখুন।</div>
+</div>
+
       <details class="chapter" id="ch9">
         <summary>
           <div class="ch-num">০৯</div>
@@ -891,6 +1109,12 @@ mark{background:var(--gold-100);color:inherit;border-radius:3px;padding:0 2px;}
           <div class="chev">▾</div>
         </summary>
         <div class="body">
+<div class="chapter-visual" data-vu="ch9">
+  <figure>
+    <svg viewBox="0 0 1000 125" role="img" aria-label="PPP &amp; Outsourcing visual workflow"><title>PPP &amp; Outsourcing</title><desc>Plan → Select → Manage</desc><rect x="22" y="46" width="306" height="42" rx="10" fill="none" stroke="currentColor" stroke-width="2"/><text x="175.0" y="71" text-anchor="middle" font-family="sans-serif" font-size="14" fill="currentColor">Plan</text><path d="M333 67.0h8m0 0-6-5m6 5-6 5" stroke="currentColor" stroke-width="2" fill="none"/><rect x="346" y="46" width="306" height="42" rx="10" fill="none" stroke="currentColor" stroke-width="2"/><text x="499.0" y="71" text-anchor="middle" font-family="sans-serif" font-size="14" fill="currentColor">Select</text><path d="M657 67.0h8m0 0-6-5m6 5-6 5" stroke="currentColor" stroke-width="2" fill="none"/><rect x="670" y="46" width="306" height="42" rx="10" fill="none" stroke="currentColor" stroke-width="2"/><text x="823.0" y="71" text-anchor="middle" font-family="sans-serif" font-size="14" fill="currentColor">Manage</text><text x="22" y="24" font-family="monospace" font-size="11" fill="currentColor">09 · PPP &amp; Outsourcing</text></svg>
+    <figcaption><b>PPP &amp; Outsourcing</b> — Special procurement arrangements · Illustrative learning visual</figcaption>
+  </figure>
+</div>
           <div class="tags"><span class="tag">Rule ১৫১ (যাচাইকৃত)</span><span class="tag">Outsourcing Policy 2025</span></div>
           <div class="grid2">
             <div class="mini"><b>উদ্দেশ্য</b>বিশেষ ধরনের ক্রয় (PPP প্রকল্প, আউটসোর্সিং) কে নিয়মিত PPR কাঠামোর সাথে সামঞ্জস্যপূর্ণ করা এবং অবশিষ্ট বিবিধ বিধান অন্তর্ভুক্ত করা।</div>
@@ -909,6 +1133,12 @@ mark{background:var(--gold-100);color:inherit;border-radius:3px;padding:0 2px;}
         </div>
       </details>
 
+<div class="audit-strip" aria-label="Visual audit checklist">
+  <div class="audit-item audit-high"><b>🔴 HIGH AUDIT RISK</b>ভুল method, unsupported justification, missing approval বা documentation-এর ক্ষেত্রে source rule যাচাই করুন।</div>
+  <div class="audit-item audit-caution"><b>🟠 CAUTION</b>Threshold, validity, timeline ও qualification condition পরিবর্তনশীল/Rule-specific হতে পারে।</div>
+  <div class="audit-item audit-good"><b>🟢 GOOD PRACTICE</b>Rule reference + evidence + evaluation trail + approval record একসঙ্গে রাখুন।</div>
+</div>
+
       <details class="chapter" id="ch-schedules">
         <summary>
           <div class="ch-num">❖</div>
@@ -916,12 +1146,24 @@ mark{background:var(--gold-100);color:inherit;border-radius:3px;padding:0 2px;}
           <div class="chev">▾</div>
         </summary>
         <div class="body">
+<div class="chapter-visual" data-vu="ch-schedules">
+  <figure>
+    <svg viewBox="0 0 1000 125" role="img" aria-label="Schedules visual workflow"><title>Schedules</title><desc>Schedule → Template → Reference</desc><rect x="22" y="46" width="306" height="42" rx="10" fill="none" stroke="currentColor" stroke-width="2"/><text x="175.0" y="71" text-anchor="middle" font-family="sans-serif" font-size="14" fill="currentColor">Schedule</text><path d="M333 67.0h8m0 0-6-5m6 5-6 5" stroke="currentColor" stroke-width="2" fill="none"/><rect x="346" y="46" width="306" height="42" rx="10" fill="none" stroke="currentColor" stroke-width="2"/><text x="499.0" y="71" text-anchor="middle" font-family="sans-serif" font-size="14" fill="currentColor">Template</text><path d="M657 67.0h8m0 0-6-5m6 5-6 5" stroke="currentColor" stroke-width="2" fill="none"/><rect x="670" y="46" width="306" height="42" rx="10" fill="none" stroke="currentColor" stroke-width="2"/><text x="823.0" y="71" text-anchor="middle" font-family="sans-serif" font-size="14" fill="currentColor">Reference</text><text x="22" y="24" font-family="monospace" font-size="11" fill="currentColor">📑 · Schedules</text></svg>
+    <figcaption><b>Schedules</b> — Reference forms, schedules and supporting templates · Illustrative learning visual</figcaption>
+  </figure>
+</div>
           <div class="mini" style="margin-top:16px;">
             PPR 2025-এ মোট ২১টি তফসিল রয়েছে, যেখানে STD, কমিটি গঠন, বিজ্ঞাপন, জামানত, ফ্লো-চার্ট (প্রতিটি ক্রয় পদ্ধতির জন্য পৃথক), NOA ফরম্যাট, রেকর্ড সংরক্ষণ, JVCA নমুনা চুক্তি, Code of Ethics এবং ডিবারমেন্ট রিভিউ বোর্ডের কার্যপ্রণালিসহ বিস্তারিত প্রয়োগ-নির্দেশিকা অন্তর্ভুক্ত। প্রতিটি Rule-এর ব্যবহারিক প্রয়োগ প্রায়শই সংশ্লিষ্ট তফসিলের ফরম্যাট/চেকলিস্ট অনুসরণ করে সম্পন্ন হয়।
           </div>
           <div class="phase-badge">🔜 গভীর পর্যায়ে যুক্ত হবে: প্রতিটি গুরুত্বপূর্ণ তফসিলের (বিশেষত তফসিল-১৪ ফ্লো-চার্ট ও তফসিল-২ থ্রেশহোল্ড/সময়সীমা) সংক্ষিপ্তসার।</div>
         </div>
       </details>
+
+<div class="audit-strip" aria-label="Visual audit checklist">
+  <div class="audit-item audit-high"><b>🔴 HIGH AUDIT RISK</b>ভুল method, unsupported justification, missing approval বা documentation-এর ক্ষেত্রে source rule যাচাই করুন।</div>
+  <div class="audit-item audit-caution"><b>🟠 CAUTION</b>Threshold, validity, timeline ও qualification condition পরিবর্তনশীল/Rule-specific হতে পারে।</div>
+  <div class="audit-item audit-good"><b>🟢 GOOD PRACTICE</b>Rule reference + evidence + evaluation trail + approval record একসঙ্গে রাখুন।</div>
+</div>
 
       <details class="chapter" id="ch10">
         <summary>
@@ -930,6 +1172,12 @@ mark{background:var(--gold-100);color:inherit;border-radius:3px;padding:0 2px;}
           <div class="chev">▾</div>
         </summary>
         <div class="body">
+<div class="chapter-visual" data-vu="ch10">
+  <figure>
+    <svg viewBox="0 0 1000 125" role="img" aria-label="e-GP Practical Guide visual workflow"><title>e-GP Practical Guide</title><desc>Upload → Evaluate → Award</desc><rect x="22" y="46" width="306" height="42" rx="10" fill="none" stroke="currentColor" stroke-width="2"/><text x="175.0" y="71" text-anchor="middle" font-family="sans-serif" font-size="14" fill="currentColor">Upload</text><path d="M333 67.0h8m0 0-6-5m6 5-6 5" stroke="currentColor" stroke-width="2" fill="none"/><rect x="346" y="46" width="306" height="42" rx="10" fill="none" stroke="currentColor" stroke-width="2"/><text x="499.0" y="71" text-anchor="middle" font-family="sans-serif" font-size="14" fill="currentColor">Evaluate</text><path d="M657 67.0h8m0 0-6-5m6 5-6 5" stroke="currentColor" stroke-width="2" fill="none"/><rect x="670" y="46" width="306" height="42" rx="10" fill="none" stroke="currentColor" stroke-width="2"/><text x="823.0" y="71" text-anchor="middle" font-family="sans-serif" font-size="14" fill="currentColor">Award</text><text x="22" y="24" font-family="monospace" font-size="11" fill="currentColor">🖥️ · e-GP Practical Guide</text></svg>
+    <figcaption><b>e-GP Practical Guide</b> — Upload → Evaluation → Award · Illustrative learning visual</figcaption>
+  </figure>
+</div>
           <div class="callout tip" style="margin-top:16px;">
             <b>📘 কাঠামোগত নোট</b> এটি PPR 2025-এর কোনো নির্দিষ্ট আইনি অধ্যায় (Rule ১–১৫৪) নয় — বরং একটি <b>ব্যবহারিক/অপারেশনাল প্রশিক্ষণ অধ্যায়</b>, যা e-GP Guidelines, CPTU/BPPA-এর প্রচলিত User Manual এবং বাস্তব কার্যপ্রবাহের ভিত্তিতে প্রস্তুত। আইনগত বিধানের জন্য অধ্যায় ৪ (ক্রয় পদ্ধতি) ও অধ্যায় ৫ (প্রক্রিয়াকরণ) দেখুন — এই অধ্যায়টি সেগুলো <i>কীভাবে</i> সিস্টেমে বাস্তবায়িত হয় তা দেখায়।
           </div>
@@ -1099,6 +1347,12 @@ mark{background:var(--gold-100);color:inherit;border-radius:3px;padding:0 2px;}
       </details>
 
 
+<div class="audit-strip" aria-label="Visual audit checklist">
+  <div class="audit-item audit-high"><b>🔴 HIGH AUDIT RISK</b>ভুল method, unsupported justification, missing approval বা documentation-এর ক্ষেত্রে source rule যাচাই করুন।</div>
+  <div class="audit-item audit-caution"><b>🟠 CAUTION</b>Threshold, validity, timeline ও qualification condition পরিবর্তনশীল/Rule-specific হতে পারে।</div>
+  <div class="audit-item audit-good"><b>🟢 GOOD PRACTICE</b>Rule reference + evidence + evaluation trail + approval record একসঙ্গে রাখুন।</div>
+</div>
+
       <details class="chapter" id="ch11">
         <summary>
           <div class="ch-num">SLT</div>
@@ -1106,6 +1360,12 @@ mark{background:var(--gold-100);color:inherit;border-radius:3px;padding:0 2px;}
           <div class="chev">▾</div>
         </summary>
         <div class="body">
+<div class="chapter-visual" data-vu="ch11">
+  <figure>
+    <svg viewBox="0 0 1000 125" role="img" aria-label="SLP / LERT visual workflow"><title>SLP / LERT</title><desc>Price → Calculate → Review → Recommend</desc><rect x="22" y="46" width="225" height="42" rx="10" fill="none" stroke="currentColor" stroke-width="2"/><text x="134.5" y="71" text-anchor="middle" font-family="sans-serif" font-size="14" fill="currentColor">Price</text><path d="M252 67.0h8m0 0-6-5m6 5-6 5" stroke="currentColor" stroke-width="2" fill="none"/><rect x="265" y="46" width="225" height="42" rx="10" fill="none" stroke="currentColor" stroke-width="2"/><text x="377.5" y="71" text-anchor="middle" font-family="sans-serif" font-size="14" fill="currentColor">Calculate</text><path d="M495 67.0h8m0 0-6-5m6 5-6 5" stroke="currentColor" stroke-width="2" fill="none"/><rect x="508" y="46" width="225" height="42" rx="10" fill="none" stroke="currentColor" stroke-width="2"/><text x="620.5" y="71" text-anchor="middle" font-family="sans-serif" font-size="14" fill="currentColor">Review</text><path d="M738 67.0h8m0 0-6-5m6 5-6 5" stroke="currentColor" stroke-width="2" fill="none"/><rect x="751" y="46" width="225" height="42" rx="10" fill="none" stroke="currentColor" stroke-width="2"/><text x="863.5" y="71" text-anchor="middle" font-family="sans-serif" font-size="14" fill="currentColor">Recommend</text><text x="22" y="24" font-family="monospace" font-size="11" fill="currentColor">SLT · SLP / LERT</text></svg>
+    <figcaption><b>SLP / LERT</b> — Price → calculation → review → recommendation · Illustrative learning visual</figcaption>
+  </figure>
+</div>
           <div class="callout warn" style="margin-top:16px;">
             <b>⚠️ সংশোধনী নোট</b> পূর্ববর্তী অনুরোধে উল্লিখিত "Specialized Local Tender (SLT)" এবং "PPR 2026" — এই দুটি নামের কোনো অস্তিত্ব যাচাই করা যায়নি। প্রকৃতপক্ষে <b>SLT মানে "Significantly Low-priced Tender"</b> এবং এটি বর্তমানে কার্যকর <b>PPR 2025</b>-এর <b>Rule ২৫ ও ২৬</b>-এ বর্ণিত একটি নির্দিষ্ট <i>মূল্যায়ন প্রক্রিয়া</i> — এটি OTM/LTM-এর মতো কোনো স্বতন্ত্র "ক্রয় পদ্ধতি" নয়, বরং যেকোনো ক্রয় পদ্ধতিতে দরপত্র মূল্যায়নের একটি ধাপ। এই চ্যাপ্টারটি BPPA-প্রকাশিত Standard Tender Document (e-PG2, ITT Clause 49)-এর সরাসরি-যাচাইকৃত বিষয়বস্তুর ভিত্তিতে প্রস্তুত।
           </div>
@@ -1220,6 +1480,12 @@ mark{background:var(--gold-100);color:inherit;border-radius:3px;padding:0 2px;}
       </details>
 
 
+<div class="audit-strip" aria-label="Visual audit checklist">
+  <div class="audit-item audit-high"><b>🔴 HIGH AUDIT RISK</b>ভুল method, unsupported justification, missing approval বা documentation-এর ক্ষেত্রে source rule যাচাই করুন।</div>
+  <div class="audit-item audit-caution"><b>🟠 CAUTION</b>Threshold, validity, timeline ও qualification condition পরিবর্তনশীল/Rule-specific হতে পারে।</div>
+  <div class="audit-item audit-good"><b>🟢 GOOD PRACTICE</b>Rule reference + evidence + evaluation trail + approval record একসঙ্গে রাখুন।</div>
+</div>
+
     </section>
 
     <section class="chapters" id="partB">
@@ -1236,6 +1502,7 @@ mark{background:var(--gold-100);color:inherit;border-radius:3px;padding:0 2px;}
     <div class="chev">▾</div>
   </summary>
   <div class="body">
+<div class="chapter-visual" data-vu="tec1"><figure><svg viewBox="0 0 1000 125" role="img" aria-label="TEC Configuration workflow"><title>TEC Configuration</title><desc>Tender → TEC Setup → Members → Roles → Confirmation</desc><rect x="18" y="48" width="183" height="40" rx="9" fill="none" stroke="currentColor" stroke-width="2"/><text x="109.5" y="72" text-anchor="middle" font-family="sans-serif" font-size="14" fill="currentColor">Tender</text><path d="M204 68.0h6m0 0-5-4m5 4-5 4" stroke="currentColor" stroke-width="2" fill="none"/><rect x="213" y="48" width="183" height="40" rx="9" fill="none" stroke="currentColor" stroke-width="2"/><text x="304.5" y="72" text-anchor="middle" font-family="sans-serif" font-size="14" fill="currentColor">TEC Setup</text><path d="M399 68.0h6m0 0-5-4m5 4-5 4" stroke="currentColor" stroke-width="2" fill="none"/><rect x="408" y="48" width="183" height="40" rx="9" fill="none" stroke="currentColor" stroke-width="2"/><text x="499.5" y="72" text-anchor="middle" font-family="sans-serif" font-size="14" fill="currentColor">Members</text><path d="M594 68.0h6m0 0-5-4m5 4-5 4" stroke="currentColor" stroke-width="2" fill="none"/><rect x="603" y="48" width="183" height="40" rx="9" fill="none" stroke="currentColor" stroke-width="2"/><text x="694.5" y="72" text-anchor="middle" font-family="sans-serif" font-size="14" fill="currentColor">Roles</text><path d="M789 68.0h6m0 0-5-4m5 4-5 4" stroke="currentColor" stroke-width="2" fill="none"/><rect x="798" y="48" width="183" height="40" rx="9" fill="none" stroke="currentColor" stroke-width="2"/><text x="889.5" y="72" text-anchor="middle" font-family="sans-serif" font-size="14" fill="currentColor">Confirmation</text><text x="18" y="25" font-family="monospace" font-size="11" fill="currentColor">M1 · TEC Configuration</text></svg><figcaption><b>TEC Configuration</b> — step-by-step visual learning aid for the existing TEC module</figcaption></figure></div>
     <p style="color:var(--ink-soft)">e-GP-এ মূল্যায়ন প্রক্রিয়া শুরুর প্রথম ও সবচেয়ে গুরুত্বপূর্ণ ধাপ হলো Tender Evaluation Committee (TEC) সঠিকভাবে গঠন ও কনফিগার করা। ভুল কনফিগারেশন পুরো Workflow-কে পরবর্তীতে ব্যাহত করতে পারে।</p>
     <h4>Tender Evaluation Committee (TEC) গঠন</h4>
 <p>Procuring Entity (PE)-এর দায়িত্বপ্রাপ্ত কর্মকর্তা e-GP পোর্টালে লগইন করে সংশ্লিষ্ট Tender ID নির্বাচন করে "Evaluation Committee" মডিউলে প্রবেশ করেন। এখানে ন্যূনতম সদস্য সংখ্যা, চেয়ারপারসনের পদমর্যাদা এবং কমিটির ধরন (Technical/Financial/Combined) নির্ধারণ করতে হয়।</p>
@@ -1277,6 +1544,7 @@ mark{background:var(--gold-100);color:inherit;border-radius:3px;padding:0 2px;}
     <div class="chev">▾</div>
   </summary>
   <div class="body">
+<div class="chapter-visual" data-vu="tec2"><figure><svg viewBox="0 0 1000 125" role="img" aria-label="Committee Consent workflow"><title>Committee Consent</title><desc>Members → Consent → COI Declaration → Confirmation</desc><rect x="18" y="48" width="232" height="40" rx="9" fill="none" stroke="currentColor" stroke-width="2"/><text x="134.0" y="72" text-anchor="middle" font-family="sans-serif" font-size="14" fill="currentColor">Members</text><path d="M253 68.0h6m0 0-5-4m5 4-5 4" stroke="currentColor" stroke-width="2" fill="none"/><rect x="262" y="48" width="232" height="40" rx="9" fill="none" stroke="currentColor" stroke-width="2"/><text x="378.0" y="72" text-anchor="middle" font-family="sans-serif" font-size="14" fill="currentColor">Consent</text><path d="M497 68.0h6m0 0-5-4m5 4-5 4" stroke="currentColor" stroke-width="2" fill="none"/><rect x="506" y="48" width="232" height="40" rx="9" fill="none" stroke="currentColor" stroke-width="2"/><text x="622.0" y="72" text-anchor="middle" font-family="sans-serif" font-size="14" fill="currentColor">COI Declaration</text><path d="M741 68.0h6m0 0-5-4m5 4-5 4" stroke="currentColor" stroke-width="2" fill="none"/><rect x="750" y="48" width="232" height="40" rx="9" fill="none" stroke="currentColor" stroke-width="2"/><text x="866.0" y="72" text-anchor="middle" font-family="sans-serif" font-size="14" fill="currentColor">Confirmation</text><text x="18" y="25" font-family="monospace" font-size="11" fill="currentColor">M2 · Committee Consent</text></svg><figcaption><b>Committee Consent</b> — step-by-step visual learning aid for the existing TEC module</figcaption></figure></div>
     <p style="color:var(--ink-soft)">কমিটি গঠনের পর প্রতিটি সদস্যের ডিজিটাল সম্মতি ও Conflict of Interest ঘোষণা ছাড়া মূল্যায়ন কার্যক্রম আনুষ্ঠানিকভাবে শুরু করা যায় না।</p>
     <h4>Committee Invitation</h4>
 <p>TEC কনফিগারেশন সম্পন্ন হলে e-GP সিস্টেম স্বয়ংক্রিয়ভাবে প্রতিটি মনোনীত সদস্যের নিবন্ধিত ইমেইল ও ড্যাশবোর্ডে একটি Invitation Notification পাঠায়, যাতে Tender ID, ভূমিকা এবং সময়সীমা উল্লেখ থাকে।</p>
@@ -1307,6 +1575,7 @@ mark{background:var(--gold-100);color:inherit;border-radius:3px;padding:0 2px;}
     <div class="chev">▾</div>
   </summary>
   <div class="body">
+<div class="chapter-visual" data-vu="tec3"><figure><svg viewBox="0 0 1000 125" role="img" aria-label="Evaluation Start workflow"><title>Evaluation Start</title><desc>Tender Opening → Documents → Evaluation Start</desc><rect x="18" y="48" width="313" height="40" rx="9" fill="none" stroke="currentColor" stroke-width="2"/><text x="174.5" y="72" text-anchor="middle" font-family="sans-serif" font-size="14" fill="currentColor">Tender Opening</text><path d="M334 68.0h6m0 0-5-4m5 4-5 4" stroke="currentColor" stroke-width="2" fill="none"/><rect x="343" y="48" width="313" height="40" rx="9" fill="none" stroke="currentColor" stroke-width="2"/><text x="499.5" y="72" text-anchor="middle" font-family="sans-serif" font-size="14" fill="currentColor">Documents</text><path d="M659 68.0h6m0 0-5-4m5 4-5 4" stroke="currentColor" stroke-width="2" fill="none"/><rect x="668" y="48" width="313" height="40" rx="9" fill="none" stroke="currentColor" stroke-width="2"/><text x="824.5" y="72" text-anchor="middle" font-family="sans-serif" font-size="14" fill="currentColor">Evaluation Start</text><text x="18" y="25" font-family="monospace" font-size="11" fill="currentColor">M3 · Evaluation Start</text></svg><figcaption><b>Evaluation Start</b> — step-by-step visual learning aid for the existing TEC module</figcaption></figure></div>
     <p style="color:var(--ink-soft)">সম্মতি সম্পন্ন হলে TEC আনুষ্ঠানিকভাবে মূল্যায়ন কার্যক্রমে প্রবেশ করে এবং সিস্টেমে জমাকৃত সকল দরপত্রের তথ্য পর্যালোচনা করে।</p>
     <h4>Tender Opening Information Review</h4>
 <p>TEC সর্বপ্রথম Bid Opening মিনিটস, জমাকৃত মূল্য, এবং প্রাপ্ত Securities/Guarantee-এর তথ্য পর্যালোচনা করে নিশ্চিত হয় যে সবকিছু বিধি অনুযায়ী সম্পন্ন হয়েছে।</p>
@@ -1332,6 +1601,7 @@ mark{background:var(--gold-100);color:inherit;border-radius:3px;padding:0 2px;}
     <div class="chev">▾</div>
   </summary>
   <div class="body">
+<div class="chapter-visual" data-vu="tec4"><figure><svg viewBox="0 0 1000 125" role="img" aria-label="Eligibility &amp; Qualification workflow"><title>Eligibility &amp; Qualification</title><desc>Eligibility → Qualification → Pass / Fail</desc><rect x="18" y="48" width="313" height="40" rx="9" fill="none" stroke="currentColor" stroke-width="2"/><text x="174.5" y="72" text-anchor="middle" font-family="sans-serif" font-size="14" fill="currentColor">Eligibility</text><path d="M334 68.0h6m0 0-5-4m5 4-5 4" stroke="currentColor" stroke-width="2" fill="none"/><rect x="343" y="48" width="313" height="40" rx="9" fill="none" stroke="currentColor" stroke-width="2"/><text x="499.5" y="72" text-anchor="middle" font-family="sans-serif" font-size="14" fill="currentColor">Qualification</text><path d="M659 68.0h6m0 0-5-4m5 4-5 4" stroke="currentColor" stroke-width="2" fill="none"/><rect x="668" y="48" width="313" height="40" rx="9" fill="none" stroke="currentColor" stroke-width="2"/><text x="824.5" y="72" text-anchor="middle" font-family="sans-serif" font-size="14" fill="currentColor">Pass / Fail</text><text x="18" y="25" font-family="monospace" font-size="11" fill="currentColor">M4 · Eligibility &amp; Qualification</text></svg><figcaption><b>Eligibility &amp; Qualification</b> — step-by-step visual learning aid for the existing TEC module</figcaption></figure></div>
     <p style="color:var(--ink-soft)">এই অধ্যায়টি e-GP-এর প্রতিটি Online Evaluation Form-কে পৃথকভাবে ব্যাখ্যা করে — যাচাই পদ্ধতি, সহায়ক দলিল, Pass/Fail নির্ণায়ক এবং সাধারণ ভুলসহ।</p>
     <h4>Eligibility Criteria</h4>
 <p><strong>উদ্দেশ্য:</strong> বিডার আইনগতভাবে দরপত্রে অংশগ্রহণের যোগ্য কিনা তা নিশ্চিত করা।</p>
@@ -1383,6 +1653,7 @@ mark{background:var(--gold-100);color:inherit;border-radius:3px;padding:0 2px;}
     <div class="chev">▾</div>
   </summary>
   <div class="body">
+<div class="chapter-visual" data-vu="tec5"><figure><svg viewBox="0 0 1000 125" role="img" aria-label="Technical Evaluation workflow"><title>Technical Evaluation</title><desc>Criteria → Compliance → Technical Result</desc><rect x="18" y="48" width="313" height="40" rx="9" fill="none" stroke="currentColor" stroke-width="2"/><text x="174.5" y="72" text-anchor="middle" font-family="sans-serif" font-size="14" fill="currentColor">Criteria</text><path d="M334 68.0h6m0 0-5-4m5 4-5 4" stroke="currentColor" stroke-width="2" fill="none"/><rect x="343" y="48" width="313" height="40" rx="9" fill="none" stroke="currentColor" stroke-width="2"/><text x="499.5" y="72" text-anchor="middle" font-family="sans-serif" font-size="14" fill="currentColor">Compliance</text><path d="M659 68.0h6m0 0-5-4m5 4-5 4" stroke="currentColor" stroke-width="2" fill="none"/><rect x="668" y="48" width="313" height="40" rx="9" fill="none" stroke="currentColor" stroke-width="2"/><text x="824.5" y="72" text-anchor="middle" font-family="sans-serif" font-size="14" fill="currentColor">Technical Result</text><text x="18" y="25" font-family="monospace" font-size="11" fill="currentColor">M5 · Technical Evaluation</text></svg><figcaption><b>Technical Evaluation</b> — step-by-step visual learning aid for the existing TEC module</figcaption></figure></div>
     <p style="color:var(--ink-soft)">Eligibility উত্তীর্ণ বিডারদের কারিগরি প্রস্তাব নির্ধারিত Specification-এর সাথে তুলনা করে Responsiveness নির্ধারণ করা হয়।</p>
     <h4>Technical Responsiveness</h4>
 <p>বিডারের প্রস্তাবিত Method Statement, Work Schedule এবং প্রস্তাবিত উপকরণ Tender Document-এর চাহিদার সাথে সামঞ্জস্যপূর্ণ কিনা তা যাচাই করা হয়।</p>
@@ -1410,6 +1681,7 @@ mark{background:var(--gold-100);color:inherit;border-radius:3px;padding:0 2px;}
     <div class="chev">▾</div>
   </summary>
   <div class="body">
+<div class="chapter-visual" data-vu="tec6"><figure><svg viewBox="0 0 1000 125" role="img" aria-label="Financial Evaluation workflow"><title>Financial Evaluation</title><desc>Prices → Corrections → Comparison → Ranking</desc><rect x="18" y="48" width="232" height="40" rx="9" fill="none" stroke="currentColor" stroke-width="2"/><text x="134.0" y="72" text-anchor="middle" font-family="sans-serif" font-size="14" fill="currentColor">Prices</text><path d="M253 68.0h6m0 0-5-4m5 4-5 4" stroke="currentColor" stroke-width="2" fill="none"/><rect x="262" y="48" width="232" height="40" rx="9" fill="none" stroke="currentColor" stroke-width="2"/><text x="378.0" y="72" text-anchor="middle" font-family="sans-serif" font-size="14" fill="currentColor">Corrections</text><path d="M497 68.0h6m0 0-5-4m5 4-5 4" stroke="currentColor" stroke-width="2" fill="none"/><rect x="506" y="48" width="232" height="40" rx="9" fill="none" stroke="currentColor" stroke-width="2"/><text x="622.0" y="72" text-anchor="middle" font-family="sans-serif" font-size="14" fill="currentColor">Comparison</text><path d="M741 68.0h6m0 0-5-4m5 4-5 4" stroke="currentColor" stroke-width="2" fill="none"/><rect x="750" y="48" width="232" height="40" rx="9" fill="none" stroke="currentColor" stroke-width="2"/><text x="866.0" y="72" text-anchor="middle" font-family="sans-serif" font-size="14" fill="currentColor">Ranking</text><text x="18" y="25" font-family="monospace" font-size="11" fill="currentColor">M6 · Financial Evaluation</text></svg><figcaption><b>Financial Evaluation</b> — step-by-step visual learning aid for the existing TEC module</figcaption></figure></div>
     <p style="color:var(--ink-soft)">শুধুমাত্র Technically Responsive বিডারদের আর্থিক প্রস্তাব উন্মুক্ত ও মূল্যায়ন করা হয়।</p>
     <h4>Financial Bid Opening</h4>
 <p>নির্ধারিত তারিখে সিস্টেম স্বয়ংক্রিয়ভাবে Technically Responsive বিডারদের আর্থিক প্রস্তাব উন্মুক্ত করে এবং TEC-এর কাছে প্রদর্শন করে।</p>
@@ -1436,6 +1708,7 @@ mark{background:var(--gold-100);color:inherit;border-radius:3px;padding:0 2px;}
     <div class="chev">▾</div>
   </summary>
   <div class="body">
+<div class="chapter-visual" data-vu="tec7"><figure><svg viewBox="0 0 1000 125" role="img" aria-label="SLP &amp; LERT workflow"><title>SLP &amp; LERT</title><desc>Bid Prices → Calculation → LERT → Decision</desc><rect x="18" y="48" width="232" height="40" rx="9" fill="none" stroke="currentColor" stroke-width="2"/><text x="134.0" y="72" text-anchor="middle" font-family="sans-serif" font-size="14" fill="currentColor">Bid Prices</text><path d="M253 68.0h6m0 0-5-4m5 4-5 4" stroke="currentColor" stroke-width="2" fill="none"/><rect x="262" y="48" width="232" height="40" rx="9" fill="none" stroke="currentColor" stroke-width="2"/><text x="378.0" y="72" text-anchor="middle" font-family="sans-serif" font-size="14" fill="currentColor">Calculation</text><path d="M497 68.0h6m0 0-5-4m5 4-5 4" stroke="currentColor" stroke-width="2" fill="none"/><rect x="506" y="48" width="232" height="40" rx="9" fill="none" stroke="currentColor" stroke-width="2"/><text x="622.0" y="72" text-anchor="middle" font-family="sans-serif" font-size="14" fill="currentColor">LERT</text><path d="M741 68.0h6m0 0-5-4m5 4-5 4" stroke="currentColor" stroke-width="2" fill="none"/><rect x="750" y="48" width="232" height="40" rx="9" fill="none" stroke="currentColor" stroke-width="2"/><text x="866.0" y="72" text-anchor="middle" font-family="sans-serif" font-size="14" fill="currentColor">Decision</text><text x="18" y="25" font-family="monospace" font-size="11" fill="currentColor">M7 · SLP &amp; LERT</text></svg><figcaption><b>SLP &amp; LERT</b> — step-by-step visual learning aid for the existing TEC module</figcaption></figure></div>
     <p style="color:var(--ink-soft)">চূড়ান্ত র‍্যাঙ্কিং ও Lowest Evaluated Responsive Tender (LERT) নির্ধারণের গাণিতিক ভিত্তি এই অধ্যায়ে ব্যাখ্যা করা হয়েছে।</p>
     <h4>SLP Calculation Method</h4>
 <p>সকল Responsive বিডারের Evaluated Price থেকে সর্বনিম্ন মূল্যকে ভিত্তি ধরে প্রতিটি বিডের মূল্য তুলনা করা হয়; নির্ধারিত Threshold-এর মধ্যে থাকা দরসমূহকে Substantially Lowest হিসেবে বিবেচনা করা হয়।</p>
@@ -1466,6 +1739,7 @@ mark{background:var(--gold-100);color:inherit;border-radius:3px;padding:0 2px;}
     <div class="chev">▾</div>
   </summary>
   <div class="body">
+<div class="chapter-visual" data-vu="tec8"><figure><svg viewBox="0 0 1000 125" role="img" aria-label="Post Qualification workflow"><title>Post Qualification</title><desc>LERT → Verification → Qualification → Result</desc><rect x="18" y="48" width="232" height="40" rx="9" fill="none" stroke="currentColor" stroke-width="2"/><text x="134.0" y="72" text-anchor="middle" font-family="sans-serif" font-size="14" fill="currentColor">LERT</text><path d="M253 68.0h6m0 0-5-4m5 4-5 4" stroke="currentColor" stroke-width="2" fill="none"/><rect x="262" y="48" width="232" height="40" rx="9" fill="none" stroke="currentColor" stroke-width="2"/><text x="378.0" y="72" text-anchor="middle" font-family="sans-serif" font-size="14" fill="currentColor">Verification</text><path d="M497 68.0h6m0 0-5-4m5 4-5 4" stroke="currentColor" stroke-width="2" fill="none"/><rect x="506" y="48" width="232" height="40" rx="9" fill="none" stroke="currentColor" stroke-width="2"/><text x="622.0" y="72" text-anchor="middle" font-family="sans-serif" font-size="14" fill="currentColor">Qualification</text><path d="M741 68.0h6m0 0-5-4m5 4-5 4" stroke="currentColor" stroke-width="2" fill="none"/><rect x="750" y="48" width="232" height="40" rx="9" fill="none" stroke="currentColor" stroke-width="2"/><text x="866.0" y="72" text-anchor="middle" font-family="sans-serif" font-size="14" fill="currentColor">Result</text><text x="18" y="25" font-family="monospace" font-size="11" fill="currentColor">M8 · Post Qualification</text></svg><figcaption><b>Post Qualification</b> — step-by-step visual learning aid for the existing TEC module</figcaption></figure></div>
     <p style="color:var(--ink-soft)">LERT হিসেবে চিহ্নিত বিডারের প্রকৃত সক্ষমতা মাঠপর্যায়ে ও দলিলের মাধ্যমে চূড়ান্তভাবে যাচাই করা হয়।</p>
     <h4>Lowest Bidder Verification</h4>
 <p>জমাকৃত সকল দলিলের সত্যতা মূল উৎস থেকে পুনরায় নিশ্চিত করা হয়।</p>
@@ -1501,6 +1775,7 @@ mark{background:var(--gold-100);color:inherit;border-radius:3px;padding:0 2px;}
     <div class="chev">▾</div>
   </summary>
   <div class="body">
+<div class="chapter-visual" data-vu="tec9"><figure><svg viewBox="0 0 1000 125" role="img" aria-label="TER Preparation workflow"><title>TER Preparation</title><desc>Findings → Results → Recommendation → TER</desc><rect x="18" y="48" width="232" height="40" rx="9" fill="none" stroke="currentColor" stroke-width="2"/><text x="134.0" y="72" text-anchor="middle" font-family="sans-serif" font-size="14" fill="currentColor">Findings</text><path d="M253 68.0h6m0 0-5-4m5 4-5 4" stroke="currentColor" stroke-width="2" fill="none"/><rect x="262" y="48" width="232" height="40" rx="9" fill="none" stroke="currentColor" stroke-width="2"/><text x="378.0" y="72" text-anchor="middle" font-family="sans-serif" font-size="14" fill="currentColor">Results</text><path d="M497 68.0h6m0 0-5-4m5 4-5 4" stroke="currentColor" stroke-width="2" fill="none"/><rect x="506" y="48" width="232" height="40" rx="9" fill="none" stroke="currentColor" stroke-width="2"/><text x="622.0" y="72" text-anchor="middle" font-family="sans-serif" font-size="14" fill="currentColor">Recommendation</text><path d="M741 68.0h6m0 0-5-4m5 4-5 4" stroke="currentColor" stroke-width="2" fill="none"/><rect x="750" y="48" width="232" height="40" rx="9" fill="none" stroke="currentColor" stroke-width="2"/><text x="866.0" y="72" text-anchor="middle" font-family="sans-serif" font-size="14" fill="currentColor">TER</text><text x="18" y="25" font-family="monospace" font-size="11" fill="currentColor">M9 · TER Preparation</text></svg><figcaption><b>TER Preparation</b> — step-by-step visual learning aid for the existing TEC module</figcaption></figure></div>
     <p style="color:var(--ink-soft)">সমস্ত মূল্যায়ন সম্পন্ন হওয়ার পর TEC একটি সুসংগঠিত প্রতিবেদন প্রস্তুত করে, যা অনুমোদনের ভিত্তি হিসেবে কাজ করবে।</p>
     <h4>TER প্রস্তুত করার ধাপ</h4>
 <p>e-GP সিস্টেমে "Generate TER" অপশনে ক্লিক করলে সিস্টেম স্বয়ংক্রিয়ভাবে পূর্ববর্তী সকল ধাপের তথ্য সংকলন করে একটি খসড়া তৈরি করে, যা TEC পর্যালোচনা করে চূড়ান্ত করে।</p>
@@ -1531,6 +1806,7 @@ mark{background:var(--gold-100);color:inherit;border-radius:3px;padding:0 2px;}
     <div class="chev">▾</div>
   </summary>
   <div class="body">
+<div class="chapter-visual" data-vu="tec10"><figure><svg viewBox="0 0 1000 125" role="img" aria-label="Approval Workflow workflow"><title>Approval Workflow</title><desc>TER → Approval Authority → Decision</desc><rect x="18" y="48" width="313" height="40" rx="9" fill="none" stroke="currentColor" stroke-width="2"/><text x="174.5" y="72" text-anchor="middle" font-family="sans-serif" font-size="14" fill="currentColor">TER</text><path d="M334 68.0h6m0 0-5-4m5 4-5 4" stroke="currentColor" stroke-width="2" fill="none"/><rect x="343" y="48" width="313" height="40" rx="9" fill="none" stroke="currentColor" stroke-width="2"/><text x="499.5" y="72" text-anchor="middle" font-family="sans-serif" font-size="14" fill="currentColor">Approval Authority</text><path d="M659 68.0h6m0 0-5-4m5 4-5 4" stroke="currentColor" stroke-width="2" fill="none"/><rect x="668" y="48" width="313" height="40" rx="9" fill="none" stroke="currentColor" stroke-width="2"/><text x="824.5" y="72" text-anchor="middle" font-family="sans-serif" font-size="14" fill="currentColor">Decision</text><text x="18" y="25" font-family="monospace" font-size="11" fill="currentColor">M10 · Approval Workflow</text></svg><figcaption><b>Approval Workflow</b> — step-by-step visual learning aid for the existing TEC module</figcaption></figure></div>
     <p style="color:var(--ink-soft)">স্বাক্ষরিত TER পূর্বনির্ধারিত অনুমোদন প্রবাহ অনুযায়ী পর্যায়ক্রমে অনুমোদনের জন্য প্রেরণ করা হয়।</p>
     <h4>Workflow Initiation</h4>
 <p>Member-Secretary "Submit for Approval" বাটনে ক্লিক করলে TER প্রথম অনুমোদন স্তরে স্বয়ংক্রিয়ভাবে প্রেরিত হয়।</p>
@@ -1557,6 +1833,7 @@ mark{background:var(--gold-100);color:inherit;border-radius:3px;padding:0 2px;}
     <div class="chev">▾</div>
   </summary>
   <div class="body">
+<div class="chapter-visual" data-vu="tec11"><figure><svg viewBox="0 0 1000 125" role="img" aria-label="Final Submission workflow"><title>Final Submission</title><desc>Final TER → Submission → Approval → Award Recommended</desc><rect x="18" y="48" width="232" height="40" rx="9" fill="none" stroke="currentColor" stroke-width="2"/><text x="134.0" y="72" text-anchor="middle" font-family="sans-serif" font-size="14" fill="currentColor">Final TER</text><path d="M253 68.0h6m0 0-5-4m5 4-5 4" stroke="currentColor" stroke-width="2" fill="none"/><rect x="262" y="48" width="232" height="40" rx="9" fill="none" stroke="currentColor" stroke-width="2"/><text x="378.0" y="72" text-anchor="middle" font-family="sans-serif" font-size="14" fill="currentColor">Submission</text><path d="M497 68.0h6m0 0-5-4m5 4-5 4" stroke="currentColor" stroke-width="2" fill="none"/><rect x="506" y="48" width="232" height="40" rx="9" fill="none" stroke="currentColor" stroke-width="2"/><text x="622.0" y="72" text-anchor="middle" font-family="sans-serif" font-size="14" fill="currentColor">Approval</text><path d="M741 68.0h6m0 0-5-4m5 4-5 4" stroke="currentColor" stroke-width="2" fill="none"/><rect x="750" y="48" width="232" height="40" rx="9" fill="none" stroke="currentColor" stroke-width="2"/><text x="866.0" y="72" text-anchor="middle" font-family="sans-serif" font-size="14" fill="currentColor">Award Recommended</text><text x="18" y="25" font-family="monospace" font-size="11" fill="currentColor">M11 · Final Submission</text></svg><figcaption><b>Final Submission</b> — step-by-step visual learning aid for the existing TEC module</figcaption></figure></div>
     <p style="color:var(--ink-soft)">সকল অনুমোদন সম্পন্ন হওয়ার পর চূড়ান্ত ফাইল PE-এর নিকট প্রেরণ ও কার্যাদেশ প্রক্রিয়ার জন্য প্রস্তুত করা হয়।</p>
     <h4>Required Attachments Checklist</h4>
 <div class="checklist"><label><input type="checkbox"> স্বাক্ষরিত TER (সকল Annexure-সহ)</label><label><input type="checkbox"> সকল Evaluation Form-এর সিস্টেম-জেনারেটেড কপি</label><label><input type="checkbox"> Post Qualification Verification Report</label><label><input type="checkbox"> Committee Consent ও Declaration ফরম</label></div>
@@ -1581,6 +1858,7 @@ mark{background:var(--gold-100);color:inherit;border-radius:3px;padding:0 2px;}
     <div class="chev">▾</div>
   </summary>
   <div class="body">
+<div class="chapter-visual" data-vu="tec12"><figure><svg viewBox="0 0 1000 125" role="img" aria-label="Real Case Study workflow"><title>Real Case Study</title><desc>Real Tender → Evaluation → Decision → Award</desc><rect x="18" y="48" width="232" height="40" rx="9" fill="none" stroke="currentColor" stroke-width="2"/><text x="134.0" y="72" text-anchor="middle" font-family="sans-serif" font-size="14" fill="currentColor">Real Tender</text><path d="M253 68.0h6m0 0-5-4m5 4-5 4" stroke="currentColor" stroke-width="2" fill="none"/><rect x="262" y="48" width="232" height="40" rx="9" fill="none" stroke="currentColor" stroke-width="2"/><text x="378.0" y="72" text-anchor="middle" font-family="sans-serif" font-size="14" fill="currentColor">Evaluation</text><path d="M497 68.0h6m0 0-5-4m5 4-5 4" stroke="currentColor" stroke-width="2" fill="none"/><rect x="506" y="48" width="232" height="40" rx="9" fill="none" stroke="currentColor" stroke-width="2"/><text x="622.0" y="72" text-anchor="middle" font-family="sans-serif" font-size="14" fill="currentColor">Decision</text><path d="M741 68.0h6m0 0-5-4m5 4-5 4" stroke="currentColor" stroke-width="2" fill="none"/><rect x="750" y="48" width="232" height="40" rx="9" fill="none" stroke="currentColor" stroke-width="2"/><text x="866.0" y="72" text-anchor="middle" font-family="sans-serif" font-size="14" fill="currentColor">Award</text><text x="18" y="25" font-family="monospace" font-size="11" fill="currentColor">M12 · Real Case Study</text></svg><figcaption><b>Real Case Study</b> — step-by-step visual learning aid for the existing TEC module</figcaption></figure></div>
     <p style="color:var(--ink-soft)">"গ্রামীণ সড়ক উন্নয়ন প্রকল্প — প্যাকেজ RD-07" শীর্ষক একটি কাল্পনিক কিন্তু বাস্তবধর্মী কাজের দরপত্রে ৫ জন বিডার অংশগ্রহণ করেছেন। নিচে সম্পূর্ণ প্রক্রিয়া ধাপে ধাপে দেখানো হলো।</p>
     <h4>প্রকল্প সংক্ষিপ্ত বিবরণ</h4>
 <table class="role-table">
@@ -2021,6 +2299,68 @@ window.addEventListener('online',updateOnlineStatus);
 window.addEventListener('offline',updateOnlineStatus);
 updateOnlineStatus();
 </script>
+
+
+<script id="visual-upgrade-js">
+/* ================= VISUAL UPGRADE INTERACTIONS ================= */
+(function(){
+  const state={category:null,competition:null,situation:null};
+  const result=document.getElementById('methodResult');
+  const labels={
+    works:'Works',goods:'Goods',service:'Physical / Non-consulting Service',consultancy:'Consultancy',
+    standard:'standard',special:'specialized',limited:'limited competition',unknown:'uncertain',
+    normal:'normal',urgent:'urgent / emergency',repeat:'repeated requirement',direct:'specific exceptional basis'
+  };
+  function recommend(){
+    if(!result || !state.category || !state.competition || !state.situation) return;
+    let title='Review the applicable procurement method';
+    let rule='Start with the relevant method section and confirm the exact Rule/condition before deciding.';
+    if(state.category==='consultancy') { title='Review Consultancy Selection methods'; rule='Go to Chapter 6 / consultancy services and confirm the applicable selection method and requirements.'; }
+    else if(state.situation==='repeat') { title='Review Framework Agreement where applicable'; rule='Repeated requirements may make Framework Agreement relevant; verify Rule 109 and its conditions.'; }
+    else if(state.situation==='direct') { title='Review DPM / other exceptional methods'; rule='Do not assume direct procurement is permitted. Verify the specific legal basis, justification and approval.'; }
+    else if(state.competition==='limited') { title='Review LTM or another limited-competition method'; rule='Check the applicable Rule, threshold/condition and approval requirements before selection.'; }
+    else if(state.competition==='special') { title='Review TSTM / OSTEM / International or specialized methods'; rule='The technical nature of the requirement should be matched against the relevant method rules and tender documents.'; }
+    else if(state.situation==='urgent') { title='Review the emergency procurement provisions'; rule='Urgency alone is not a method. Verify the emergency provisions, justification, authority and documentation.'; }
+    else { title='Start with OTM review'; rule='For a normal competitive procurement, review OTM first, then verify whether another Rule-based method applies.'; }
+    result.innerHTML='<strong>Suggested review path: '+title+'</strong><small>'+rule+'</small><small>Selected: '+labels[state.category]+' · '+labels[state.competition]+' · '+labels[state.situation]+'</small>';
+    result.style.display='block';
+  }
+  document.querySelectorAll('.method-options').forEach(group=>{
+    group.addEventListener('click',e=>{
+      const btn=e.target.closest('button'); if(!btn) return;
+      group.querySelectorAll('button').forEach(b=>{b.classList.remove('active');b.setAttribute('aria-pressed','false');});
+      btn.classList.add('active');btn.setAttribute('aria-pressed','true');
+      state[group.dataset.group]=btn.dataset.value;
+      recommend();
+    });
+    group.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed','false'));
+  });
+
+  // Persist dark mode preference while keeping the original button/functionality.
+  const darkBtn=document.getElementById('darkBtn');
+  if(localStorage.getItem('ppr2025-dark')==='1') document.body.classList.add('dark');
+  if(darkBtn) darkBtn.addEventListener('click',()=>localStorage.setItem('ppr2025-dark',document.body.classList.contains('dark')?'1':'0'));
+
+  // Make meaningful inline SVG figures accessible.
+  document.querySelectorAll('.chapter-visual svg').forEach((svg,i)=>{
+    if(!svg.getAttribute('focusable')) svg.setAttribute('focusable','false');
+    if(!svg.querySelector('title')){const t=document.createElementNS('http://www.w3.org/2000/svg','title');t.textContent='PPR 2025 learning workflow '+(i+1);svg.prepend(t);}
+  });
+
+  // Add keyboard-friendly Escape behavior for search/sidebar.
+  document.addEventListener('keydown',e=>{
+    if(e.key==='Escape'){
+      const sr=document.getElementById('searchResults'); if(sr) sr.style.display='none';
+      const sb=document.getElementById('sidebar'); if(sb) sb.classList.remove('open');
+    }
+  });
+})();
+</script>
+
+
+<button id="visualTopBtn" class="icon-btn" type="button" title="Visual Learning Hub" aria-label="Visual Learning Hub">🎯 Visual</button>
+<style>#visualTopBtn{position:fixed;bottom:22px;inset-inline-start:22px;z-index:400;background:var(--green-800);color:#fff;box-shadow:var(--shadow);display:flex;}@media(max-width:600px){#visualTopBtn{bottom:78px;inset-inline-start:12px;font-size:.72rem;padding:6px 9px;}}</style>
+<script>document.getElementById('visualTopBtn').addEventListener('click',()=>document.getElementById('visualLearningHub')?.scrollIntoView({behavior:'smooth'}));</script>
 
 </body>
 </html>
