@@ -375,6 +375,11 @@ mark{background:var(--gold-100);color:inherit;border-radius:3px;padding:0 2px;}
 .quick-summary .qs span{font-size:.8rem;}
 @media(max-width:900px){.learning-path{grid-template-columns:repeat(3,1fr);}.lp-step:nth-child(3)::after{display:none;}.visual-grid{grid-template-columns:1fr 1fr;}.method-options{grid-template-columns:1fr 1fr;}.quick-summary{grid-template-columns:1fr 1fr;}}
 @media(max-width:600px){.visual-upgrade{padding:0 14px 22px;}.learning-path{grid-template-columns:1fr 1fr;padding:12px;}.lp-step:not(:last-child)::after{display:none;}.visual-grid,.audit-strip{grid-template-columns:1fr;}.method-options{grid-template-columns:1fr;}.quick-summary{grid-template-columns:1fr;}.chapter-visual svg{height:145px;}}
+
+@media(max-width:600px){
+  #sidebar.open{transform:translateX(0);}
+  body.sidebar-open{overflow:hidden;}
+}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important;}}
 @media print{.visual-upgrade{padding:0 0 15px;}.method-tool{display:none!important;}.vu-panel{box-shadow:none;}.chapter-visual{break-inside:avoid;}.learning-path{grid-template-columns:repeat(3,1fr);}}
 </style>
@@ -2106,8 +2111,32 @@ document.getElementById('darkBtn').addEventListener('click',()=>document.body.cl
 document.getElementById('printBtn').addEventListener('click',()=>window.print());
 
 /* ---------------- mobile sidebar ---------------- */
-document.getElementById('menuBtn').addEventListener('click',()=>document.getElementById('sidebar').classList.toggle('open'));
-document.getElementById('tocNav').addEventListener('click',()=>document.getElementById('sidebar').classList.remove('open'));
+const menuBtn = document.getElementById('menuBtn');
+const sidebar = document.getElementById('sidebar');
+const tocNav = document.getElementById('tocNav');
+
+function closeMobileSidebar(){
+  sidebar.classList.remove('open');
+}
+
+menuBtn.addEventListener('click', (e)=>{
+  e.preventDefault();
+  sidebar.classList.toggle('open');
+});
+
+/* Close the mobile menu immediately when any TOC item is selected.
+   The small delay also handles browsers that finish the hash jump after click. */
+tocNav.querySelectorAll('a').forEach(link=>{
+  link.addEventListener('click', ()=>{
+    closeMobileSidebar();
+    requestAnimationFrame(closeMobileSidebar);
+    setTimeout(closeMobileSidebar, 0);
+    setTimeout(closeMobileSidebar, 120);
+  }, {passive:true});
+});
+
+/* Also close it whenever the URL hash changes (including browser back/forward). */
+window.addEventListener('hashchange', closeMobileSidebar);
 
 /* ---------------- search ---------------- */
 const searchInput=document.getElementById('searchInput');
